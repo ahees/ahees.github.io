@@ -80,6 +80,7 @@ header {
     position: relative;
     background-color: rgba(255, 255, 255, 0.7);
     margin: 0 50px;
+    padding: 15px 0;
     -webkit-box-shadow: 0 0 35px 5px rgba(255, 255, 255, 0.3);
        -moz-box-shadow: 0 0 35px 5px rgba(255, 255, 255, 0.3);
             box-shadow: 0 0 35px 5px rgba(255, 255, 255, 0.3); }
@@ -89,7 +90,7 @@ header {
     header .header_logo img {
       width: 100%; }
   header .header_name {
-    padding-top: 100px; }
+    padding-top: 3%; }
     header .header_name .header_subtitle {
       text-align: center;
       font-family: "Cuprum", sans-serif;
@@ -98,7 +99,7 @@ header {
       text-transform: uppercase;
       text-decoration: underline; }
     header .header_name .header_title {
-      margin-top: 30px;
+      margin-top: 2%;
       text-align: center;
       font-family: "Cuprum", sans-serif;
       font-size: 38px;
@@ -106,9 +107,11 @@ header {
       color: #11a4ec;
       text-transform: uppercase; }
     header .header_name .header_text {
-      margin-top: 50px;
+      margin-top: 2%;
       font-size: 22px;
-      font-weight: normal; }
+      font-weight: normal;
+      text-align: justify;
+      padding-right: 2%; }
 
 .partners {
   padding: 25px 0; }
@@ -266,29 +269,23 @@ footer {
       font-size: 26px;
       color: #fff; }
 
-.meta .col-md-6 {
-  padding-right: 0;
-  padding-left: 0; }
-
-.meta .meta_block {
-  min-height: 600px; }
-  .meta .meta_block .title {
-    text-align: center;
-    color: #fff; }
-
-.meta .block1 {
+.meta {
   background-color: #11a4ec; }
+  .meta .col-md-6 {
+    padding-right: 0;
+    padding-left: 0; }
+  .meta .meta_block {
+    min-height: 600px; }
+    .meta .meta_block .title {
+      text-align: center;
+      color: #fff; }
   .meta .block1 .title {
     border-bottom: 2px solid #3fb7f1; }
-
-.meta .block2 {
-  background-color: #3fb7f1; }
   .meta .block2 .title {
     border-bottom: 2px solid #11a4ec; }
-
-.meta .block_text {
-  color: #fff;
-  font-size: 18px; }
+  .meta .block_text {
+    color: #fff;
+    font-size: 18px; }
 
 .advantages {
   padding: 25px 0; }
@@ -306,18 +303,23 @@ footer {
       font-size: 18px; }
 
 .conditions {
+  position: relative;
   background-color: #FFCA06; }
   .conditions .title {
     margin-top: 25px;
-    display: inline-block; }
+    display: inline-block;
+    margin-bottom: 0;
+    padding-bottom: 0; }
   .conditions p {
+    margin-top: 0;
     text-align: justify;
-    font-size: 18px; }
+    font-size: 16px; }
   .conditions .adv_img {
-    height: 675px;
+    min-height: 720px;
+    height: 100%;
     width: 100%;
     background-image: url("../images/bg.jpg");
-    background-position: 25% 50%;
+    background-position: 10% 50%;
     -moz-background-size: cover;
       -o-background-size: cover;
          background-size: cover; }
