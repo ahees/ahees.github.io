@@ -10,11 +10,11 @@ $(function() {
 	});
 
 	$('.parallax-window').parallax({
-		imageSrc: '/images/DSC03952.JPG',
+		imageSrc: '/images/DSC03952.jpg',
 		speed: 0.1
 	});
 	$('.parallax-window-head').parallax({
-		imageSrc: '/images/bg.JPG',
+		imageSrc: '/images/bg.jpg',
 		speed: 0.1
 	});
 
