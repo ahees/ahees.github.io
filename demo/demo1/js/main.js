@@ -10,7 +10,7 @@ $(function() {
 	});
 
 	$('.parallax-window').parallax({
-		imageSrc: '/images/DSC03952.jpg',
+		imageSrc: '/images/DSC03952.JPG',
 		speed: 0.1
 	});
 	$('.parallax-window-head').parallax({
