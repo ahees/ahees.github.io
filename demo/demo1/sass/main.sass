@@ -1,0 +1,264 @@
+@import "var.sass"
+@import "mixins.sass"
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	font-family: $font-text	
+	overflow-x: hidden
+
+
+
+.main_head
+	position: relative
+	//background-image: url("../images/bg.jpg")
+	background-position: 50% 50%
+	background-size: cover	
+	//text-align: center
+	&:before
+		+before
+		background-color: rgba(0,0,0, .2)
+
+.logo_subtitle
+	//text-align: center
+	color: #fff
+	font-size: em(36)
+	text-transform: uppercase
+	font-family: $font-title
+.logo_title
+	color: $main-color
+	font-size: em(38)
+	text-transform: uppercase
+	font-family: $font-title
+	font-weight: 700
+.logo_p
+	//border-top: 1px solid $main-color
+	color: #fff
+	font-size: em(22)
+	font-family: $font-text
+	font-weight: 500
+
+
+.head
+	display: table
+	//height: 100%
+	width: 100%
+	text-align: center
+	min-height: 600px
+	.wrapper_head
+		display: table-cell
+		vertical-align: middle
+		position: relative
+	.head_logo
+		width: 100%
+		max-width: 320px
+		margin: 0 auto
+		img
+			width: 100%
+
+
+
+
+/* ALL */
+.block_center
+	text-align: center
+.title
+	font-family: $font-title
+	font-size: em(32)
+	font-weight: 300
+	margin: 0
+	padding: 0
+	position: relative
+	text-align: center
+	display: inline-block
+	text-transform: uppercase
+	background: url("../images/111.png") no-repeat 0 50%
+	padding-left: 35px
+
+section
+	position: relative
+	padding: 30px 0
+.bg_gray
+	background-color: $gray-color
+.bg_y
+	background-color: lighten($two-color, 45%)
+.bg_m
+	background-color: lighten($main-color, 45%)
+/* END ALL */
+
+
+
+
+
+
+
+.section_meta
+	.list_meta
+		list-style-type: square
+		text-align: justify
+		padding-left: 20px
+		li
+			margin-top: 5px
+.section_advantages
+	.advantages_row
+		margin-top: 25px
+		padding-left: 35px
+	.row_list
+		//line-height: 30px
+		position: relative
+		margin-top: 10px
+	.fa
+		position: absolute
+		font-size: 30px
+		left: -40px
+		color: $main-color		
+.section_conditions
+	.t_img
+		img			
+			width: 100%
+
+.section_partners
+	.items
+		.items_item
+			max-height: 125px
+			line-height: 125px
+			img
+				height: 100%
+				width: 100%
+.section_activities
+	padding-bottom: 0
+	p
+		text-align: justify
+	.items
+		margin-top: 25px
+	.item_img
+		margin: 0px -15px 0 -15px
+		height: 100%
+		max-height: 330px
+		//width: 100%
+		overflow: hidden		
+		//transform: scale(1)		
+		img
+			width: 100%
+			height: 100%
+			transition: all 1s ease-out
+			&:hover
+				transform: scale(1.1)
+				transition: all 1s ease-out	
+.section_plan
+	.plan_img
+		text-align: center
+		padding-top: 30px
+		img
+			width: 100%
+			max-width: 300px
+.section_follow
+	.list_follow
+		list-style-type: none
+		padding: 0		
+		+counter(li)
+		li
+			line-height: em(32)
+			position: relative	
+			padding-left: 35px
+			margin-top: 10px
+		li:before
+			color: $main-color
+			display: inline-block
+			text-align: center
+			line-height: 26px
+			font-size: em(18)
+			font-weight: 500
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			border: 2px solid $main-color
+			//background-color: $main-color
+			position: absolute
+			left: 0
+
+.section_parallax
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+	&:before
+		+before
+		background-color: rgba(0,0,0, .3)
+	.par_wrapper
+		display: table
+		width: 100%
+		text-align: center
+	.par_cell
+		position: relative
+		display: table-cell
+		vertical-align: middle
+		p
+			font-family: $font-title
+			font-size: em(40)
+			font-weight: 700
+			color: $main-color
+.section_contacts
+	.contacts
+		margin-top: 25px
+		font-weight: 500
+		font-size: em(20)
+		text-align: center
+		span,
+		a
+			display: block
+		a
+			color: $main-color
+			font-family: $font-title
+			letter-spacing: 1px
+		.fa
+			color: #3b5998
+			font-size: em(22)			
+
+
+
+.parallax-window,
+.parallax-window-head
+	min-height: 400px
+	background: transparent
+
+
+					
+
+			
+
+
+		
+
+
+
+
+
+
+
+@import "media.sass"
+		
