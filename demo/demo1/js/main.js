@@ -7,11 +7,15 @@ $(function() {
 	heightDetect();
 	$(window).resize(function() {
 		heightDetect();
+		//$(".parallax-mirror").css("top", 0);
 	});
+
+	//$(".parallax-mirror").css("top", 0);
 
 	$('.parallax-window').parallax({
 		imageSrc: '/images/DSC03952.JPG',
-		speed: 0.1
+		//imageSrc: '/images/bg.jpg',
+		speed: 0.2,
 	});
 	$('.parallax-window-head').parallax({
 		imageSrc: '/images/bg.jpg',

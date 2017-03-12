@@ -209,7 +209,7 @@ section {
     left: 0; }
 
 .section_parallax {
-  background-repeat: no-repeat;
+  padding: 0;
   background-position: 50% 50%;
   -moz-background-size: cover;
     -o-background-size: cover;
@@ -254,7 +254,7 @@ section {
 
 .parallax-window,
 .parallax-window-head {
-  min-height: 400px;
+  min-height: 500px;
   background: transparent; }
 
 /*==========  Desktop First Method  ==========*/
