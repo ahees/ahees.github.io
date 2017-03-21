@@ -29,16 +29,35 @@
 </head>
 
 <body>
+	<div id="app">
+	<div class="chain">
+		<div class="hamburger" id="hamburger-1">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+	</div>
+	<div class="modal">
+		  <ol>
+			<li v-for="todo in logo">			
+			<img :src="todo.src" alt="logo" v-on:click="setlogo(todo.src)">
+			</li>
+		</ol>
+	</div>
 
 	<div id="pagepiling">
-		<div class="section section1">Some section</div>
-		<div class="section section2">Some section</div>
-		<div class="section section3">Some section</div>
-		<div class="section section4">Some section</div>
+		<div class="section section1"><img :src="logo_header" alt="logo"></div>
+		<div class="section section2"><img :src="logo_header" alt="logo"></div>
+		<div class="section section3"><img :src="logo_header" alt="logo"></div>
+		<div class="section section4"><img :src="logo_header" alt="logo"></div>
 	</div>
+
+	</div>
+	
 
 	
 	<link rel="stylesheet" href="css/main.min.css">
+	<script src="https://unpkg.com/vue"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>

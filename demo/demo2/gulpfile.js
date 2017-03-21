@@ -27,7 +27,7 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/pagePiling.js/dist/jquery.pagepiling.min.js',
+		'app/libs/pagePiling.js/dist/jquery.pagepiling.min.js',		
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
@@ -39,11 +39,11 @@ gulp.task('js', ['common-js'], function() {
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
-			baseDir: 'app'
+			baseDir: 'app',		
 		},
 		notify: false,
-		// tunnel: true,
-		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
+		//tunnel: true,		
+		//tunnel: "redlemon", //Demonstration page: http://projectmane.localtunnel.me
 	});
 });
 
