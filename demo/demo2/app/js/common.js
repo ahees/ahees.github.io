@@ -66,6 +66,7 @@ var app = new Vue({
       { src: 'img/logo4.svg' },
       { src: 'img/logo5.svg' },
       { src: 'img/logo6.svg' },
+      { src: 'img/test1.svg' },
     ],
 	logo_header: 'img/ny.jpg'
   },
