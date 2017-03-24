@@ -32,6 +32,13 @@ body {
   overflow-x: hidden;
   color: #292929; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu Condensed", sans-serif; }
+
+.title {
+  margin: 0;
+  text-transform: uppercase; }
+
 .header {
   padding: 20px 0; }
   .header .header_logo {
@@ -108,6 +115,21 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(246, 198, 7, 0.3); }
+  .parallax .title {
+    font-size: 70px; }
+  .parallax .easy_lp {
+    width: 300px;
+    padding: 10px 5px;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+       -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); }
+    .parallax .easy_lp h2 {
+      margin: 0;
+      font-size: 26px; }
 
 .parallax-window,
 .parallax-window-head {
@@ -123,6 +145,12 @@ body {
   .auto_height .auto_wrapper {
     display: table-cell;
     vertical-align: middle; }
+
+.block_left {
+  text-align: left; }
+
+.block_right {
+  text-align: right; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */

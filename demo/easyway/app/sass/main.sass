@@ -32,6 +32,11 @@ body
 	font-family: $font-text	
 	overflow-x: hidden
 	color: $dark
+h1, h2, h3, h4, h5, h6
+	font-family: $font-title
+.title
+	margin: 0
+	text-transform: uppercase
 
 .header
 	padding: 20px 0
@@ -103,10 +108,24 @@ body
 
 
 .parallax
-	position: relative
+	position: relative	
 	&::before
 		+before
 		background-color: rgba($yellow, .3)
+	.title
+		font-size: 70px
+	.easy_lp
+		width: 300px
+		padding: 10px 5px
+		display: inline-block
+		position: relative	
+		background-color: rgba(#fff, .8)
+		text-align: center
+		box-shadow: 5px 5px 5px rgba(0,0,0,.4)
+		h2
+			margin: 0
+			font-size: 26px
+		
 
 .parallax-window,
 .parallax-window-head
@@ -122,6 +141,10 @@ body
 	.auto_wrapper
 		display: table-cell
 		vertical-align: middle
+.block_left
+	text-align: left
+.block_right
+	text-align: right
 
 
 					
