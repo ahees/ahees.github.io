@@ -150,6 +150,7 @@ header
 	min-height: 700px
 	background-position: center
 	background-size: cover
+	z-index: 1
 	&:before
 		+before
 		background-color: rgba(#F6C607, .41)
@@ -157,7 +158,9 @@ header
 .auto_height
 	display: table
 	width: 100%
+	position: relative
 	.auto_wrapper
+		//z-index: 5
 		position: relative
 		display: table-cell
 		vertical-align: middle
