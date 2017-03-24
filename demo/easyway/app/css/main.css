@@ -28,7 +28,7 @@ body {
   position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
   overflow-x: hidden;
   color: #292929; }
 
@@ -37,7 +37,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .title {
   margin: 0;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 36px;
+  text-align: center; }
+
+.section {
+  padding: 50px 0; }
 
 .header {
   padding: 20px 0; }
@@ -135,6 +140,13 @@ h1, h2, h3, h4, h5, h6 {
 .parallax-window-head {
   min-height: 500px;
   background: transparent; }
+
+.about p {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.87); }
+  .about p strong {
+    font-size: 19px; }
 
 .auto_height {
   min-height: 400px;
