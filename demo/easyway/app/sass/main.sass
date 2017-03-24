@@ -1,5 +1,6 @@
 @import "fonts"
 @import "libs"
+@import "mixins"
 @import "vars"
 
 *::-webkit-input-placeholder
@@ -41,5 +42,50 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+
+
+
+
+/*main*/
+header
+	//background-color: tomato
+.header_line
+	position: relative
+	.header_logo
+		position: absolute
+	.header_map
+		float: right
+		margin-left: 25px
+		span
+			display: block
+//
+.menu_line
+	position: relative
+	text-align: center
+	.menu
+		+noul
+		li
+			display: inline-block
+			a
+				font-size: 14px
+
+.header_easyway
+	position: relative
+	min-height: 700px
+	background-position: center
+	background-size: cover
+	&:before
+		+before
+		background-color: rgba(#F6C607, .41)
+.auto_height
+	display: table
+	width: 100%
+	.auto_wrapper
+		position: relative
+		display: table-cell
+		vertical-align: middle
+		text-align: center
+
+/*main*/
 
 @import "media" // Всегда в конце
