@@ -35,12 +35,14 @@ body
 
 .parallax
 	position: relative
-
+	&::before
+		+before
+		background-color: rgba(tomato, .4)
 
 .parallax-window,
 .parallax-window-head
 	min-height: 500px
-	//background: transparent
+	background: transparent
 
 
 					
