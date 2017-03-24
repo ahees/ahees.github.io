@@ -36,8 +36,7 @@ body {
 
 .parallax-window,
 .parallax-window-head {
-  min-height: 500px;
-  background: transparent; }
+  min-height: 500px; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
