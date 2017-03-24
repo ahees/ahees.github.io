@@ -9,7 +9,7 @@ $(function() {
 		heightDetect();
 	});
 
-	$('.header_easyway').parallax({
+	$('.parallax-window').parallax({
 		imageSrc: '/img/bg1_top-min.jpg',
 		//imageSrc: '/images/bg.jpg',
 		speed: 0.2,
