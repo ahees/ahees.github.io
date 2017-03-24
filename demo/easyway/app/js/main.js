@@ -13,7 +13,7 @@ $(function() {
 	//$(".parallax-mirror").css("top", 0);
 
 	$('.parallax-window').parallax({
-		imageSrc: '/img/bg1_min.jpg',
+		imageSrc: './img/bg1_min.jpg',
 		//imageSrc: '/images/bg.jpg',
 		speed: 0.2,
 	});
