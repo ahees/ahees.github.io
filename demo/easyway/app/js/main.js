@@ -2,7 +2,7 @@ $(function() {
 
 	// Custom JS
 	function heightDetect() {
-		$(".head, .par_wrapper").css("height", $(window).height());
+		$(".auto_height").css("height", ($(window).height()/1.5));
 	};
 	heightDetect();
 	$(window).resize(function() {

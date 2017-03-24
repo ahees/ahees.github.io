@@ -31,18 +31,97 @@ body
 	-webkit-font-smoothing: antialiased
 	font-family: $font-text	
 	overflow-x: hidden
+	color: $dark
+
+.header
+	padding: 20px 0
+	.header_logo
+		margin-top: 10px
+		.header_title
+			font-size: 14px
+		img
+			margin-left: 5px
+	.header_map
+		float: right
+		margin-left: 50px
+		.map_title
+			position: relative
+			font-family: $font-title
+			font-weight: 300
+			font-size: 18px
+			&::before
+				+before
+				border-bottom: 2px solid $accent
+
+			//color: $dark
+			.fa
+				position: absolute
+				left: -20px
+				font-size: 20px
+				top: 3px
+				color: $accent
+		.map_phone
+			text-align: center
+			span
+				color: $dark-light
+
+
+.top_menu
+	position: relative
+	text-align: center
+	background-color: lighten($accent, 10)
+	box-shadow: 10px 14px 14px lighten($accent, 20) inset
+	.menu
+		height: 75px	
+	.menu, li
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			text-align: center
+			vertical-align: middle
+			height: 100%
+			padding: 10px 15px
+			a
+				display: block
+				color: #fff
+				text-decoration: none
+				font-family: $font-title
+				//font-weight: 300
+				font-size: 17px				
+				text-transform: lowercase
+			&:nth-child(6),
+			&:nth-child(7)
+				line-height: 60px
+			&:hover
+				background-color: $accent
+
+
+
+
 
 
 .parallax
 	position: relative
 	&::before
 		+before
-		background-color: rgba(tomato, .4)
+		background-color: rgba($yellow, .3)
 
 .parallax-window,
 .parallax-window-head
 	min-height: 500px
 	background: transparent
+
+.auto_height
+	min-height: 400px
+	position: relative
+	display: table
+	width: 100%
+	text-align: center
+	.auto_wrapper
+		display: table-cell
+		vertical-align: middle
 
 
 					
