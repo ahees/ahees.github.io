@@ -100,16 +100,13 @@ h1, h2, h3, h4, h5, h6 {
 .top_menu {
   position: relative;
   text-align: center;
-  background-color: #24f693;
-  -webkit-box-shadow: 10px 14px 14px #55f8ab inset;
-     -moz-box-shadow: 10px 14px 14px #55f8ab inset;
-          box-shadow: 10px 14px 14px #55f8ab inset; }
+  background-color: #24f693; }
   .top_menu .menu {
     height: 75px; }
   .top_menu .menu, .top_menu li {
     list-style-type: none;
-    margin: 0;
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
     .top_menu .menu li, .top_menu li li {
       display: inline-block;
       text-align: center;
@@ -125,8 +122,6 @@ h1, h2, h3, h4, h5, h6 {
         text-transform: lowercase; }
       .top_menu .menu li:nth-child(6), .top_menu .menu li:nth-child(7), .top_menu li li:nth-child(6), .top_menu li li:nth-child(7) {
         line-height: 60px; }
-      .top_menu .menu li:hover, .top_menu li li:hover {
-        background-color: #09DE7A; }
 
 .parallax {
   position: relative; }
@@ -210,6 +205,22 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center; }
     .order .order_block .order_block_title {
       padding: 5px 0; }
+
+.sale {
+  text-align: center;
+  width: 100%; }
+
+.table {
+  text-align: center;
+  display: table;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: tomato; }
+  .table .table_row {
+    display: table-row; }
+  .table .table_item {
+    display: table-cell; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */

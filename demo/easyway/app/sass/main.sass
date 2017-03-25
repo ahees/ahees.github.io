@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, h6
 	.sub_title
 		color: $dark-light
 
+
 .accent_color
 	color: $accent
 .accent_bg
@@ -90,40 +91,11 @@ h1, h2, h3, h4, h5, h6
 				color: $dark-light
 
 
-.top_menu
-	position: relative
-	text-align: center
-	background-color: lighten($accent, 10)
-	box-shadow: 10px 14px 14px lighten($accent, 20) inset
-	.menu
-		height: 75px	
-	.menu, li
-		list-style-type: none
-		margin: 0
-		padding: 0
-		li
-			display: inline-block
-			text-align: center
-			vertical-align: middle
-			height: 100%
-			padding: 10px 15px
-			a
-				display: block
-				color: #fff
-				text-decoration: none
-				font-family: $font-title
-				//font-weight: 300
-				font-size: 17px				
-				text-transform: lowercase
-			&:nth-child(6),
-			&:nth-child(7)
-				line-height: 60px
-			&:hover
-				background-color: $accent
 
 
 
 
+@import "partial/menu"
 
 
 .parallax
@@ -195,6 +167,20 @@ h1, h2, h3, h4, h5, h6
 		text-align: center
 		.order_block_title			
 			padding: 5px 0
+.sale
+	text-align: center
+	width: 100%
+.table
+	text-align: center
+	display: table
+	max-width: 600px
+	width: 100%	
+	margin: 0 auto
+	background-color: tomato
+	.table_row
+		display: table-row
+	.table_item
+		display: table-cell
 		
 
 
