@@ -301,32 +301,40 @@ h1, h2, h3, h4, h5, h6
 			transform: scale(1.02)
 			.order_block_buy
 				background-color: darken($accent, 5)
+.order_2
+	.order_block		
+		.order_block_date
+			min-height: 65px
+		.order_block_body
+			min-height: 200px			
+
 .sale
 	text-align: center
 	width: 100%
 /* end order-buy */
 
 
-.table
+table	
 	border-collapse: collapse
 	text-align: center
-	display: table
-	max-width: 600px
+	max-width: 700px
 	width: 100%	
 	margin: 0 auto
 	border: 2px solid rgba($accent, .7)
 
 	//background-color: tomato
-	.table_row
-		display: table-row
-	.table_item
-		display: table-cell
+	td		
 		width: 33%
 		height: 100px
-		vertical-align: middle
-		//padding: 5px 10px
-		border-bottom: 1px solid rgba($accent, .5)
-		border-right: 1px solid rgba($accent, .5)
+		vertical-align: middle		
+		border: 1px solid rgba($accent, .5)	
+		&:first-child
+			background-color: rgba($accent, .5)
+			font-size: 18px
+		&:nth-child(2),
+		&:nth-child(3)
+			font-style: italic
+			color: $dark-light
 		
 
 .prio

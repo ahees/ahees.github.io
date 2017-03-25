@@ -354,28 +354,35 @@ h1, h2, h3, h4, h5, h6 {
       .order .order_block:hover .order_block_buy {
         background-color: #08c56d; }
 
+.order_2 .order_block .order_block_date {
+  min-height: 65px; }
+
+.order_2 .order_block .order_block_body {
+  min-height: 200px; }
+
 .sale {
   text-align: center;
   width: 100%; }
 
 /* end order-buy */
-.table {
+table {
   border-collapse: collapse;
   text-align: center;
-  display: table;
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
   border: 2px solid rgba(9, 222, 122, 0.7); }
-  .table .table_row {
-    display: table-row; }
-  .table .table_item {
-    display: table-cell;
+  table td {
     width: 33%;
     height: 100px;
     vertical-align: middle;
-    border-bottom: 1px solid rgba(9, 222, 122, 0.5);
-    border-right: 1px solid rgba(9, 222, 122, 0.5); }
+    border: 1px solid rgba(9, 222, 122, 0.5); }
+    table td:first-child {
+      background-color: rgba(9, 222, 122, 0.5);
+      font-size: 18px; }
+    table td:nth-child(2), table td:nth-child(3) {
+      font-style: italic;
+      color: #5c5c5c; }
 
 .prio .block_center {
   margin-right: -15px;
