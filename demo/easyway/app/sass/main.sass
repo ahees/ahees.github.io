@@ -212,6 +212,17 @@ h1, h2, h3, h4, h5, h6
 			left: 30%
 			top: 36%
 			color: $accent
+	.warning
+		border: 1px solid rgba($accent, .5)
+		padding: 10px
+		.title
+			//font-size: 20px
+			text-align: center
+			font-family: $font-title
+			//color: $accent
+			//font-weight: normal
+		.pr_line
+			margin: 0
 			
 /* end-programm */
 .pr_1_text
@@ -297,16 +308,25 @@ h1, h2, h3, h4, h5, h6
 
 
 .table
+	border-collapse: collapse
 	text-align: center
 	display: table
 	max-width: 600px
 	width: 100%	
 	margin: 0 auto
-	background-color: tomato
+	border: 2px solid rgba($accent, .7)
+
+	//background-color: tomato
 	.table_row
 		display: table-row
 	.table_item
 		display: table-cell
+		width: 33%
+		height: 100px
+		vertical-align: middle
+		//padding: 5px 10px
+		border-bottom: 1px solid rgba($accent, .5)
+		border-right: 1px solid rgba($accent, .5)
 		
 
 .prio

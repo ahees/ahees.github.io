@@ -269,6 +269,15 @@ h1, h2, h3, h4, h5, h6 {
     top: 36%;
     color: #09DE7A; }
 
+.pr .warning {
+  border: 1px solid rgba(9, 222, 122, 0.5);
+  padding: 10px; }
+  .pr .warning .title {
+    text-align: center;
+    font-family: "Ubuntu Condensed", sans-serif; }
+  .pr .warning .pr_line {
+    margin: 0; }
+
 /* end-programm */
 .pr_1_text ul {
   list-style-type: none;
@@ -351,16 +360,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* end order-buy */
 .table {
+  border-collapse: collapse;
   text-align: center;
   display: table;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  background-color: tomato; }
+  border: 2px solid rgba(9, 222, 122, 0.7); }
   .table .table_row {
     display: table-row; }
   .table .table_item {
-    display: table-cell; }
+    display: table-cell;
+    width: 33%;
+    height: 100px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(9, 222, 122, 0.5);
+    border-right: 1px solid rgba(9, 222, 122, 0.5); }
 
 .prio .block_center {
   margin-right: -15px;
