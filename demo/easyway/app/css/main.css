@@ -241,16 +241,16 @@ h1, h2, h3, h4, h5, h6 {
     color: #292929;
     text-decoration: underline; }
 
-.pr .pr_map .pr_line {
-  text-decoration: underline;
-  color: #292929;
-  font-size: 20px; }
-
-.pr .pr_map span, .pr .pr_map li {
-  font-size: 18px; }
-
-.pr .pr_map li {
-  margin-bottom: 10px; }
+.pr .pr_map {
+  padding-left: 10%; }
+  .pr .pr_map .pr_line {
+    text-decoration: underline;
+    color: #292929;
+    font-size: 20px; }
+  .pr .pr_map span, .pr .pr_map li {
+    font-size: 18px; }
+  .pr .pr_map li {
+    margin-bottom: 10px; }
 
 .pr .pr_ps {
   margin: 25px 0;
@@ -483,6 +483,59 @@ table {
     width: 100px;
     text-align: center;
     margin-right: 5px; }
+
+.footer {
+  position: relative;
+  background-color: #292929; }
+  .footer .footer_adress {
+    padding: 20px 0; }
+    .footer .footer_adress .footer_title {
+      padding-left: 25px;
+      font-family: "Ubuntu Condensed", sans-serif;
+      font-size: 28px;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-decoration: underline;
+      position: relative;
+      color: #fff; }
+      .footer .footer_adress .footer_title .fa {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        font-size: 32px;
+        color: #09DE7A; }
+    .footer .footer_adress span {
+      font-size: 20px;
+      margin-right: 50px;
+      color: gainsboro;
+      font-weight: 300; }
+  .footer .footer_footer {
+    position: relative;
+    background-color: #222; }
+    .footer .footer_footer .footer_bottom {
+      height: 40px;
+      line-height: 40px; }
+      .footer .footer_footer .footer_bottom .footer_bottom_left {
+        float: left;
+        font-style: italic;
+        color: #fff;
+        font-size: 15px; }
+      .footer .footer_footer .footer_bottom .footer_bottom_right {
+        float: right; }
+      .footer .footer_footer .footer_bottom .social {
+        list-style-type: none;
+        padding: 0;
+        margin: 0; }
+        .footer .footer_footer .footer_bottom .social li {
+          float: right;
+          margin-left: 10px; }
+          .footer .footer_footer .footer_bottom .social li a {
+            color: #09DE7A;
+            font-size: 20px;
+            text-decoration: none;
+            outline: none; }
+            .footer .footer_footer .footer_bottom .social li a:hover {
+              color: #fff; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */

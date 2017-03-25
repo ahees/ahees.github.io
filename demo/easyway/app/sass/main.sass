@@ -188,14 +188,15 @@ h1, h2, h3, h4, h5, h6
 			font-size: 20px
 			color: $dark
 			text-decoration: underline
-	.pr_map		
-		 .pr_line
+	.pr_map
+		padding-left: 10%
+		.pr_line
 		 	text-decoration: underline
 		 	color: $dark
 		 	font-size: 20px
-		 span, li
+		span, li
 		 	font-size: 18px
-		 li
+		li
 		 	margin-bottom: 10px
 	.pr_ps
 		margin: 25px 0
@@ -445,6 +446,59 @@ table
 				//padding: 0 5px
 					
 
+.footer
+	position: relative
+	//background-color: rgba($accent, .7)
+	background-color: $dark
+	.footer_adress
+		padding: 20px 0
+		.footer_title
+			padding-left: 25px		
+			font-family: $font-title
+			font-size: 28px
+			text-transform: uppercase
+			font-weight: 300
+			text-decoration: underline
+			position: relative
+			color: #fff
+			.fa
+				position: absolute
+				left: 0
+				top: 8px
+				font-size: 32px
+				color: $accent
+
+		span
+			font-size: 20px
+			margin-right: 50px		
+			color: lighten($dark-light, 50)	
+			font-weight: 300
+	.footer_footer
+		position: relative
+		//background-color: $accent
+		background-color: #222
+		.footer_bottom
+			height: 40px
+			line-height: 40px
+			.footer_bottom_left
+				float: left
+				font-style: italic
+				color: #fff
+				font-size: 15px
+			.footer_bottom_right
+				float: right
+			.social
+				+noul
+				li
+					float: right
+					margin-left: 10px
+					a
+						color: $accent
+						font-size: 20px
+						text-decoration: none
+						outline: none
+						&:hover
+							color: #fff
 			
 
 
