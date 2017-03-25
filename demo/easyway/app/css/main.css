@@ -149,33 +149,54 @@ h1, h2, h3, h4, h5, h6 {
       vertical-align: middle;
       height: 100%;
       padding: 10px 15px;
-      margin-right: -4px; }
+      margin-right: -4px;
+      -webkit-transition: background-color .5s ease-in-out;
+      -o-transition: background-color .5s ease-in-out;
+      -moz-transition: background-color .5s ease-in-out;
+      transition: background-color .5s ease-in-out; }
       .top_menu .menu li a, .top_menu li li a {
         display: block;
         color: #fff;
         text-decoration: none;
         font-family: "Ubuntu Condensed", sans-serif;
+        outline: none;
         font-size: 17px;
         text-transform: lowercase; }
       .top_menu .menu li:first-child, .top_menu li li:first-child {
         background-color: #FFCB2E; }
+        .top_menu .menu li:first-child:hover, .top_menu li li:first-child:hover {
+          background-color: #fabc00; }
       .top_menu .menu li:nth-child(2), .top_menu li li:nth-child(2) {
         background-color: #66CFD5; }
+        .top_menu .menu li:nth-child(2):hover, .top_menu li li:nth-child(2):hover {
+          background-color: #3ec2ca; }
       .top_menu .menu li:nth-child(3), .top_menu li li:nth-child(3) {
         background-color: #4499A7; }
+        .top_menu .menu li:nth-child(3):hover, .top_menu li li:nth-child(3):hover {
+          background-color: #357883; }
       .top_menu .menu li:nth-child(4), .top_menu li li:nth-child(4) {
         background-color: #AFC21E; }
+        .top_menu .menu li:nth-child(4):hover, .top_menu li li:nth-child(4):hover {
+          background-color: #879617; }
       .top_menu .menu li:nth-child(5), .top_menu li li:nth-child(5) {
         background-color: #97A5C3; }
+        .top_menu .menu li:nth-child(5):hover, .top_menu li li:nth-child(5):hover {
+          background-color: #7789b0; }
       .top_menu .menu li:nth-child(6), .top_menu .menu li:nth-child(7), .top_menu li li:nth-child(6), .top_menu li li:nth-child(7) {
         line-height: 60px; }
       .top_menu .menu li:nth-child(6), .top_menu li li:nth-child(6) {
         background-color: #F88149; }
+        .top_menu .menu li:nth-child(6):hover, .top_menu li li:nth-child(6):hover {
+          background-color: #f65f18; }
       .top_menu .menu li:nth-child(7), .top_menu li li:nth-child(7) {
         background-color: #B27FDC; }
+        .top_menu .menu li:nth-child(7):hover, .top_menu li li:nth-child(7):hover {
+          background-color: #9a57d1; }
       .top_menu .menu li:last-child, .top_menu li li:last-child {
         margin-right: 0;
         background-color: #FDA98F; }
+        .top_menu .menu li:last-child:hover, .top_menu li li:last-child:hover {
+          background-color: #fc835d; }
 
 /* first desctop */
 .parallax {

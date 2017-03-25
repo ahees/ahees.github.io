@@ -67,6 +67,8 @@ $(function() {
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
+	$(".top_menu .menu a").mPageScroll2id();
+
 
 
 
