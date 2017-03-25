@@ -12,13 +12,13 @@ $(function() {
 
 	//$(".parallax-mirror").css("top", 0);
 
-	$('.parallax-window').parallax({
+	$('.easyway').parallax({
 		imageSrc: './img/bg1_min.jpg',
 		//imageSrc: '/images/bg.jpg',
 		speed: 0.2,
 	});
-	$('.parallax-window-head').parallax({
-		imageSrc: '/images/bg.jpg',
+	$('.holidays').parallax({
+		imageSrc: './img/bg2_min.jpg',
 		speed: 0.1
 	});
 

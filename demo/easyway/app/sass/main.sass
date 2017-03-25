@@ -39,8 +39,23 @@ h1, h2, h3, h4, h5, h6
 	text-transform: uppercase
 	font-size: 36px
 	text-align: center
+.parallax_title
+	position: relative
+	padding: 100px 0	
 .section
 	padding: 50px 0
+	.sup_title,
+	.sub_title
+		text-align: center
+	.sub_title
+		color: $dark-light
+
+.accent_color
+	color: $accent
+.accent_bg
+	background-color: $accent
+.yellow_bg
+	background-color: $yellow
 
 .header
 	padding: 20px 0
@@ -157,6 +172,31 @@ h1, h2, h3, h4, h5, h6
 	text-align: left
 .block_right
 	text-align: right
+.block_center
+	text-align: center
+
+
+.parralax_title
+	position: relative
+	&::before
+		+before
+		background-color: rgba($yellow, .3)
+
+.order
+	//min-height: 520px
+	padding: 50px 0
+	background-image: url('../img/bg3_min.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	.order_block
+		background-color: #fff
+		border: 1px solid $accent
+		text-align: center
+		.order_block_title			
+			padding: 5px 0
+		
+
 
 
 					

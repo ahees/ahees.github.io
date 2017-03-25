@@ -41,8 +41,26 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 36px;
   text-align: center; }
 
+.parallax_title {
+  position: relative;
+  padding: 100px 0; }
+
 .section {
   padding: 50px 0; }
+  .section .sup_title,
+  .section .sub_title {
+    text-align: center; }
+  .section .sub_title {
+    color: #5c5c5c; }
+
+.accent_color {
+  color: #09DE7A; }
+
+.accent_bg {
+  background-color: #09DE7A; }
+
+.yellow_bg {
+  background-color: #F6C607; }
 
 .header {
   padding: 20px 0; }
@@ -163,6 +181,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .block_right {
   text-align: right; }
+
+.block_center {
+  text-align: center; }
+
+.parralax_title {
+  position: relative; }
+  .parralax_title::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(246, 198, 7, 0.3); }
+
+.order {
+  padding: 50px 0;
+  background-image: url("../img/bg3_min.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+    -o-background-size: cover;
+       background-size: cover; }
+  .order .order_block {
+    background-color: #fff;
+    border: 1px solid #09DE7A;
+    text-align: center; }
+    .order .order_block .order_block_title {
+      padding: 5px 0; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
