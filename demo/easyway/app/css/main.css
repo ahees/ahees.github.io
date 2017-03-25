@@ -430,6 +430,32 @@ table {
     padding: 50px 0;
     font-size: 28px; }
 
+.speak .owl_item_title {
+  font-size: 24px;
+  color: #09DE7A; }
+
+.speak .owl_left,
+.speak .owl_right {
+  display: inline-block; }
+  .speak .owl_left span,
+  .speak .owl_right span {
+    color: rgba(41, 41, 41, 0.5);
+    padding: 0 20px;
+    cursor: pointer; }
+    .speak .owl_left span .fa,
+    .speak .owl_right span .fa {
+      font-size: 40px; }
+    .speak .owl_left span:hover,
+    .speak .owl_right span:hover {
+      color: #292929; }
+
+.gallery .title {
+  margin-bottom: 20px; }
+
+.gallery .gallery_items img {
+  width: 100%;
+  margin-bottom: 10px; }
+
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
