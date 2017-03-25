@@ -423,12 +423,14 @@ table {
       font-style: italic;
       color: #5c5c5c; }
 
-.prio .block_center {
-  margin-right: -15px;
-  margin-left: -15px; }
-  .prio .block_center div {
-    padding: 50px 0;
-    font-size: 28px; }
+.prio {
+  line-height: 100px; }
+  .prio .block_center {
+    margin-right: -15px;
+    margin-left: -15px; }
+    .prio .block_center div {
+      height: 100px;
+      font-size: 28px; }
 
 .speak .owl_item_title {
   font-size: 24px;
@@ -455,6 +457,32 @@ table {
 .gallery .gallery_items img {
   width: 100%;
   margin-bottom: 10px; }
+
+.smena .title {
+  margin-bottom: 20px; }
+
+.smena table {
+  max-width: 800px; }
+  .smena table th {
+    background-color: #09DE7A;
+    text-align: center;
+    font-weight: normal; }
+  .smena table td {
+    width: auto; }
+
+.grafik .title {
+  margin-bottom: 20px; }
+
+.grafik .grafik_text .grafik_line {
+  position: relative;
+  margin: 5px; }
+  .grafik .grafik_text .grafik_line span {
+    float: left;
+    background-color: #09DE7A;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    margin-right: 5px; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */

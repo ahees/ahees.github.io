@@ -21,9 +21,10 @@ $(function() {
 		imageSrc: './img/bg2_min.jpg',
 		speed: 0.1
 	});
-	
+
 	$(".owl-carousel").owlCarousel({
 	    loop:true,	    
+	    autoHeight: true,
 	    responsiveClass:true,
 	    responsive:{
 	        0:{
@@ -35,7 +36,7 @@ $(function() {
 	            nav:false
 	        },
 	        1000:{
-	            items:1
+	            items:2
 	            
 	        }
 	    }
