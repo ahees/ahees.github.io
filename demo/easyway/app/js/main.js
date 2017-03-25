@@ -18,7 +18,15 @@ $(function() {
 		speed: 0.2,
 	});
 	$('.holidays').parallax({
+		imageSrc: './img/bg6_min.jpg',
+		speed: 0.1
+	});
+	$('#holidayskids').parallax({
 		imageSrc: './img/bg2_min.jpg',
+		speed: 0.1
+	});
+	$('#light').parallax({
+		imageSrc: './img/bg5_min.jpg',
 		speed: 0.1
 	});
 
