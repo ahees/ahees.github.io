@@ -62,6 +62,41 @@ h1, h2, h3, h4, h5, h6 {
 .yellow_bg {
   background-color: #F6C607; }
 
+.auto_height {
+  min-height: 400px;
+  position: relative;
+  display: table;
+  width: 100%;
+  text-align: center; }
+  .auto_height .auto_wrapper {
+    display: table-cell;
+    vertical-align: middle; }
+
+.block_left {
+  text-align: left; }
+
+.block_right {
+  text-align: right; }
+
+.block_center {
+  text-align: center; }
+
+.parralax_title {
+  position: relative; }
+  .parralax_title::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(246, 198, 7, 0.3); }
+
+.line_title .title {
+  color: #fff;
+  font-family: "Ubuntu Condensed", sans-serif; }
+
+/* header */
 .header {
   padding: 20px 0; }
   .header .header_logo {
@@ -97,6 +132,7 @@ h1, h2, h3, h4, h5, h6 {
       .header .header_map .map_phone span {
         color: #5c5c5c; }
 
+/* end header */
 .top_menu {
   position: relative;
   text-align: center;
@@ -141,6 +177,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-right: 0;
         background-color: #FDA98F; }
 
+/* first desctop */
 .parallax {
   position: relative; }
   .parallax::before {
@@ -167,11 +204,13 @@ h1, h2, h3, h4, h5, h6 {
       margin: 0;
       font-size: 26px; }
 
+/* end first desctop */
 .parallax-window,
 .parallax-window-head {
   min-height: 500px;
   background: transparent; }
 
+/* about */
 .about p {
   font-family: "Fira Sans Extra Condensed", sans-serif;
   font-size: 17px;
@@ -179,36 +218,73 @@ h1, h2, h3, h4, h5, h6 {
   .about p strong {
     font-size: 19px; }
 
-.auto_height {
-  min-height: 400px;
+/* end about */
+/* programm */
+.pr_1 .sub_title {
+  margin-bottom: 25px; }
+
+.pr .pr_line {
   position: relative;
-  display: table;
-  width: 100%;
-  text-align: center; }
-  .auto_height .auto_wrapper {
-    display: table-cell;
-    vertical-align: middle; }
-
-.block_left {
-  text-align: left; }
-
-.block_right {
-  text-align: right; }
-
-.block_center {
-  text-align: center; }
-
-.parralax_title {
-  position: relative; }
-  .parralax_title::before {
+  padding-left: 25px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.6); }
+  .pr .pr_line .fa {
     position: absolute;
-    content: "";
-    top: 0;
+    top: 3px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(246, 198, 7, 0.3); }
+    color: #09DE7A;
+    font-size: 20px; }
+  .pr .pr_line span {
+    font-size: 20px;
+    color: #292929;
+    text-decoration: underline; }
 
+.pr .pr_map .pr_line {
+  text-decoration: underline;
+  color: #292929;
+  font-size: 20px; }
+
+.pr .pr_map span, .pr .pr_map li {
+  font-size: 18px; }
+
+.pr .pr_map li {
+  margin-bottom: 10px; }
+
+.pr .pr_ps {
+  margin: 25px 0;
+  font-size: 20px;
+  font-style: italic; }
+
+.pr .round {
+  position: relative;
+  border: 1px solid rgba(9, 222, 122, 0.3);
+  margin: 0 15px;
+  padding: 25px;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 24px; }
+  .pr .round .fa {
+    position: absolute;
+    left: 30%;
+    top: 36%;
+    color: #09DE7A; }
+
+/* end-programm */
+.pr_1_text ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .pr_1_text ul li {
+    font-size: 20px; }
+  .pr_1_text ul li:first-child,
+  .pr_1_text ul li:nth-child(2) {
+    color: red; }
+
+.pr_1_text span {
+  color: red;
+  font-size: 20px; }
+
+/* order-buy */
 .order {
   padding: 50px 0;
   background-image: url("../img/bg3_min.jpg");
@@ -228,6 +304,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   width: 100%; }
 
+/* end order-buy */
 .table {
   text-align: center;
   display: table;

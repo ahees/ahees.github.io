@@ -58,6 +58,36 @@ h1, h2, h3, h4, h5, h6
 .yellow_bg
 	background-color: $yellow
 
+.auto_height
+	min-height: 400px
+	position: relative
+	display: table
+	width: 100%
+	text-align: center
+	.auto_wrapper
+		display: table-cell
+		vertical-align: middle
+.block_left
+	text-align: left
+.block_right
+	text-align: right
+.block_center
+	text-align: center
+
+
+.parralax_title
+	position: relative
+	&::before
+		+before
+		background-color: rgba($yellow, .3)
+
+.line_title
+	.title
+		color: #fff
+		font-family: $font-title
+
+
+/* header */
 .header
 	padding: 20px 0
 	.header_logo
@@ -89,7 +119,7 @@ h1, h2, h3, h4, h5, h6
 			text-align: center
 			span
 				color: $dark-light
-
+/* end header */
 
 
 
@@ -98,6 +128,8 @@ h1, h2, h3, h4, h5, h6
 @import "partial/menu"
 
 
+
+/* first desctop */
 .parallax
 	position: relative	
 	&::before
@@ -116,6 +148,7 @@ h1, h2, h3, h4, h5, h6
 		h2
 			margin: 0
 			font-size: 26px
+/* end first desctop */
 		
 
 .parallax-window,
@@ -123,6 +156,7 @@ h1, h2, h3, h4, h5, h6
 	min-height: 500px
 	background: transparent
 
+/* about */
 .about
 	p
 		font-family: $font-text
@@ -130,30 +164,75 @@ h1, h2, h3, h4, h5, h6
 		color: rgba(0,0,0,0.87)
 		strong
 			font-size: 19px
+/* end about */
 
-.auto_height
-	min-height: 400px
-	position: relative
-	display: table
-	width: 100%
-	text-align: center
-	.auto_wrapper
-		display: table-cell
-		vertical-align: middle
-.block_left
-	text-align: left
-.block_right
-	text-align: right
-.block_center
-	text-align: center
+/* programm */
+.pr_1
+	.sub_title
+		margin-bottom: 25px
+.pr
+	.pr_line
+		position: relative
+		padding-left: 25px
+		font-size: 18px
+		margin-bottom: 10px
+		color: rgba(0,0,0, .6)
+		.fa
+			position: absolute
+			top: 3px
+			left: 0
+			color: $accent
+			font-size: 20px
+		span
+			font-size: 20px
+			color: $dark
+			text-decoration: underline
+	.pr_map		
+		 .pr_line
+		 	text-decoration: underline
+		 	color: $dark
+		 	font-size: 20px
+		 span, li
+		 	font-size: 18px
+		 li
+		 	margin-bottom: 10px
+	.pr_ps
+		margin: 25px 0
+		font-size: 20px
+		font-style: italic
+	.round
+		position: relative
+		border: 1px solid rgba($accent, .3)
+		margin: 0 15px
+		padding: 25px
+		font-family: $font-title
+		font-size: 24px		
+		.fa
+			position: absolute
+			left: 30%
+			top: 36%
+			color: $accent
+			
+/* end-programm */
+.pr_1_text
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			font-size: 20px
+		li:first-child,
+		li:nth-child(2)
+			color: red
+	span
+		color: red
+		//font-weight: bold
+		font-size: 20px
 
 
-.parralax_title
-	position: relative
-	&::before
-		+before
-		background-color: rgba($yellow, .3)
 
+
+/* order-buy */
 .order
 	//min-height: 520px
 	padding: 50px 0
@@ -170,6 +249,9 @@ h1, h2, h3, h4, h5, h6
 .sale
 	text-align: center
 	width: 100%
+/* end order-buy */
+
+
 .table
 	text-align: center
 	display: table
