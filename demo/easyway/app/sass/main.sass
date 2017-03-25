@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6
 		margin: 0
 		padding: 0
 		li
-			font-size: 20px
+			font-size: 17px
 		li:first-child,
 		li:nth-child(2)
 			color: red
@@ -228,6 +228,10 @@ h1, h2, h3, h4, h5, h6
 		color: red
 		//font-weight: bold
 		font-size: 20px
+	.title
+		text-align: left
+		margin-bottom: 15px
+		font-size: 26px
 
 
 
@@ -241,11 +245,51 @@ h1, h2, h3, h4, h5, h6
 	background-position: center
 	background-size: cover
 	.order_block
-		background-color: #fff
+		background-color: rgba(255,255,255, .8)
 		border: 1px solid $accent
 		text-align: center
 		.order_block_title			
 			padding: 5px 0
+			font-family: $font-title
+			font-size: 20px
+			font-weight: 600
+		.order_block_date,
+		.order_block_buy
+			color: #fff
+			font-size: 20px
+			cursor: pointer
+		.order_block_buy
+			padding: 15px 0
+		span
+			//display: inline-block
+			position: relative
+			font-size: 18px
+			font-style: italic
+			.fa
+				//position: absolute
+				color: $accent
+				margin-right: 10px
+				//left: -23px
+				//top: 4px
+		.order_block_price
+			color: tomato
+			font-size: 26px
+			font-weight: bold
+		hr
+			margin: 0
+			padding: 0
+			color: $accent
+		.order_block_day
+			position: absolute
+			background-color: tomato
+			padding: 2px
+			color: #fff
+			font-size: 14px
+		&:hover
+			background-color: #fff
+			transform: scale(1.02)
+			.order_block_buy
+				background-color: darken($accent, 5)
 .sale
 	text-align: center
 	width: 100%
@@ -265,7 +309,13 @@ h1, h2, h3, h4, h5, h6
 		display: table-cell
 		
 
-
+.prio
+	.block_center
+		margin-right: -15px
+		margin-left: -15px
+		div
+			padding: 50px 0
+			font-size: 28px
 
 					
 

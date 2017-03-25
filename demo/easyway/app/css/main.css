@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
   .pr_1_text ul li {
-    font-size: 20px; }
+    font-size: 17px; }
   .pr_1_text ul li:first-child,
   .pr_1_text ul li:nth-child(2) {
     color: red; }
@@ -283,6 +283,11 @@ h1, h2, h3, h4, h5, h6 {
 .pr_1_text span {
   color: red;
   font-size: 20px; }
+
+.pr_1_text .title {
+  text-align: left;
+  margin-bottom: 15px;
+  font-size: 26px; }
 
 /* order-buy */
 .order {
@@ -294,11 +299,51 @@ h1, h2, h3, h4, h5, h6 {
     -o-background-size: cover;
        background-size: cover; }
   .order .order_block {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #09DE7A;
     text-align: center; }
     .order .order_block .order_block_title {
-      padding: 5px 0; }
+      padding: 5px 0;
+      font-family: "Ubuntu Condensed", sans-serif;
+      font-size: 20px;
+      font-weight: 600; }
+    .order .order_block .order_block_date,
+    .order .order_block .order_block_buy {
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer; }
+    .order .order_block .order_block_buy {
+      padding: 15px 0; }
+    .order .order_block span {
+      position: relative;
+      font-size: 18px;
+      font-style: italic; }
+      .order .order_block span .fa {
+        color: #09DE7A;
+        margin-right: 10px; }
+    .order .order_block .order_block_price {
+      color: tomato;
+      font-size: 26px;
+      font-weight: bold; }
+    .order .order_block hr {
+      margin: 0;
+      padding: 0;
+      color: #09DE7A; }
+    .order .order_block .order_block_day {
+      position: absolute;
+      background-color: tomato;
+      padding: 2px;
+      color: #fff;
+      font-size: 14px; }
+    .order .order_block:hover {
+      background-color: #fff;
+      -webkit-transform: scale(1.02);
+         -moz-transform: scale(1.02);
+          -ms-transform: scale(1.02);
+           -o-transform: scale(1.02);
+              transform: scale(1.02); }
+      .order .order_block:hover .order_block_buy {
+        background-color: #08c56d; }
 
 .sale {
   text-align: center;
@@ -316,6 +361,13 @@ h1, h2, h3, h4, h5, h6 {
     display: table-row; }
   .table .table_item {
     display: table-cell; }
+
+.prio .block_center {
+  margin-right: -15px;
+  margin-left: -15px; }
+  .prio .block_center div {
+    padding: 50px 0;
+    font-size: 28px; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
