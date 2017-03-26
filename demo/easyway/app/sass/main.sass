@@ -1,5 +1,8 @@
-@import "var.sass"
-@import "mixins.sass"
+@import "_mixins/mixins"
+@import "fonts"
+@import "libs"
+@import "vars"
+
 *::-webkit-input-placeholder
 	color: #666
 	opacity: 1
@@ -23,15 +26,22 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
+html, body
+	height: 100%
+
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.6
-	-webkit-font-smoothing: antialiased
-	font-family: $font-text	
+	line-height: 1.75
+	font-family: $font-text
 	overflow-x: hidden
-	color: $dark
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
 h1, h2, h3, h4, h5, h6
 	font-family: $font-title
 .title
@@ -77,9 +87,9 @@ h1, h2, h3, h4, h5, h6
 
 .parralax_title
 	position: relative
-	&::before
-		+before
-		background-color: rgba($yellow, .3)
+	// &::before
+	// 	+before
+	// 	background-color: rgba($yellow, .3)
 
 .line_title
 	.title
@@ -89,11 +99,17 @@ h1, h2, h3, h4, h5, h6
 
 /* header */
 .header
+	position: relative
 	padding: 20px 0
+	background-color: #fff
+	.header_line
+		position: relative
 	.header_logo
-		margin-top: 10px
+		position: absolute
+		top: 10px
 		.header_title
 			font-size: 14px
+			margin-left: 5px
 		img
 			margin-left: 5px
 	.header_map
@@ -122,19 +138,101 @@ h1, h2, h3, h4, h5, h6
 /* end header */
 
 
+/* menu */
+.top_menu
+	position: relative
+	text-align: center
+	background-color: lighten($accent, 10)	
+	.menu
+		height: 75px	
+	.menu, li
+		+noul
+		li
+			display: inline-block
+			text-align: center
+			vertical-align: middle
+			height: 100%
+			padding: 10px 15px
+			margin-right: -4px
+			transition: background-color .5s ease-in-out			
+			a
+				display: block
+				color: #fff
+				text-decoration: none
+				font-family: $font-title
+				outline: none
+				font-size: 17px				
+				text-transform: lowercase							
+			&:first-child
+				background-color: #FFCB2E
+				&:hover					
+					background-color: darken(#FFCB2E, 10)
+
+			&:nth-child(2)
+				background-color: #66CFD5
+				&:hover
+					background-color: darken(#66CFD5, 10)	
+			&:nth-child(3)
+				background-color: #4499A7	
+				&:hover
+					background-color: darken(#4499A7, 10)
+			&:nth-child(4)
+				background-color: #AFC21E
+				&:hover
+					background-color: darken(#AFC21E, 10)	
+			&:nth-child(5)
+				background-color: #97A5C3	
+				&:hover
+					background-color: darken(#97A5C3, 10)
+			&:nth-child(6),
+			&:nth-child(7)
+				line-height: 60px
+			&:nth-child(6)
+				background-color: #F88149
+				&:hover
+					background-color: darken(#F88149, 10)	
+			&:nth-child(7)
+				background-color: #B27FDC
+				&:hover
+					background-color: darken(#B27FDC, 10)
+			&:last-child
+				margin-right: 0
+				background-color: #FDA98F
+				&:hover
+					background-color: darken(#FDA98F, 10)
+
+.tooglebutton
+	display: none
+	padding: 15px 10px
+	cursor: pointer
+	z-index: 5
+@media only screen and (max-width : 790px)
+	.top_menu
+		.menu
+			display: none
+			position: absolute
+			left: 0
+			width: 100%
+			z-index: 10
+			li
+				display: block
+				width: 100%
+				
+				
+	.tooglebutton
+		display: inline-block		
+
+
+/* end menu */
 
 
 
-@import "partial/menu"
 
 
 
 /* first desctop */
 .parallax
-	position: relative	
-	&::before
-		+before
-		background-color: rgba($yellow, .3)
+	position: relative		
 	.title
 		font-size: 70px
 	.easy_lp
@@ -175,9 +273,9 @@ h1, h2, h3, h4, h5, h6
 	.pr_line
 		position: relative
 		padding-left: 25px
-		font-size: 18px
+		font-size: 17px
 		margin-bottom: 10px
-		color: rgba(0,0,0, .6)
+		//color: rgba(0,0,0, .6)
 		.fa
 			position: absolute
 			top: 3px
@@ -225,10 +323,20 @@ h1, h2, h3, h4, h5, h6
 			//font-weight: normal
 		.pr_line
 			margin: 0
+		span
+			font-size: 17px
+			display: block
+			line-height: 1.2
+			margin-bottom: 5px
 .pr_3
 	padding-bottom: 0
 	p
-		font-size: 17px	
+		font-size: 17px
+	.sub_title
+	span.accent
+		display: inline-block
+		color: $accent
+		font-style: normal	
 	span
 		display: block
 		font-style: italic	
@@ -271,13 +379,14 @@ h1, h2, h3, h4, h5, h6
 		padding: 0
 		li
 			font-size: 17px
-		li:first-child,
-		li:nth-child(2)
-			color: red
+		// li:first-child,
+		// li:nth-child(2)
+		// 	color: $accent
 	span
-		color: red
+		color: $accent
 		//font-weight: bold
-		font-size: 20px
+		font-size: 17px
+		display: block
 	.title
 		text-align: left
 		margin-bottom: 15px
@@ -290,7 +399,7 @@ h1, h2, h3, h4, h5, h6
 .order
 	//min-height: 520px
 	padding: 50px 0
-	background-image: url('../img/bg4_min.jpg')
+	//background-image: url('../img/min_bg3.jpg')
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
@@ -310,6 +419,10 @@ h1, h2, h3, h4, h5, h6
 			cursor: pointer
 		.order_block_buy
 			padding: 15px 0
+			a
+				outline: none
+				color: $dark
+				text-decoration: none
 		span
 			//display: inline-block
 			position: relative
@@ -322,7 +435,7 @@ h1, h2, h3, h4, h5, h6
 				//left: -23px
 				//top: 4px
 		.order_block_price
-			color: tomato
+			color: #8940B4
 			font-size: 26px
 			font-weight: bold
 		hr
@@ -337,20 +450,28 @@ h1, h2, h3, h4, h5, h6
 			font-size: 14px
 		&:hover
 			background-color: #fff
-			transform: scale(1.02)
-			transition: transform .1s ease-in-out
+			transform: scale(1.01)
+			transition: background-color .5s ease-in-out
 			.order_block_buy
 				background-color: darken($accent, 5)
+				a
+					color: #fff
+					transition: color .5s ease-in-out
 .order_2
+	//background-image: url('../img/min_bg4.jpg')
 	.order_block		
 		.order_block_date
 			min-height: 65px
 		.order_block_body
-			min-height: 200px			
+			min-height: 212px			
 
 .sale
 	text-align: center
 	width: 100%
+	span
+		margin: 10px 0
+		display: block
+		text-align: center
 /* end order-buy */
 
 
@@ -370,7 +491,7 @@ table
 		border: 1px solid rgba($accent, .5)	
 		&:first-child
 			background-color: rgba($accent, .5)
-			font-size: 18px
+			font-size: 17px
 		&:nth-child(2),
 		&:nth-child(3)
 			font-style: italic
@@ -426,6 +547,8 @@ table
 			font-weight: normal
 		td
 			width: auto
+		tr:nth-child(2n-1)
+			background-color: rgba($accent, .5)
 
 .grafik
 	.title
@@ -456,7 +579,7 @@ table
 		.footer_title
 			padding-left: 25px		
 			font-family: $font-title
-			font-size: 28px
+			font-size: 20px
 			text-transform: uppercase
 			font-weight: 300
 			text-decoration: underline
@@ -465,12 +588,12 @@ table
 			.fa
 				position: absolute
 				left: 0
-				top: 8px
-				font-size: 32px
+				top: 4px
+				font-size: 26px
 				color: $accent
 
 		span
-			font-size: 20px
+			font-size: 16px
 			margin-right: 50px		
 			color: lighten($dark-light, 50)	
 			font-weight: 300
@@ -502,10 +625,11 @@ table
 							color: #fff
 			
 
-a
-	outline: none
-	text-decoration: none
-		
+
+
+
+
+/* popup */
 .white-popup
 	position: relative
 	background: #FFF
@@ -514,14 +638,16 @@ a
 	max-width: 500px
 	margin: 20px auto
 	
-	.inputbox
+	.inputbox,
+	input[type=text]
 		width: 100%
 		margin-bottom: 10px
 		border: 1px solid rgba($accent, .3)
 		padding: 10px
 		&:focus
 			border: 1px solid $accent
-	input[type=submit]
+	.close,
+	#save
 		background-color: rgba($accent, 1)
 		border: 1px solid $accent
 		padding: 5px 10px
@@ -532,12 +658,6 @@ a
 	.mfp-figure
 		.mfp-close
 			cursor: pointer
+/* end popup */
 
-
-
-
-
-
-
-@import "media.sass"
-		
+@import "media" // Всегда в конце

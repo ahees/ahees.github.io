@@ -5,17 +5,17 @@
 
 	<meta charset="utf-8">
 
-	<title>Title</title>
+	<title>Easy Way Camp</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<meta property="og:image" content="path/to/image.jpg">
+ 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"> 
 
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#000">
@@ -24,37 +24,44 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-	
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+
+
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/theme.css">
+
 
 </head>
 
 <body>
-
-	<!-- <a href="#form-popup" class="feedback">Вызвать окно с текстом</a> -->
+	<!--<a href="#form-popup" class="feedback">Вызвать окно с текстом</a>-->
 
 	<header class="header">
 		<div class="container">
-			<div class="row">				
-				<div class="col-md-12 col-xs-12">
-					<div class="header_line">
-						
-						<div class="header_logo">
-							<img src="./img/easy_way.png" alt="easy way">
-							<div class="header_title">
-								Центр иностранных языков
-							</div>
+			<div class="row">
+				<div class="col-md-6 col-xs-5">
+					<div class="header_logo">
+						<img src="./img/easy_way.png" alt="easy way">
+						<div class="header_title">
+							Центр Иностранных Языков
 						</div>
-						
-						<div class="header_map">
-							<div class="map_title"><i class="fa fa-map-marker"></i>Пр-т Победы, 21а</div>
-							<div class="map_phone"><span>(044)</span> 236 30 34 </div>
-							<div class="map_phone"><span>(067)</span> 247 18 08 </div>
-						</div>
-						<div class="header_map">
-							<div class="map_title"><i class="fa fa-map-marker"></i> Ул. Е.Телиги, 27а</div>
-							<div class="map_phone"><span>(044)</span> 440 75 00</div>
-							<div class="map_phone"><span>(067)</span> 328 24 40</div>
-						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-7">
+					<div class="header_map">
+						<div class="map_title"><i class="fa fa-map-marker"></i>Пр-т Победы, 21а</div>
+						<div class="map_phone"><span>(044)</span> 236 30 34 </div>
+						<div class="map_phone"><span>(067)</span> 247 18 08 </div>
+					</div>
+					<div class="header_map">
+						<div class="map_title"><i class="fa fa-map-marker"></i> Ул. Е.Телиги, 27а</div>
+						<div class="map_phone"><span>(044)</span> 440 75 00</div>
+						<div class="map_phone"><span>(067)</span> 328 24 40</div>
 					</div>
 				</div>
 			</div>
@@ -64,9 +71,7 @@
 	<div class="top_menu">
 		<div class="container-fluid">
 			<nav>
-				<div class="block_right">
-					<div class="tooglebutton">МЕНЮ</div>
-				</div>
+				<div class="tooglebutton">Menu</div>
 				<ul class="menu">
 					<li><a href="#easyway">SUMMER WITH <br> EASY WAY</a></li>
 					<li><a href="#about">ABOUT <br> EASY WAY</a></li>
@@ -81,7 +86,7 @@
 		</div>
 	</div>
 
-	<div class="parallax easyway parallax-window" id="easyway" data-parallax="scroll" data-position="top" data-bleed="20">
+	<div class="parallax easyway parallax-window" id="easyway">
 		<div class="auto_height">
 			<div class="auto_wrapper">
 				<div class="container">
@@ -100,7 +105,7 @@
 					<div class="block_right">
 						<div class="easy_lp">
 							<h2>Light English</h2>
-							<span>(летняя языковая программа для школьников и дошкольников)</span>
+							<span>(летние языковая программа для школьников и дошкольников)</span>
 						</div>
 					</div>
 				</div>
@@ -144,7 +149,7 @@
 	<!--end about-->
 
 	<!--prog1-->
-	<div class="parallax holidays" id="holidays" data-parallax="scroll" data-bleed="20">
+	<div class="parallax holidays" id="holidays">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -219,10 +224,9 @@
 			<div class="row">
 				<div class="col-md-8">
 					<h2 class="title">ПРОГРАММА ВКЛЮЧАЕТ</h2>
-					
-						<span>2 полноценных занятия английского языка в день</span>
-					<span>	2 полноценных занятия второго языка </span>
-					<ul>				
+					<ul>
+						<li>2 полноценных занятия английского языка в день</li>
+						<li>2 полноценных занятия второго языка  </li>						
 						<li>специально разработанная языковая программа</li>
 						<li>2 иностранных языка</li>
 						<li>10 полноценных занятий английского за 5 дней (в неделю) </li>
@@ -241,7 +245,7 @@
 						<li>много разговорной практики на английском языке</li>
 						<li>10 дней новых открытий и незабываемых впечатлений </li>
 					</ul>
-					
+					<br>
 					<span>Общение только на английском языке!!!</span>
 
 
@@ -249,7 +253,7 @@
 				<div class="col-md-4">
 					<div class="warning">
 						<h2 class="title">Важно</h2>	
-						<span>Продолжительность смены – 10 дней</span>
+						<div class="pr_line"><i class="fa fa-circle-o"></i>Продолжительность смены – 10 дней </div>
 						<div class="pr_line"><i class="fa fa-circle-o"></i>Время занятий 10.00-18.00</div> 
 						<div class="pr_line"><i class="fa fa-circle-o"></i>Возможность отдать ребенка на полдня:</div> 
 									<div class="block_center">10.00-14.00 <br>
@@ -258,9 +262,6 @@
 						<div class="pr_line"><i class="fa fa-circle-o"></i>начало программы - 10.00</div> 
 						<div class="pr_line"><i class="fa fa-circle-o"></i>дети находятся в комфортных классах, оборудованных  всем необходимым</div> 
 						<div class="pr_line"><i class="fa fa-circle-o"></i>группы формируются по результатам тестирования и возрастному принципу</div>
-						<span>Максимальное количество человек в группе - 15 человек</span>
-						<span>Все материалы включены в стоимость!!!</span>
-
 					</div>
 				</div>
 			</div>
@@ -424,12 +425,12 @@
 	<!-- end grafik -->
 
 	<!--order pr1-->
-	<div class="order parralax_title" id="order" data-bleed="20" data-parallax="scroll">
+	<div class="order parralax_title">
 		<div class="container">
 			<div class="row">
 
 
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3">
 					<div class="order_block">
 						<div class="order_block_title">СМЕНА 1</div>
 						<div class="order_block_date accent_bg">05.06-09.06<br>12.06-16.06</div>
@@ -449,7 +450,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3">
 					<div class="order_block">
 						<div class="order_block_title">СМЕНА 2</div>
 						<div class="order_block_date accent_bg">19.06-23.06<br>26.06-30.06</div>
@@ -469,7 +470,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3">
 					<div class="order_block">
 						<div class="order_block_title">СМЕНА 3</div>
 						<div class="order_block_date accent_bg">03.07-07.07<br>10.07-14.07</div>
@@ -489,7 +490,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3">
 					<div class="order_block">
 						<div class="order_block_title">СМЕНА 4</div>
 						<div class="order_block_date accent_bg">17.07-21.07<br>24.07-28.07</div>
@@ -544,7 +545,6 @@
 						</tr>
 						
 					</table>
-					<span>*скидки могут суммироваться</span>
 				</div>
 			</div>
 		</div>
@@ -557,7 +557,7 @@
 	<!--end colage-->
 
 	<!--prog2-->
-	<div class="parallax" id="holidayskids" data-bleed="20" data-parallax="scroll">
+	<div class="parallax" id="holidayskids">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -606,15 +606,36 @@
 	</div>
 
 	<!--описание программы-->
-	
+	<div class="prio accent_bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="block_center">
+						<div style="background-color: #FFCB2E;">2 смены</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="block_center">
+						<div style="background-color: #66CFD5;">2 языкa</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="block_center">
+						<div style="background-color: #F88149;">2 проекта в каждой смене</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="section pr pr_1_text">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
 					<h2 class="title">ПРОГРАММА ВКЛЮЧАЕТ</h2>
-					<span>2 полноценных занятия английского языка в день</span>
+					<ul>
+					<li>2 полноценных занятия английского языка в день</li>
 						
-						<ul>
+						<br>
 						<li>10 полноценных занятий английского за 5 дней (в неделю)</li> 
 						<li>специально разработанная языковая программа</li>			
 						<li>творческие мастер-классы</li>
@@ -623,22 +644,23 @@
 						<li>тематические игры, викторины </li>
 						<li>арт студия (творческая мастерская – карандаш, акварель, гуашь….)</li>
 						<li>10 дней новых открытий и незабываемых впечатлений</li>
-						</ul>
-						<span>Языковая программа с 10.00 до 13.00</span>
+						<br>
+						<li>Языковая программа с 10.00 до 13.00</li></ul>
 
 
 				</div>
 				<div class="col-md-4">
 					<div class="warning">
 						<h2 class="title">Важно</h2>	
-						<span>Продолжительность смены – 20 дней</span>
-						 <div class="pr_line"><i class="fa fa-circle-o"></i>время занятий 10.00-13.00</div>
-						  <div class="pr_line"><i class="fa fa-circle-o"></i>сбор участников 9.00</div>
-						  <div class="pr_line"><i class="fa fa-circle-o"></i>начало программы - 10.00</div>
-						  <div class="pr_line"><i class="fa fa-circle-o"></i>дети находятся в комфортных классах, оборудованных всем необходимым</div>
-						<span>Максимальное количество человек в группе - 10 человек</span>
- 						<span>Все материалы включены в стоимость!!!</span>
-						
+						<div class="pr_line"><i class="fa fa-circle-o"></i>Продолжительность смены – 10 дней </div>
+						<div class="pr_line"><i class="fa fa-circle-o"></i>Время занятий 10.00-18.00</div> 
+						<div class="pr_line"><i class="fa fa-circle-o"></i>Возможность отдать ребенка на полдня:</div> 
+									<div class="block_center">10.00-14.00 <br>
+										14.00-18.00</div>
+					    <div class="pr_line"><i class="fa fa-circle-o"></i>сбор участников 9.00 </div>
+						<div class="pr_line"><i class="fa fa-circle-o"></i>начало программы - 10.00</div> 
+						<div class="pr_line"><i class="fa fa-circle-o"></i>дети находятся в комфортных классах, оборудованных  всем необходимым</div> 
+						<div class="pr_line"><i class="fa fa-circle-o"></i>группы формируются по результатам тестирования и возрастному принципу</div>
 					</div>
 				</div>
 			</div>
@@ -649,12 +671,12 @@
 
 	
 	<!--order pr2-->
-	<div class="order order_2 parralax_title" id="order_2" data-bleed="20" data-parallax="scroll">
+	<div class="order order_2 parralax_title">
 		<div class="container">
 			<div class="row">
 
 
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3">
 					<div class="order_block">
 						<div class="order_block_title">СМЕНА 1</div>
 						<div class="order_block_date accent_bg">05.06-16.06 или<br>19.06-30.06</div>
@@ -667,7 +689,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3">
 					<div class="order_block">
 						<div class="order_block_title">СМЕНА 1</div>
 						<div class="order_block_date accent_bg">05.06-30.06</div>
@@ -683,7 +705,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3">
 					<div class="order_block">
 						<div class="order_block_title">СМЕНА 2</div>
 						<div class="order_block_date accent_bg">03.07-14.07 или<br>17.07-28.07</div>
@@ -696,7 +718,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3">
 					<div class="order_block">
 						<div class="order_block_title">СМЕНА 2</div>
 						<div class="order_block_date accent_bg">03.07-28.07</div>
@@ -733,23 +755,22 @@
 						<tr>
 							<td>Раннее бронирование <br> (до 29.04.2017)</td>
 							<td>2 300грн <br>(20 дней)</td>
-							
+							<td><a href="#form-popup" class="feedback">ЗАПИСАТЬСЯ</a></td>
 						</tr>
 						<tr>
 							<td>При покупке второй смены <br>
 								(скидка 10% от полной стоимости)
 							</td>
 							<td>2 475 грн (20 дней) <br>1 260 грн (10 дней)</td>
-							
+							<td><a href="#form-popup" class="feedback">ЗАПИСАТЬСЯ</a></td>
 						</tr>
 						<tr>
 							<td>Акция  "Приведи друга"<br>(скидка 10% <br>от полной стоимости)</td>
 							<td>2 475 грн (20 дней)<br> 1 260 грн (10 дней)</td>
-							
+							<td><a href="#form-popup" class="feedback">ЗАПИСАТЬСЯ</a></td>
 						</tr>					
 						
 					</table>
-					<span>*скидки не суммируются</span>
 				</div>
 			</div>
 		</div>
@@ -763,7 +784,7 @@
 	<!--end collage-->
 
 	<!--prog3-->
-	<div class="parallax" id="light" data-bleed="20" data-parallax="scroll">
+	<div class="parallax" id="light">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -779,12 +800,12 @@
 				<div class="col-md-12">
 					<div class="sup_title">Летняя языковая программа для школьников и дошкольников</div>
 					<h2 class="title">LIGHT ENGLISH</h2>
-					<div class="sub_title"><span class="accent">ПОДДЕРЖИВАЮЩИЙ РАЗГОВОРНЫЙ АНГЛИЙСКИЙ</span> для дошкольников и школьников <span class="accent">БЕЗ ДОМАШНИХ ЗАДАНИЙ</span></div>
+					<div class="sub_title">ПОДДЕРЖИВАЮЩИЙ РАЗГОВОРНЫЙ АНГЛИЙСКИЙ для дошкольников и школьников БЕЗ ДОМАШНИХ ЗАДАНИЙ</div>
 				</div>
 				<div class="col-md-12">
 					<p>Easy Way приглашает провести летние месяцы (июнь, июль) весело и с пользой.</p>
 
-					<p>Легкие увлекательные занятия <span class="accent">БЕЗ ДОМАШНИХ ЗАДАНИЙ</span> будут проводиться не только в <span class="accent">АУДИТОРИИ</span>, но и в <span class="accent">ПАРКЕ</span> поблизости.</p>
+					<p>Легкие увлекательные занятия БЕЗ ДОМАШНИХ ЗАДАНИЙ будут проводиться не только в АУДИТОРИИ, но и в ПАРКЕ поблизости.</p>
 					<span>* Группы формируются по результатам тестирования и возрастному принципу.</span>
 					<span>* Максимальное количество человек в группе – 10 человек.</span>
 					<span>* Программа действует с 05.06.2017 по 28.07.2017.</span>
@@ -814,7 +835,7 @@
 						<span>Стоимость 1 недели</span>
 						<p>- 210 грн (при длительности 1 занятия – 60 мин)</p>
 						<p>- 270 грн (при длительности 1 занятия – 90 мин)</p>
-						<span class="accent">ГИБКАЯ СИСТЕМА ОПЛАТЫ!!!</span>
+						<p><strong>ГИБКАЯ СИСТЕМА ОПЛАТЫ!!!</strong></p>
 						<span>Оплата вносится за неделю (3 занятия)</span>
 					</div>
 				</div>
@@ -878,23 +899,7 @@
 						Мы учимся в центре уже не первый год и видим результаты, а лагерь дает практическое общение - педагог говорит с детьми только на английском и мотивирует их к тому же.
 						Я вижу результат, а потому очень довольна, ребенку же просто интересно ходить на занятия.
 						Алина уже обсуждает, кого из подружек возьмет с собой в лагерь в следующем году))" 
-					  </div>
-					  <div class="owl_item">
-						<div class="owl_item_title">Кирильченко Арсеній:</div>
-					   "Повністю влаштовує вчитель і метод викладання. Дитина дуже любить ці уроки і з великим задоволенням відвідує майстер-класи. Дякую Вам за такі чудові та цікаві уроки." 
-					  </div>
-					  <div class="owl_item">
-						<div class="owl_item_title">Гриценко Арина:</div>
-					   "Занятия интересны, познавательны, ребенок с удовольствием ходит, материал подается в доступной форме, хорошо запоминается ребенком, остается в долгострочной памяти." 
-					  </div>
-					  <div class="owl_item">
-						<div class="owl_item_title">Павлюк Софія:</div>
-					   "Позитивне ставлення до дитини, комунікабельність та розуміння дитини, та її потреб і задатків позитивно впливали на навчальний процес протягом року" 
-					  </div>
-					  <div class="owl_item">
-						<div class="owl_item_title">Кононова Елена:</div>
-					   "Хочу выразить благодарность нашим учителям за прекрасное преподавание и легкость в обучении." 
-					  </div>
+						</div>
 					  
 					</div>
 				</div>
@@ -911,12 +916,12 @@
 		<div class="gallery_items">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3">
 						<a href="./img/bg1_min.jpg" rel="alternate">
 							<img src="./img/bg1_min.jpg" alt="">
 						</a>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-3">
 						<a href="./img/bg2_min.jpg" rel="alternate">
 							<img src="./img/bg2_min.jpg" alt="">
 						</a>
@@ -932,7 +937,7 @@
 	<footer class="footer" id="contacts">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-6">
 					<div class="footer_adress">
 						<div class="footer_title"><i class="fa fa-mobile-phone"></i>Телефон</div>
 						<span>(044) 236 30 34</span>
@@ -941,7 +946,7 @@
 						<span>(067) 328 24 40</span>
 					</div>
 				</div>
-				<div class="col-md-6 col-sm-6">
+				<div class="col-md-6">
 					<div class="footer_adress">
 						<div class="footer_title"><i class="fa fa-map-marker"></i>Адрес</div>
 						<span>г. Киев, Пр-т Победы, 21а</span> <br>
@@ -970,56 +975,27 @@
 		</div>
 	</footer>
 
-
 	<div id="form-popup" class="white-popup mfp-hide">
 		<h2 class="title">Заявка</h2>
-		<form method="post" role="form" name="myForm" id="myForm">
-			<!-- <div><input id="name" class="inputbox" type="text" placeholder="Ваше имя" /></div>
+		<form action="#">
+			<div><input id="name" class="inputbox" type="text" placeholder="Ваше имя" /></div>
 			<div><input id="email" class="inputbox" type="email" placeholder="Ваш e-mail" /></div>
 			<div><textarea name="mess" id="mess" class="inputbox" cols="30" rows="10" placeholder="Ваше сообщение"></textarea></div>
-			<div><input type="submit" value="Отправить"></div> -->
-			<!-- Блок для ввода логина -->
-	      <div class="form-group has-feedback">
-	        <label for="login" class="control-label">Ваше Имя:</label>
-            <div class="input-group">
-	                 
-	          <input id="name" type="text" class="form-control" required="required" name="login" pattern="&#91;А-яа-я&A-Za-z&#93;{3,}" value="">
-	        </div>
-	        
-	      </div>
-	      <!-- Блок для ввода email -->
-	      <div class="form-group has-feedback">
-	        <label for="phone" class="control-label">Контактный номер телефона:</label>
-            <div class="input-group">	          
-	          <input id="phone" type="text" class="form-control" required="required" name="phone" value="">
-	        </div>
-	      </div>
-          <!-- Конец блока для ввода email-->
-          <div class="form-group has-feedback">
-              <label for="message" class="control-label">Комментарий:
-              </label>
-              <div class="input-group">
-              <input id="message" type="text" class="form-control" name="message" value="" >
-              </div>              
-          </div>
-          
-	      <hr>          
+			<div><input type="submit" value="Отправить"></div>
 		</form>
-		<div id="messageForm" style="display: none;">
-          	<h2 style='color: black;'>Спасибо!</h2><div style='color: black;'>Мы свяжемся с Вами в ближайшее время!</div>
-        </div>
-		<div class="modal-footer">
-       <div class="hidden" id="ajax_loader">
-           <img src="./img/ajax-loader.gif">
-       </div>
-        <button type="button" class="close" data-dismiss="modal">Отмена</button>
-        <button id="save" type="button" class="">Отправить</button>
-      </div>
 	</div>
-	
-	<link rel="stylesheet" href="css/main.min.css">
-	<script src="js/scripts.min.js"></script>
+
+
 	
 
+
+
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/parallax/parallax.min.js"></script>
+	<script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script src="libs/plugins-scroll/PageScroll2id.min.js"></script>
+	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

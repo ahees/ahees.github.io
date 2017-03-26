@@ -1,4 +1,6 @@
-/*==========  Desktop First Method  ==========*/
+@import "vars"
+
+/*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
@@ -8,43 +10,35 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-	
+	.pr
+		.pr_map
+			padding-left: 0
+	.order
+		.order_block
+			max-width: 265px
+			margin: 0 auto
+			margin-bottom: 10px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	
-	/*Disable Animation on Mobile Devices*/
-	.animated
-		/*CSS transitions*/
-		// -o-transition-property: none !important
-		// -moz-transition-property: none !important
-		// -ms-transition-property: none !important
-		// -webkit-transition-property: none !important
-		// transition-property: none !important
-		/*CSS transforms*/
-		// -o-transform: none !important
-		// -moz-transform: none !important
-		// -ms-transform: none !important
-		// -webkit-transform: none !important
-		// transform: none !important
-		/*CSS animations*/
-		// -webkit-animation: none !important
-		// -moz-animation: none !important
-		// -o-animation: none !important
-		// -ms-animation: none !important
-		// animation: none !important
+	/**/
 	.header
 		.header_map
-			margin-left: 25px
+			margin-left: 5px
 			.map_title
-				font-size: 16px				
+				font-size: 16px	
+				.fa
+					display: none			
 			.map_phone
 				font-size: 15px
 		.header_logo
+			top: 20px
 			img
-				width: 100px
+				width: 200px
+				margin-left: 0
 			.header_title
 				font-size: 12px
-		
+				margin-left: 0
 	.parallax
 		.title
 			font-size: 40px
@@ -57,46 +51,47 @@
 		padding: 25px 0
 	.title
 		font-size: 30px
-	.pr
-		.pr_map
-			padding-left: 0
+	.pr		
 		.pr_ps
 			text-align: left
 			font-size: 17px
 		.pr_line
-			font-size: 17px
-	.order
-		.order_block
-			margin-bottom: 10px
-	
+			font-size: 17px	
+
+	.footer
+		.footer_adress
+			span
+				margin-right: 20px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
 	.header
-		.header_map
-			margin-left: 5px
-			.map_title
-				font-size: 16px
-				.fa
-					display: none
-			.map_phone
-				font-size: 15px
+		padding: 10px 0
 		.header_logo
+			top: 95px
+			left: 5px
+			z-index: 10
 			img
-				width: 100px
-			.header_title
-				font-size: 12px
-	
-	
-				
+				width: 150px
+
+		.header_map
+			//display: none			
+			margin-left: 50px
+			.map_title
+				.fa
+					display: inline-block
+					//display: none
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
+	.header
+		.header_map
+			margin-left: 40px
 
-
-/*==========  Mobile First Method  ==========*/
+/*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
@@ -116,7 +111,6 @@
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
 	/**/
-
 
 
 /* Large Devices, Wide Screens */
