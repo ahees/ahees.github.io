@@ -98,6 +98,11 @@ h1, h2, h3, h4, h5, h6
 
 
 /* header */
+.top_fixed
+	position: fixed
+	z-index: 10
+	width: 100%
+
 .header
 	position: relative
 	padding: 20px 0
@@ -231,8 +236,11 @@ h1, h2, h3, h4, h5, h6
 
 
 /* first desctop */
+.easyway
+	padding-top: 205px
 .parallax
-	position: relative		
+	position: relative	
+	//margin-top: 205px		
 	.title
 		font-size: 70px
 	.easy_lp
@@ -269,6 +277,9 @@ h1, h2, h3, h4, h5, h6
 .pr_3
 	.sub_title
 		margin-bottom: 25px
+.pr_1
+	.sub_title
+		font-size: 26px
 .pr
 	.pr_line
 		position: relative
@@ -568,7 +579,14 @@ table
 				text-align: center
 				margin-right: 5px
 				//padding: 0 5px
-					
+
+.collage
+	position: relative
+	height: 500px	
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	margin-bottom: 50px		
 
 .footer
 	position: relative
@@ -659,5 +677,42 @@ table
 		.mfp-close
 			cursor: pointer
 /* end popup */
+
+
+#p_prldr
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background: $accent
+	z-index: 30
+ 
+.contpre
+	small
+		font-size: 25px
+ 
+.contpre
+	width: 250px
+	height: 100px
+	position: absolute
+	left: 50%
+	top: 48%
+	margin-left: -125px
+	margin-top: -75px
+	color:#fff
+	font-size: 40px
+	letter-spacing: -2px
+	text-align: center
+	line-height: 35px
+ 
+#p_prldr
+	.svg_anm
+		position: absolute
+		width: 41px
+		height: 41px
+		background: url(../img/three-dots.svg) center center no-repeat
+		background-size: 41px
+		margin: -16px 0 0 -16px
 
 @import "media" // Всегда в конце

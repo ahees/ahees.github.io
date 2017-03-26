@@ -22,6 +22,8 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
+	#gotop
+		display: none
 	.header
 		.header_map
 			margin-left: 5px
@@ -111,6 +113,33 @@
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
 	/**/
+	#gotop
+		position: fixed
+		bottom: 50px
+		right: 20px
+		z-index: 5000		
+		border-radius: 50%
+		cursor: pointer
+		opacity: 0
+		transition: opacity .5s ease
+		&:hover
+			opacity: 1
+		a
+			display: block
+			position: relative
+			width: 50px
+			height: 50px
+			line-height: 50px
+			text-align: center
+			border-radius: 50%
+			background-color: $accent
+			overflow: hidden
+			outline: none
+			&:hover
+				opacity: 1
+		.fa
+			font-size: 20px
+			color: #fff
 
 
 /* Large Devices, Wide Screens */
