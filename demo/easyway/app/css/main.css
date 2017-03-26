@@ -564,6 +564,38 @@ table {
             .footer .footer_footer .footer_bottom .social li a:hover {
               color: #fff; }
 
+a {
+  outline: none;
+  text-decoration: none; }
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto; }
+  .white-popup .inputbox {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid rgba(9, 222, 122, 0.3);
+    padding: 10px; }
+    .white-popup .inputbox:focus {
+      border: 1px solid #09DE7A; }
+  .white-popup input[type=submit] {
+    background-color: #09de7a;
+    border: 1px solid #09DE7A;
+    padding: 5px 10px;
+    -webkit-transition: background-color .5s ease-in-out;
+    -o-transition: background-color .5s ease-in-out;
+    -moz-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out; }
+    .white-popup input[type=submit]:hover {
+      background-color: #fff; }
+
+.mfp-content .mfp-figure .mfp-close {
+  cursor: pointer; }
+
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {

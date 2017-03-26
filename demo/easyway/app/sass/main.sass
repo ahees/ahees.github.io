@@ -502,8 +502,36 @@ table
 							color: #fff
 			
 
-
+a
+	outline: none
+	text-decoration: none
 		
+.white-popup
+	position: relative
+	background: #FFF
+	padding: 20px
+	width: auto
+	max-width: 500px
+	margin: 20px auto
+	
+	.inputbox
+		width: 100%
+		margin-bottom: 10px
+		border: 1px solid rgba($accent, .3)
+		padding: 10px
+		&:focus
+			border: 1px solid $accent
+	input[type=submit]
+		background-color: rgba($accent, 1)
+		border: 1px solid $accent
+		padding: 5px 10px
+		transition: background-color .5s ease-in-out
+		&:hover
+			background-color: #fff
+.mfp-content
+	.mfp-figure
+		.mfp-close
+			cursor: pointer
 
 
 
