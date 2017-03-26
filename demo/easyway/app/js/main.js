@@ -93,6 +93,21 @@ $(function() {
 	});
 
 
+	 $('.tooglebutton').on('click', function(){
+        $('.menu').slideToggle(300, function(){
+
+            if($(this).css('display') === 'none'){
+              $(this).removeAttr('style');
+            }
+
+
+        });
+	});
+	$(".top_menu .menu a").on("click", function(){
+		$('.top_menu .menu').hide();
+	});
+
+
 
 
 
