@@ -1,0 +1,518 @@
+@import "var.sass"
+@import "mixins.sass"
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	font-family: $font-text	
+	overflow-x: hidden
+	color: $dark
+h1, h2, h3, h4, h5, h6
+	font-family: $font-title
+.title
+	margin: 0
+	text-transform: uppercase
+	font-size: 36px
+	text-align: center
+.parallax_title
+	position: relative
+	padding: 100px 0	
+.section
+	padding: 50px 0
+	.sup_title,
+	.sub_title
+		text-align: center
+	.sub_title
+		color: $dark-light
+
+
+.accent_color
+	color: $accent
+.accent_bg
+	background-color: $accent
+.yellow_bg
+	background-color: $yellow
+
+.auto_height
+	min-height: 400px
+	position: relative
+	display: table
+	width: 100%
+	text-align: center
+	.auto_wrapper
+		display: table-cell
+		vertical-align: middle
+.block_left
+	text-align: left
+.block_right
+	text-align: right
+.block_center
+	text-align: center
+
+
+.parralax_title
+	position: relative
+	&::before
+		+before
+		background-color: rgba($yellow, .3)
+
+.line_title
+	.title
+		color: #fff
+		font-family: $font-title
+
+
+/* header */
+.header
+	padding: 20px 0
+	.header_logo
+		margin-top: 10px
+		.header_title
+			font-size: 14px
+		img
+			margin-left: 5px
+	.header_map
+		float: right
+		margin-left: 50px
+		.map_title
+			position: relative
+			font-family: $font-title
+			font-weight: 300
+			font-size: 18px
+			&::before
+				+before
+				border-bottom: 2px solid $accent
+
+			//color: $dark
+			.fa
+				position: absolute
+				left: -20px
+				font-size: 20px
+				top: 3px
+				color: $accent
+		.map_phone
+			text-align: center
+			span
+				color: $dark-light
+/* end header */
+
+
+
+
+
+@import "partial/menu"
+
+
+
+/* first desctop */
+.parallax
+	position: relative	
+	&::before
+		+before
+		background-color: rgba($yellow, .3)
+	.title
+		font-size: 70px
+	.easy_lp
+		width: 300px
+		padding: 10px 5px
+		display: inline-block
+		position: relative	
+		background-color: rgba(#fff, .8)
+		text-align: center
+		box-shadow: 5px 5px 5px rgba(0,0,0,.4)
+		h2
+			margin: 0
+			font-size: 26px
+/* end first desctop */
+		
+
+.parallax-window,
+.parallax-window-head
+	min-height: 500px
+	background: transparent
+
+/* about */
+.about
+	p
+		font-family: $font-text
+		font-size: 17px
+		color: rgba(0,0,0,0.87)
+		strong
+			font-size: 19px
+/* end about */
+
+/* programm */
+.pr_1,
+.pr_3
+	.sub_title
+		margin-bottom: 25px
+.pr
+	.pr_line
+		position: relative
+		padding-left: 25px
+		font-size: 18px
+		margin-bottom: 10px
+		color: rgba(0,0,0, .6)
+		.fa
+			position: absolute
+			top: 3px
+			left: 0
+			color: $accent
+			font-size: 20px
+		span
+			font-size: 20px
+			color: $dark
+			text-decoration: underline
+	.pr_map
+		padding-left: 10%
+		.pr_line
+		 	text-decoration: underline
+		 	color: $dark
+		 	font-size: 20px
+		span, li
+		 	font-size: 18px
+		li
+		 	margin-bottom: 10px
+	.pr_ps
+		margin: 25px 0
+		font-size: 20px
+		font-style: italic
+	.round
+		position: relative
+		border: 1px solid rgba($accent, .3)
+		margin: 0 15px
+		padding: 25px
+		font-family: $font-title
+		font-size: 24px		
+		.fa
+			position: absolute
+			left: 30%
+			top: 36%
+			color: $accent
+	.warning
+		border: 1px solid rgba($accent, .5)
+		padding: 10px
+		.title
+			//font-size: 20px
+			text-align: center
+			font-family: $font-title
+			//color: $accent
+			//font-weight: normal
+		.pr_line
+			margin: 0
+.pr_3
+	padding-bottom: 0
+	p
+		font-size: 17px	
+	span
+		display: block
+		font-style: italic	
+		color: $dark-light
+	.block_border
+		border: 1px solid rgba($accent, .5)
+		margin: 20px 0
+		min-height: 305px
+		span
+			display: block
+			text-decoration: underline
+			text-align: center
+			font-size: 20px
+			ul
+				margin: 0
+				padding: 0
+				li
+					font-size: 18px
+		p
+			text-align: center
+			padding: 0
+			margin: 0
+			&.sub
+				font-style: italic
+				color: $dark-light
+				font-size: 16px
+			strong
+				color: tomato
+	.block_center
+		margin-right: -15px
+		margin-left: -15px
+		div
+			padding: 10px 0
+
+/* end-programm */
+.pr_1_text
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			font-size: 17px
+		li:first-child,
+		li:nth-child(2)
+			color: red
+	span
+		color: red
+		//font-weight: bold
+		font-size: 20px
+	.title
+		text-align: left
+		margin-bottom: 15px
+		font-size: 26px
+
+
+
+
+/* order-buy */
+.order
+	//min-height: 520px
+	padding: 50px 0
+	background-image: url('../img/bg4_min.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	.order_block
+		background-color: rgba(255,255,255, .8)
+		border: 1px solid $accent
+		text-align: center
+		.order_block_title			
+			padding: 5px 0
+			font-family: $font-title
+			font-size: 20px
+			font-weight: 600
+		.order_block_date,
+		.order_block_buy
+			color: #fff
+			font-size: 20px
+			cursor: pointer
+		.order_block_buy
+			padding: 15px 0
+		span
+			//display: inline-block
+			position: relative
+			font-size: 18px
+			font-style: italic
+			.fa
+				//position: absolute
+				color: $accent
+				margin-right: 10px
+				//left: -23px
+				//top: 4px
+		.order_block_price
+			color: tomato
+			font-size: 26px
+			font-weight: bold
+		hr
+			margin: 0
+			padding: 0
+			color: $accent
+		.order_block_day
+			position: absolute
+			background-color: tomato
+			padding: 2px
+			color: #fff
+			font-size: 14px
+		&:hover
+			background-color: #fff
+			transform: scale(1.02)
+			transition: transform .1s ease-in-out
+			.order_block_buy
+				background-color: darken($accent, 5)
+.order_2
+	.order_block		
+		.order_block_date
+			min-height: 65px
+		.order_block_body
+			min-height: 200px			
+
+.sale
+	text-align: center
+	width: 100%
+/* end order-buy */
+
+
+table	
+	border-collapse: collapse
+	text-align: center
+	max-width: 700px
+	width: 100%	
+	margin: 0 auto
+	border: 2px solid rgba($accent, .7)
+
+	//background-color: tomato
+	td		
+		width: 33%
+		height: 100px
+		vertical-align: middle		
+		border: 1px solid rgba($accent, .5)	
+		&:first-child
+			background-color: rgba($accent, .5)
+			font-size: 18px
+		&:nth-child(2),
+		&:nth-child(3)
+			font-style: italic
+			color: $dark-light
+		
+
+.prio
+	
+	line-height: 100px
+	.block_center		
+		margin-right: -15px
+		margin-left: -15px
+		div
+			//padding: 20px 0
+			height: 100px
+			font-size: 28px
+
+.speak
+	.owl_item_title
+		font-size: 24px
+		color: $accent
+	.owl_left,
+	.owl_right
+		display: inline-block		
+		span
+			color: rgba($dark, .5)
+			// text-decoration: underline
+			// outline: none
+			padding: 0 20px
+			cursor: pointer
+			.fa
+				font-size: 40px
+			&:hover
+				color: $dark
+
+
+.gallery
+	.title
+		margin-bottom: 20px
+	.gallery_items
+		img
+			width: 100%
+			margin-bottom: 10px
+
+.smena
+	.title
+		margin-bottom: 20px
+	table
+		max-width: 800px
+		th
+			background-color: $accent
+			text-align: center
+			font-weight: normal
+		td
+			width: auto
+
+.grafik
+	.title
+		margin-bottom: 20px
+	.grafik_text
+		.grafik_line
+			position: relative
+			//padding-left: 90px
+			margin: 5px
+			span
+				float: left
+				//position: absolute
+				//left: 0
+				background-color: $accent
+				color: #fff
+				width: 100px
+				text-align: center
+				margin-right: 5px
+				//padding: 0 5px
+					
+
+.footer
+	position: relative
+	//background-color: rgba($accent, .7)
+	background-color: $dark
+	.footer_adress
+		padding: 20px 0
+		.footer_title
+			padding-left: 25px		
+			font-family: $font-title
+			font-size: 28px
+			text-transform: uppercase
+			font-weight: 300
+			text-decoration: underline
+			position: relative
+			color: #fff
+			.fa
+				position: absolute
+				left: 0
+				top: 8px
+				font-size: 32px
+				color: $accent
+
+		span
+			font-size: 20px
+			margin-right: 50px		
+			color: lighten($dark-light, 50)	
+			font-weight: 300
+	.footer_footer
+		position: relative
+		//background-color: $accent
+		background-color: #222
+		.footer_bottom
+			height: 40px
+			line-height: 40px
+			.footer_bottom_left
+				float: left
+				font-style: italic
+				color: #fff
+				font-size: 15px
+			.footer_bottom_right
+				float: right
+			.social
+				+noul
+				li
+					float: right
+					margin-left: 10px
+					a
+						color: $accent
+						font-size: 20px
+						text-decoration: none
+						outline: none
+						&:hover
+							color: #fff
+			
+
+
+.parallax
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+
+
+
+
+
+
+@import "media.sass"
+		
