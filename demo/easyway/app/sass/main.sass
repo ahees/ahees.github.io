@@ -26,8 +26,8 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
-html, body
-	height: 100%
+// html, body
+// 	height: 100%
 
 body	
 	font-size: 16px
@@ -54,13 +54,16 @@ h1, h2, h3, h4, h5, h6
 	padding: 100px 0	
 .section
 	padding: 50px 0
+	position: relative
+	background-color: #fff
 	.sup_title,
 	.sub_title
 		text-align: center
 	.sub_title
 		color: $dark-light
 
-
+.none
+	//display: none
 .accent_color
 	color: $accent
 .accent_bg
@@ -148,6 +151,7 @@ h1, h2, h3, h4, h5, h6
 	position: relative
 	text-align: center
 	background-color: lighten($accent, 10)	
+	min-height: 55px
 	.menu
 		height: 75px	
 	.menu, li
@@ -220,12 +224,30 @@ h1, h2, h3, h4, h5, h6
 			width: 100%
 			z-index: 10
 			li
+				// display: block
+				// width: 100%
 				display: block
-				width: 100%
-				
-				
+				float: left
+				width: 25%
+				margin-right: 0
+			li:first-child,
+			li:nth-child(5)
+				//margin-left: 5px
 	.tooglebutton
-		display: inline-block		
+		display: inline-block
+@media only screen and (max-width : 480px)
+	.top_menu
+		.menu
+			li
+				width: 50%
+				margin-left: 0			
+			li:nth-child(2n-1)
+				//margin-left: 5px
+			li:last-child
+
+				
+				
+		
 
 
 /* end menu */
@@ -244,7 +266,7 @@ h1, h2, h3, h4, h5, h6
 	.title
 		font-size: 70px
 	.easy_lp
-		width: 300px
+		max-width: 300px
 		padding: 10px 5px
 		display: inline-block
 		position: relative	
@@ -547,12 +569,13 @@ table
 			width: 100%
 			margin-bottom: 10px
 			//max-height: 175px
-
+.smena_table
+	overflow-x: auto
 .smena
 	.title
 		margin-bottom: 20px
 	table
-		max-width: 800px
+		max-width: 600px
 		th
 			background-color: $accent
 			text-align: center
@@ -587,7 +610,7 @@ table
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
-	margin-bottom: 50px		
+	//margin-bottom: 50px		
 
 .footer
 	position: relative
