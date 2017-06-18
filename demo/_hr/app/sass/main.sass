@@ -1,0 +1,363 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+// html, body
+// 	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.55
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.header
+	position: relative	
+	//min-height: 500px	
+	margin-top: -160px
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+	z-index: 10
+	&:before
+		z-index: 10
+		position: absolute
+		content: ''
+		width: 100%
+		height: 100%
+		// background-color: rgba(0,0,0, 0.25)
+		background-color: rgba($accent, 0.25)
+.parallax-window
+	background: transparent
+	min-height: 420px
+
+.header-table
+	position: relative
+	z-index: 20	
+	color: #fff
+	display: table
+	height: 100%
+	width: 100%
+	text-align: center	
+	.header-table-td
+		display: table-cell		
+		vertical-align: middle
+		text-transform: uppercase
+		font-family: $title-font
+		.header-data
+			font-size: 28px
+		.header-name
+			font-size: 66px
+			span
+				color: $accent
+				font-size: 72px
+		.header-buttons
+			margin-top: 70px
+
+.top-line
+	height: 160px
+	// line-height: 160px
+	position: relative
+	z-index: 20
+	background-color: rgba(255,255,255, .85)
+	overflow: hidden	
+	.top-line-logo
+		text-align: center		
+		img
+			margin-top: 30px
+			width: 175px			
+	.top-line-img
+		position: relative
+		text-align: center
+		img
+			width: 100px
+		.top-line-title			
+			position: relative
+			font-family: $title-font
+			font-size: 16px
+			margin: 10px 0
+			color: #596362
+			text-transform: uppercase
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: $title-font
+	font-weight: 400
+.h2
+	font-size: 32px
+.default-title
+	// text-transform: uppercase
+	text-align: center
+	position: relative
+	margin-bottom: 40px
+	// letter-spacing: 1.25px
+	&:after
+		content: ''		
+		background: $accent
+		height: 3px
+		width: 100px
+		position: absolute
+		bottom: -5px
+		left: 50%
+		margin-left: -50px
+.text-just
+	text-align: justify
+.block-shadows
+	box-shadow: 4px 4px 7px rgba(0,0,0, 0.15)
+.sec-default
+	position: relative
+	padding: 25px 0	50px 0
+.sec-accent
+	background-color: $accent
+	background: linear-gradient(to bottom, lighten($accent, 10) 0%, $accent 100%)
+	.default-title
+		margin-top: 35px
+		color: #fff
+		line-height: 1.3
+		&:after
+			bottom: -10px
+			background: none
+
+.sec-about-location
+	padding: 5px 0px 5px 5px
+.sec-about
+	padding-bottom: 0
+	.text-just
+		p:first-child
+			margin-top: 0
+		p:last-child
+			margin-bottom: 0
+.about-location-line
+	margin-bottom: 20px
+	span
+		font-family: $title-font
+	.fa
+		color: $accent
+		font-size: 20px
+		margin-right: 10px
+	.fa-map-marker
+		margin-left: 3px
+		margin-right: 14px
+
+.sec-why
+	margin-bottom: 30px
+.man-icon
+	text-align: center
+
+.man
+	text-align: center
+	padding: 20px 0
+	min-height: 175px
+	max-width: 400px
+	margin: 0 auto
+	img		
+		width: 50px
+		height: 65px
+	p
+		line-height: 1.25
+		margin-bottom: 0
+.speak-item
+	width: 200px
+	margin: 0 auto
+	text-align: center
+	position: relative
+	img
+		display: block
+		max-width: 100%
+		border-radius: 50%
+		// border: 4px solid rgba(255,255,255, .75)
+		box-shadow: 4px 4px 7px rgba(0,0,0, 0.25)
+.speak-title
+	text-align: center
+	.item-title
+		margin-top: 10px
+		font-family: $title-font
+		font-size: 18px		
+		line-height: 1.5
+		color: #fff
+		text-decoration: underline
+	.item-subtitle
+		color: rgba(255,255,255, .75)
+	
+
+.sec-program
+	// margin-right: -10px
+	// margin-left: -10px
+	.subtitle
+		font-size: 19px
+		font-weight: 600
+		text-align: center
+		margin: 10px 0	
+	em
+		font-weight: normal
+	table
+		td
+			padding: 5px
+			font-size: 14px
+			border: 1px solid rgba(0,0,0, .1)
+			line-height: 1.1
+			text-align: left
+		.table-time
+			font-weight: 700
+			text-align: center
+		.table-title
+			text-align: center
+			font-weight: 700
+			padding: 10px 0
+			line-height: 1.2
+		.table-center
+			text-align: center
+	.table-color-1
+		background-color: darken(#fff, 8)
+
+.sec-cost
+	// background-color: rgba(0,0,0, .1)
+	// background: linear-gradient(to bottom, rgba(0,0,0, .02) 0%, rgba(0,0,0, .12) 100%)
+	color: #fff
+	.black1
+	text-align: center
+	a
+		margin: 40px 0
+	.table
+		// width: 100%
+		max-width: 740px
+		margin: 0 auto
+		span
+			display: block
+			text-align: left
+			padding-top: 10px	
+
+	table,
+	td
+		border: 1px solid rgba(#fff, .2)
+	table
+		width: 100%
+		td
+			padding: 10px
+			text-align: center
+
+.sec-partners
+	.partners-item
+		width: 150px
+		margin: 0 auto
+		margin-bottom: 30px		
+		height: 100%
+		max-height: 125px		
+		line-height: 125px
+		zoom: 0
+		img
+			//display: block
+			width: 100%
+			height: 100%
+
+.sec-contacts
+	text-align: center
+	color: #fff
+	p
+		font-size: 20px
+		// font-family: $font-text
+		font-weight: 700
+	a
+		color: #fff
+		text-decoration: none
+		font-weight: normal
+		font-size: 14px
+		letter-spacing: normal
+		outline: none
+	.social
+		margin-bottom: 25px
+		a
+			display: inline-block
+			background-color: #000
+			border-radius: 50%
+			height: 40px
+			width: 40px
+			line-height: 45px
+			&:hover
+				background-color: lighten(#000, 10%)
+			.fa
+				font-size: 20px
+	.contacts-logo
+		display: inline-block
+		margin: 0 20px
+		//width: 100px
+		// margin: 0 auto
+		img
+			width: 100px
+			max-width: 100%
+		.contacts-title
+			margin-bottom: 10px
+
+
+/*helper*/
+.btn
+	display: inline-block
+	// font-family: $font-text
+	border: 0 none
+	font-size: 16px
+	padding: 20px 60px
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	font-weight: 700
+	margin-right: 10px
+	background-image: none
+	cursor: pointer
+	letter-spacing: 1px
+	//text-transform: uppercase
+	&:hover
+		text-decoration: none
+		outline: none
+.btn-gray
+	color: #000000
+	background-color: $gray	
+	&:hover
+		background-color: darken($gray, 5)		
+.btn-red
+	color: #000000
+	background-color: #be1621
+	&:hover
+		background-color: darken(#be1621, 5)
+.btn-accent	
+	color: #ffffff
+	background-color: $accent	
+	border: 1px solid darken($accent, 5) 
+	&:hover
+		color: darken(#fff, 5)
+		background-color: darken($accent, 5)
+		border: 1px solid $accent
+.btn
+	transition: background-color .5s ease-in-out, border-color .5s ease-in-out
+
+
+@import "media" // Всегда в конце
