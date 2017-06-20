@@ -49,19 +49,18 @@ body
 	background-repeat: no-repeat
 	background-position: 50% 50%
 	background-size: cover
-	z-index: 10
-	&:before
-		z-index: 10
-		position: absolute
-		content: ''
-		width: 100%
-		height: 100%
-		// background-color: rgba(0,0,0, 0.25)
-		background-color: rgba($accent, 0.25)
+	z-index: 10	
+	// &:before
+	// 	z-index: 10
+	// 	position: absolute
+	// 	content: ''
+	// 	width: 100%
+	// 	height: 100%
+	// 	// background-color: rgba(0,0,0, 0.25)
+	// 	background-color: rgba($accent, 0.25)
 .parallax-window
 	background: transparent
-	min-height: 720px
-
+	min-height: 720px		
 .header-table
 	position: relative
 	z-index: 20	
@@ -78,8 +77,10 @@ body
 		.header-data
 			margin-top: 150px
 			font-size: 28px
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
 		.header-name
 			font-size: 66px
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
 			span
 				color: $accent
 				font-size: 72px
@@ -116,6 +117,9 @@ body
 	font-weight: 400
 .h2
 	font-size: 32px
+strong, b
+	font-family: $title-font
+	font-weight: normal
 .default-title
 	// text-transform: uppercase
 	text-align: center
@@ -148,27 +152,38 @@ body
 		&:after
 			bottom: -10px
 			background: none
-.sec-accent-test
-	// background-color: #f7f7f7
-	// background-color: rgba($accent, .55)
-	background-color: $color3
+.sec-color1
+	background-color: $color1
+	background: linear-gradient(to bottom, lighten($color1, 10) 0%, $color1 100%)
+
+.sec-color2
+	background-color: $color2
+	// background: linear-gradient(to bottom, lighten($color2, 10) 0%, $color2 100%)
+	background: linear-gradient(to bottom, $color2 0%, darken($color2, 10) 100%)
+	h2, p, .contacts-logo .contacts-title
+		color: #333
 	.speak-title
-		.item-title, .item-subtitle
-			color: #000
 		.item-title
 			color: $accent
-.sec-gray
+		.item-subtitle
+			color: #333
+	table, span
+		color: #333
+	table, td
+		border: 1px solid rgba(0,0,0, .15)
+	.td-bg
+		background-color: darken($color2, 10)
+.sec-color3
 	background-color: $color3
-	.h2, p
-		color: #333
-	.contacts-logo
-		color: #333
-	.social
-		a
-			background-color: $accent!important
+	// background: linear-gradient(to bottom, lighten($color2, 10) 0%, $color2 100%)
+	background: linear-gradient(to bottom, $color3 0%, darken($color3, 5) 100%)
+	h2, p, .contacts-logo .contacts-title
+		color: #fff
+	.speak-title
+		.item-title
 			color: #fff
-			&:hover
-				background-color: #fff
+		.item-subtitle
+			color: #333
 
 
 .sec-about-location
@@ -266,9 +281,7 @@ body
 .sec-cost
 	// background-color: rgba(0,0,0, .1)
 	// background: linear-gradient(to bottom, rgba(0,0,0, .02) 0%, rgba(0,0,0, .12) 100%)
-	color: #fff
-	.black1
-	text-align: center
+	color: #fff	
 	a
 		margin: 40px 0
 	.table
@@ -280,14 +293,16 @@ body
 			text-align: left
 			padding-top: 10px	
 
-	table,
-	td
-		border: 1px solid rgba(#fff, .2)
+	// table,
+	// td
+	// 	border: 1px solid rgba(#fff, .2)
 	table
 		width: 100%
 		td
 			padding: 10px
 			text-align: center
+	.cost-buttons
+		text-align: center
 
 .sec-partners
 	.partners-item
@@ -309,7 +324,7 @@ body
 	p
 		font-size: 20px
 		// font-family: $font-text
-		font-weight: 700
+		//font-weight: 700
 	a
 		color: #fff
 		text-decoration: none
@@ -321,13 +336,13 @@ body
 		margin-bottom: 25px
 		a
 			display: inline-block
-			background-color: #000
+			background-color: $accent
 			border-radius: 50%
 			height: 40px
 			width: 40px
 			line-height: 45px
 			&:hover
-				background-color: lighten(#000, 10%)
+				background-color: lighten($accent, 10%)
 			.fa
 				font-size: 20px
 	.contacts-logo
@@ -340,6 +355,8 @@ body
 			max-width: 100%
 		.contacts-title
 			margin-bottom: 10px
+			text-transform: uppercase
+			font-family: $title-font
 
 
 /*helper*/
