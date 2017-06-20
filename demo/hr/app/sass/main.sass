@@ -44,7 +44,7 @@ body
 
 .header
 	position: relative	
-	//min-height: 500px	
+	min-height: 720px	
 	margin-top: -160px
 	background-repeat: no-repeat
 	background-position: 50% 50%
@@ -60,7 +60,7 @@ body
 		background-color: rgba($accent, 0.25)
 .parallax-window
 	background: transparent
-	min-height: 420px
+	min-height: 720px
 
 .header-table
 	position: relative
@@ -76,6 +76,7 @@ body
 		text-transform: uppercase
 		font-family: $title-font
 		.header-data
+			margin-top: 150px
 			font-size: 28px
 		.header-name
 			font-size: 66px
@@ -147,6 +148,28 @@ body
 		&:after
 			bottom: -10px
 			background: none
+.sec-accent-test
+	// background-color: #f7f7f7
+	// background-color: rgba($accent, .55)
+	background-color: $color3
+	.speak-title
+		.item-title, .item-subtitle
+			color: #000
+		.item-title
+			color: $accent
+.sec-gray
+	background-color: $color3
+	.h2, p
+		color: #333
+	.contacts-logo
+		color: #333
+	.social
+		a
+			background-color: $accent!important
+			color: #fff
+			&:hover
+				background-color: #fff
+
 
 .sec-about-location
 	padding: 5px 0px 5px 5px

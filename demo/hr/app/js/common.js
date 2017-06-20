@@ -8,6 +8,6 @@ $(function() {
 		heightDetect();
 	});
 
-	$('.parallax-window').parallax({imageSrc: '/images/bg.jpg'});
+	$('.parallax-window').parallax({imageSrc: './images/hrbg.jpg'});
 
 });
