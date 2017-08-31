@@ -51,6 +51,9 @@ body
 	border-color: rgba($primary, .25)
 	background-color: #fff
 	// height: 75px	
+	.navbar-brand
+		text-transform: uppercase
+		font-weight: 600!important
 .navbar-default
 	.navbar-brand
 		color: #222
@@ -65,9 +68,9 @@ body
 	.navbar-nav > li > a
 		color: #333		
 		text-transform: uppercase
-		font-weight: 200
-		// padding-left: 5px
-		// padding-right: 5px
+		font-weight: 200		
+		padding-left: 5px
+		padding-right: 5px
 		&:hover
 			color: $primary		
 /* end menu */
@@ -110,8 +113,7 @@ section
 	.color6
 		background-color: rgb(32,114,66)
 
-.section-cost
-	background-image: url('../img/61297816.jpg')
+.section-cost, .section-location	
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: center
@@ -126,6 +128,8 @@ section
 	.cost-content
 		position: relative
 		z-index: 5
+.section-cost
+	background-image: url('../img/61297816.jpg')
 
 .section-program	
 	.program-block
@@ -220,6 +224,9 @@ section
 		font-size: 24px
 		color: $primary
 		font-weight: 500
+.cost-content
+	.btn
+		margin-top: 20px
 
 .org-contact	
 	vertical-align: middle
@@ -239,8 +246,52 @@ section
 			top: 10px
 			font-size: 4rem
 
+.section-location	
+	background-image: url("../img/mvc_1.jpg")
+	.location-left,
+	.location-right
+		z-index: 10
+		position: relative
+	.location-left-name
+		position: relative
+		padding-left: 40px
+		margin: 25px 0
+		font-size: 26px
+		.material-icons		
+			position: absolute
+			left: 0
+			font-size: 36px
+			color: $primary
+	.location-left
+		margin-bottom: 25px
+		span
+			font-size: 18px	
+	.loc-btn	
+		margin-top: 20px
+
+
+.btn-accent
+	border-radius: 0
+	padding: 10px 15px	
+	text-transform: uppercase
+	letter-spacing: 1.5
+	border-color: $primary
+	transition: color .25s linear,background .5s ease-out
+	&:hover
+		border-color: rgb(32,114,66)
+		// background: linear-gradient(to right, rgb(118,177,109)	, rgb(32,114,66))
+		color: #fff	
+		background-color: $primary
+		
 		
 
-
+footer
+	position: relative
+	padding: 15px 0
+	text-align: center
+	font-size: 14px
+	color: gray
+	text-transform: uppercase
+	background-color: rgb(30,30,30)
 
 @import "media" // Всегда в конце

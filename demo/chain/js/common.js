@@ -15,6 +15,7 @@ $(function() {
 		$(this).find('.program-block-line').css('left', (width/2)-2 + 'px');
 
 
+		$("a[rel='m_PageScroll2id']").mPageScroll2id();
     
 
 });
