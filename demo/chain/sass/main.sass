@@ -1,0 +1,246 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	padding-top: 50px
+	// color: $black
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+/* menu */
+.navbar-toggle
+	border-radius: 0
+.navbar
+	border-color: rgba($primary, .25)
+	background-color: #fff
+	// height: 75px	
+.navbar-default
+	.navbar-brand
+		color: #222
+		font-weight: normal
+	.navbar-toggle
+		border-radius: 0
+		border-color: $primary
+		&:hover
+			background-color: rgba($primary, .25)
+		.icon-bar
+			background-color: #222
+	.navbar-nav > li > a
+		color: #333		
+		text-transform: uppercase
+		font-weight: 200
+		// padding-left: 5px
+		// padding-right: 5px
+		&:hover
+			color: $primary		
+/* end menu */
+
+section
+	position: relative
+	padding: 50px 0
+	.section-title
+		position: relative
+		text-transform: uppercase
+		font-size: 26px
+		font-weight: 500
+		color: #444
+		margin-bottom: 70px
+		z-index: 5
+		&::after
+			content: ""
+			position: absolute
+			bottom: -10px
+			left: 0
+			right: 0
+			width: 100%
+			height: 2px
+			background: linear-gradient(to right, rgb(118,177,109)	, rgb(32,114,66))
+			z-index: 5
+
+.section-color
+	.color
+		padding: 50px
+	.color1
+		background-color: rgb(227,226,221)
+	.color2
+		background-color: rgb(30,97,62)	
+	.color3
+		background-color: rgb(118,177,109)
+	.color4
+		background-color: rgb(30,30,30)
+	.color5
+		background-color: rgb(30,54,41)
+	.color6
+		background-color: rgb(32,114,66)
+
+.section-cost
+	background-image: url('../img/61297816.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	&::after
+		position: absolute
+		content: ''
+		left: 0
+		top: 0
+		height: 100%
+		width: 100%
+		background-color: rgba(#ffffff, 0.9)
+	.cost-content
+		position: relative
+		z-index: 5
+
+.section-program	
+	.program-block
+		position: relative
+		.program-block-line
+			position: absolute
+			content: ""
+			width: 1px
+			height: 100%
+			left: 0
+			top: 0
+			background-color: green
+	.program-item
+		margin-bottom: 25px
+		.program-one-title
+			position: relative
+			font-size: 20px
+			padding-left: 35px
+			.material-icons
+				position: absolute
+				left: 0
+				top: 5px
+				
+			// padding-left: 20px
+		// 	&::after
+		// 		position: absolute
+		// 		content: ""
+		// 		left: -30px
+		// 		width: 26px
+		// 		height: 26px
+		// .program-icon-cup
+		// 	&::after
+		// 		background-image: url("../img/coffe.svg")
+		// .program-icon-open		
+		// 	&::after				
+		// 		background-image: url("../img/time.svg")
+		// .program-icon-lunch		
+		// 	&::after				
+		// 		background-image: url("../img/lunch.svg")
+	
+	.program-lead-block
+		position: relative
+		width: 100%		
+		// background-color: $primary
+		padding: 30px 20px
+		// border: 1px solid $primary
+		box-shadow: 0 5px 30px rgba(0,0,0,.1)
+.program-time
+	text-align: center
+	// background-color: tomato
+	// height: 100px
+	// width: 100%	
+	// display: table
+	.program-clock
+		display: inline
+		font-size: 18px
+		padding: 10px
+		background-color: #fff
+		// display: table-cell
+		// vertical-align: middle
+.speaker-top
+	position: relative
+	margin-bottom: 20px
+	// text-align: center
+	.speaker-foto, .speaker-name
+		display: inline-block
+	.speaker-foto
+		padding: 0 20px
+		img
+			width: 100px
+			height: 100px
+			border-radius: 50%
+	.speaker-name
+		vertical-align: middle
+	.speaker-name-name
+		font-size: 18px
+		line-height: 20px
+		font-weight: 500
+	.speaker-name-job
+		font-size: 14px
+		color: #777
+		span
+			color: $primary
+.speaker-theme
+	text-align: center
+	font-size: 18px
+
+.cost-line
+	font-size: 20px
+	span:first-child
+	span:last-child
+		font-size: 24px
+		color: $primary
+		font-weight: 500
+
+.org-contact	
+	vertical-align: middle
+	.org-phone,
+	.org-email
+		position: relative
+		padding-left: 50px
+		margin: 30px
+		span
+			display: block
+		span:first-child
+			color: $primary
+			font-size: 20px
+		.material-icons
+			position: absolute
+			left: 0
+			top: 10px
+			font-size: 4rem
+
+		
+
+
+
+@import "media" // Всегда в конце
