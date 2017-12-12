@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Просмотр образов</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-12 col-xs-12 col-sm-12">
+					<input type="text" class="fd-input" v-model="test" placeholder="линк на картинку">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+
+					<div align='center' 
+						style="width: 265px; padding: 2px; background: #3d3429; background: linear-gradient(to top, #3d3429, #eaeaea, #3d3429);
+						 margin-bottom: 5px; margin-top: -1px; border-radius: 5px; box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.6);">
+						<div style='margin: 1px 2px 1px 2px; padding: 1px; text-align: left; border-radius: 2px; background: #282828;'>
+							<div style='border-radius: 2px; background: #41a051; height: 2px; width: 100%;'></div>
+						</div>
+
+						<div name='char' v-bind:style="{ 'background-image': 'url(' + test + ')' }" style="width: 255px; margin: 3px 0px 3px 0px; padding: 2px; background: #E2DFD0; background-repeat: no-repeat; background-position: bottom center; border-radius: 2px;">
+							<table border='0' width='255' height='65' cellpadding='0' cellspacing='0' style='margin-top: 3px;'>
+							<tr>
+								<td align='right' valign='bottom'>
+									<a title='Библиотека: Ожерелье Тихого Убийцы' href='/encl.php?item=necklace_007_4' target='_blank'>
+										<img class='inv_item' src='/img/w/necklace/necklace_007_4.gif'>
+									</a>
+								</td>
+								<td width='75' align='center' valign='bottom' style='padding-bottom: 5px;'>
+									<a title='Библиотека: Шлем Тихого Убийцы' href='/encl.php?item=helm_007_4' target='_blank'>
+										<img class='inv_item' src='/img/w/helm/helm_007_4.gif'>
+									</a>
+								</td>
+								<td align='left' valign='bottom'>
+									<a title='Библиотека: Серьги Тихого Убийцы' href='/encl.php?item=earrning_007_4' target='_blank'>
+										<img class='inv_item' src='/img/w/earrning/earrning_007_4.gif'>
+									</a>
+								</td>
+							</tr>
+							</table>
+
+							<table border='0' width='255' height='280' cellpadding='0' cellspacing='0'>
+								<tr>
+									<td width='75' valign='top'>
+										<table cellpadding='0' cellspacing='0'>
+											<tr>
+												<td>
+													<a title='Библиотека: Перчатки Тихого Убийцы' href='/encl.php?item=arm_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/arm/arm_007_4.gif'>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a title='Библиотека: Кольцо Тихого Убийцы' href='/encl.php?item=ring_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/ring/ring_007_4.gif'>
+													</a><a title='Библиотека: Кольцо Тихого Убийцы' href='/encl.php?item=ring_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/ring/ring_007_4.gif'>
+													</a><a title='Библиотека: Кольцо Тихого Убийцы' href='/encl.php?item=ring_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/ring/ring_007_4.gif'>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td style='padding-top: 1px;'>
+													<a title='Библиотека: Кинжал Тихого Убийцы' href='/encl.php?item=kn_007_01' target='_blank'>
+														<img class='inv_item' src='/img/w/kn/kn_007_01.gif'>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a title='Библиотека: Броня Тихого Убийцы' href='/encl.php?item=bron_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/bron/bron_007_4.gif'>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a title='Библиотека: Пояс Тихого Убийцы' href='/encl.php?item=belt_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/belt/belt_007_4.gif'>
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td width='100%' align='center' valign='bottom'>
+									</td>
+									<td width='75' valign='top'>
+										<table border='0' cellpadding='0' cellspacing='0'>
+											<tr>
+												<td align='center'>
+													<a title='Библиотека: Наручи Тихого Убийцы' href='/encl.php?item=nar_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/nar/nar_007_4.gif'>
+													</a>
+												</td>
+											</tr>											
+											<tr>
+												<td align='center'>
+													<a title='Библиотека: Кольцо Тихого Убийцы' href='/encl.php?item=ring_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/ring/ring_007_4.gif'>
+													</a><a title='Библиотека: Кольцо Тихого Убийцы' href='/encl.php?item=ring_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/ring/ring_007_4.gif'>
+													</a><a title='Библиотека: Кольцо Тихого Убийцы' href='/encl.php?item=ring_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/ring/ring_007_4.gif'>
+													</a>
+												</td>
+											</tr>											
+											<tr>
+												<td style='padding-top: 1px;'>
+													<a title='Библиотека: Кинжал Тихого Убийцы' href='/encl.php?item=kn_007_01' target='_blank'>
+														<img class='inv_item' src='/img/w/kn/kn_007_01.gif'>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td align='center'>
+													<a title='Библиотека: Поножи Тихого Убийцы' href='/encl.php?item=lowerbody_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/lowerbody/lowerbody_007_4.gif'>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td align='center'>
+													<a title='Библиотека: Сапоги Тихого Убийцы' href='/encl.php?item=boot_007_4' target='_blank'>
+														<img class='inv_item' src='/img/w/boot/boot_007_4.gif'>
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div> <!-- char -->
+
+					</div> <!-- aligncenter -->
+
+
+
+
+				</div>
+			</div>
+
+
+		</div> <!-- container -->
+	</div> <!-- app -->
+
+
+
+
+
+
+
+
+
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
