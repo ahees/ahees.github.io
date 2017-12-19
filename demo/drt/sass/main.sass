@@ -1,0 +1,272 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 17px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: #333
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: $title-font
+	text-transform: uppercase	
+	// font-weight: normal
+	// text-transform: uppercase
+.bg-color
+	background-color: #f9fafc
+
+.uk-card-default
+	.uk-card-header
+		border-color: darken(#f9fafc, 2%)
+
+.header
+	position: relative
+	min-height: 700px
+	background-image: url("../img/854.jpg")
+	background-size: cover
+.header-menu
+	border-bottom: 1px solid rgba(255,255,255, .25)
+	.uk-navbar-nav
+		a
+			color: #fff
+			font-family: $default-font
+.header-box
+	position: relative
+	.header-lead		
+	.header-title	
+		color: #fff	
+		font-family: $default-font
+		text-transform: uppercase
+		background-color: rgba(0,0,0, .2)
+		padding: 15px 20px
+		border: 1px solid rgba(255,255,255, .25)
+	.uk-countdown-number,
+	.uk-countdown-separator,
+	.uk-countdown-label
+		color: #fff
+	.countdown-block
+		padding: 10px
+		background-color: rgba(0,0,0, .2)
+	.header-subtitle
+		color: #fff
+
+.section-about
+	.about-text
+		text-align: center
+	.about-box
+		position: relative
+
+.section-about-bg,
+.section-program-bg,
+.section-speak-bg,
+.section-partners-bg,
+.section-feedback-bg
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: -1	
+	background-repeat: no-repeat
+	background-position: center
+	// background-position: 50% 55px
+	background-size: contain
+
+.section-about-bg	
+	background-image: url("../img/s_about.png")
+.section-program-bg
+	background-image: url("../img/s_program.png")
+.section-speak-bg
+	background-image: url("../img/s_speak.png")
+	z-index: 1
+.section-partners-bg
+	background-image: url("../img/s_partner.png")
+.section-feedback-bg
+	background-image: url("../img/s_feedback.png")
+
+.pr-block
+	position: relative
+.pr-block-timeline
+	left: 0
+	top: 0
+	position: absolute
+	background-color: #f9fafc
+	height: 100%
+	width: 200px
+.pr-time
+	position: relative
+	width: 200px
+	padding: 20px 0
+	text-align: center
+	font-size: 18px
+	color: #777	
+.time-img
+	width: 35px
+	height: 35px
+	margin-right: 10px
+.time-title
+	font-size: 18px
+	font-weight: normal
+
+
+.speak-item
+	position: relative
+	max-width: 250px
+	margin: 0 auto	
+	background-color: #FFF
+	padding-bottom: 20px
+	cursor: pointer
+	transition: transform linear .125s
+	canvas
+		height: 250px
+		width: 100%
+	.speak-title,
+	.speak-subtitle
+		text-align: center
+	.speak-title
+		margin: 25px 0 10px 0
+		text-transform: uppercase
+		font-size: 18px
+	.speak-subtitle
+		text-align: center
+	&:hover
+		transform: translateY(-5px)
+
+.partners-item
+	max-width: 150px
+	margin: 0 auto
+	padding: 5px 0
+	img
+		width: 100%
+
+.section-join
+	//background-image: url("../img/join.png")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	background-color: #f9fafc
+.join-item-cost	
+	font-size: 18px	
+	color: #444
+	cursor: pointer
+	// transition: transform ease-in-out 0.15s
+	// &:hover
+	// 	transform: translateY(-5px)
+	hr
+		border-color: $light-dark
+.offer
+	// color: $accent
+
+
+.test-join
+	font-size: 3.5rem
+	font-family: $title-font
+	color: $accent
+	span
+		font-size: 16px
+		font-family: $default-font
+
+.section-feedback
+
+.footer
+	background-color: #f9fafc
+	.uk-card
+		margin-top: -25px
+	.phonemail
+		color: #222
+		font-size: 20px
+	.footer-copy
+		color: rgba(0,0,0, .35)
+		padding-bottom: 15px
+	// iframe
+	// 	height: 500px		
+
+
+.section-feedback
+	padding-bottom: 100px!important
+.feedback-item
+	position: relative
+	p
+		font-style: italic
+		color: #555
+	.feedback-item-title
+		text-align: center
+	.svg-icon
+		opacity: .25
+		cursor: pointer
+		transition: opacity linear .25s
+		&:hover
+			opacity: .75
+
+
+
+
+
+
+.uk-sticky-fixed,
+.uk-navbar-container:not(.uk-navbar-transparent)
+	background-color: #22313F
+
+.section
+	position: relative
+	padding: 75px 0 50px
+.s-title
+	text-align: center
+	font-size: 3rem
+	position: relative
+	margin-bottom: 50px
+
+
+
+
+/* help css */
+/* end help css */
+.uk-button
+	font-family: $default-font
+.button-accent
+	background-color: $accent
+	border: 1px solid transparent
+	color: #fff
+	&:hover
+		background-color: darken($accent, 5%)
+		color: #fff
+
+
+
+@import "media" // Всегда в конце

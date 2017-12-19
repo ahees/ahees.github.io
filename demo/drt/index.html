@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+
+	<header class="header" id="header">
+		<div class="header-menu" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-lig1ht; top: 200">
+			<div class="uk-container">
+				<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+					<div class="uk-navbar-left">
+						<a class="uk-navbar-item uk-logo" href="#header" uk-scroll>
+							<img src="img/legallab.png">
+						</a>
+					</div>
+		            <div class="uk-navbar-right">
+		                <ul class="uk-navbar-nav">
+		                    <li><a href="#about" uk-scroll>Про практикум</a></li>
+		                    <li><a href="#program" uk-scroll>Програма</a></li>
+		                    <li><a href="#speak" uk-scroll>Спікери</a></li>
+		                    <li><a href="#partners" uk-scroll>Партнери</a></li>
+		                    <li><a href="#join" uk-scroll>Участь</a></li>
+		                    <li><a href="#contacts" uk-scroll>Контакти</a></li>
+		                </ul>
+		            </div>
+		        </nav>
+			</div>
+		</div>
+		<div class="uk-position-center">
+			<div class="header-box">
+				<div class="header-box-wrapper">
+					<div class="header-lead uk-text-center">
+						<h1 class="header-title" uk-scrollspy="cls: uk-animation-slide-top; delay: 300; repeat: true">Допоміжні репродуктивні Технології</h1>
+						<div uk-scrollspy="cls: uk-animation-slide-left; delay: 200; repeat: true">
+							<div class="header-subtitle uk-margin-medium-bottom">м. Київ адреса та час</div>
+							<a href="#" class="uk-button button-accent">реєстрація</a>
+							<h4 class="uk-text-uppercase header-subtitle">До початку практикуму</h4>
+						</div>
+					</div>
+					
+					<div class="uk-grid-small uk-child-width-auto uk-margin uk-flex-center" uk-grid uk-countdown="date: 2018-01-01T00:00:01+00:00" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 500; repeat: true">
+					    <div>
+					        <div class="countdown-block">
+					        	<div class="uk-countdown-number uk-countdown-days"></div>
+					        	<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Днів</div>
+					        </div>
+					    </div>
+					    <div class="uk-countdown-separator">:</div>
+					    <div>
+					        <div class="countdown-block">
+					        	<div class="uk-countdown-number uk-countdown-hours"></div>
+					        	<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Годин</div>
+					        </div>
+					    </div>
+					    <div class="uk-countdown-separator">:</div>
+					    <div>
+					        <div class="countdown-block">
+					        	<div class="uk-countdown-number uk-countdown-minutes"></div>
+					        	<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Хвилин</div>
+					        </div>
+					    </div>
+					    <div class="uk-countdown-separator">:</div>
+					    <div>
+					        <div class="countdown-block">
+					        	<div class="uk-countdown-number uk-countdown-seconds"></div>
+					        	<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Секунд</div>
+					        </div>
+					    </div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="section section-about" id="about">	
+		<div class="about-box">
+			<div class="uk-container">
+				<h2 class="h2 s-title">Про практикум<div class="section-about-bg"></div></h2>
+				<div class="uk-width-4-4@s uk-width-3-4@m uk-margin-auto">
+					<p class="about-text" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 300; repeat: true">
+						Практикум, присвячений правовому регулюванню допоміжних репродуктивних технологій – один з унікальних
+						заходів Олени Бабич. В Україні існує всього 65 (?) медичних закладів, які працюють у цій сфері, і велика кількість
+						юридичних нюансів, на яких можна «спіткнутися».
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-program" id="program">
+		<div class="program-box">
+			<div class="uk-container">
+				<h2 class="h2 s-title">Програма<div class="section-program-bg"></div></h2>
+
+				<div class="pr-block uk-width-3-4@m uk-margin-auto" uk-scrollspy="cls: uk-animation-scale-up; target: > .uk-card; delay: 300; repeat: true">
+
+					<div class="pr-block-timeline"></div>
+					<div class="pr-time"><img src="img/icon/clock.svg" class="time-img">09:30–10:00</div>
+					<div class="uk-card uk-card-default">
+						<div class="uk-card-header uk-padding">
+							<div class="uk-grid-small uk-flex-middle" uk-grid>
+					            <div class="uk-width-auto">
+					                <img width="50" height="50" src="./img/icon/notepad.svg">
+					            </div>
+					            <div class="uk-width-expand">
+					                <h4 class="time-title uk-margin-remove-bottom">Реєстрація. Ранкова кава</h4>
+					                
+					            </div>
+					        </div>
+						</div>						
+					</div>
+
+					<div class="pr-time"><img src="img/icon/clock.svg" class="time-img">10:00–10:10</div>
+					<div class="uk-card uk-card-default">
+						<div class="uk-card-header uk-padding">
+							<div class="uk-grid-small uk-flex-middle" uk-grid>
+					            <div class="uk-width-auto">
+					                <img width="50" height="50" src="./img/icon/meeting.svg">
+					            </div>
+					            <div class="uk-width-expand">
+					                <h4 class="time-title uk-margin-remove-bottom">Відкриття конференції. Вітальні слова</h4>
+					                
+					            </div>
+					        </div>
+						</div>						
+					</div>
+
+					<div class="pr-time"><img src="img/icon/clock.svg" class="time-img">10.10–10.40</div>
+					<div class="uk-card uk-card-default">
+						<div class="uk-card-header uk-padding">
+							<div class="uk-grid-small uk-flex-middle" uk-grid>
+					            <div class="uk-width-auto">
+					                <img class="uk-border-circle" width="75" height="75" src="./img/author-5_5.jpg">
+					            </div>
+					            <div class="uk-width-expand">
+					                <h4 class="time-title uk-margin-remove-bottom">Іванка Іванова</h4>
+					                <p class="uk-text-meta uk-margin-remove-top">генеральний директор Технологічного центру, Київ</p>
+					            </div>
+					        </div>
+						</div>
+						<div class="uk-card-body">
+							<div class="pr-block-title">
+								Управління персоналом: можливості та ризики
+							</div>
+						</div>
+					</div>
+
+					<div class="pr-time"><img src="img/icon/clock.svg" class="time-img">11.40–12.10</div>
+					<div class="uk-card uk-card-default">
+						<div class="uk-card-header uk-padding">
+							<div class="uk-grid-small uk-flex-middle" uk-grid>
+					            <div class="uk-width-auto">
+					                <img width="50" height="50" src="./img/icon/coffee-cup.svg">
+					            </div>
+					            <div class="uk-width-expand">
+					                <h4 class="time-title uk-margin-remove-bottom">Перерва на каву</h4>
+					                
+					            </div>
+					        </div>
+						</div>						
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-speak bg-color" id="speak">
+		<div class="speak-box">
+			<div class="uk-container">
+				<h2 class="h2 s-title">Спікери<div class="section-speak-bg"></div></h2>
+				<div class="uk-grid uk-child-width-1-2@s uk-child-width-1-4@m uk-flex-center" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: > div > .speak-item; delay: 300; repeat: true">
+					<div>
+						<div class="speak-item">
+							<div class="uk-cover-container">
+								<img class="" src="./img/author-5.jpg" uk-cover>
+								<canvas></canvas>
+							</div>
+							<h4 class="speak-title">Іванова Іванка</h4>
+							<div class="speak-subtitle">Руководитель</div>
+						</div>
+					</div>
+					<div>
+						<div class="speak-item" uk-scrollspy-class="uk-animation-slide-top">
+							<div class="uk-cover-container">
+								<img class="" src="./img/author-4.jpg" uk-cover>
+								<canvas></canvas>
+							</div>
+							<h4 class="speak-title">Іванов Іван</h4>
+							<div class="speak-subtitle">Руководитель</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-partners" id="partners">
+		<div class="partners-box">
+			<div class="uk-container">
+				<h2 class="h2 s-title">Партнери<div class="section-partners-bg"></div></h2>
+				<div class="partners-block">
+					<div class="uk-grid uk-child-width-1-4@m uk-child-width-1-2@s uk-flex-middle" uk-grid>
+						<div>
+							<div class="partners-item">
+								<img src="./img/logopartners/logo_01.png" >
+							</div>
+						</div>
+						<div>
+							<div class="partners-item">
+								<img src="./img/logopartners/logo_02.png" >
+							</div>
+						</div>
+						<div>
+							<div class="partners-item">
+								<img src="./img/logopartners/logo_03.png" >
+							</div>
+						</div>
+						<div>
+							<div class="partners-item">
+								<img src="./img/logopartners/logo_04.png" >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-join" id="join">
+		<div class="join-box">
+			<!-- <h2 class="h2 s-title">Участь</h2> -->
+			<div class="uk-container">
+				<div class="uk-grid uk-grid-small" uk-grid uk-height-match="target: > div > .uk-card; row: false;">
+					<div class="uk-width-1-2@s uk-width-1-4@m">
+						<div class="join-item-cost uk-card uk-card-default uk-card-body uk-card-hover uk-text-center">
+							<div class="join-line">Рання реєстрація <br> (до 01.02)</div>
+							<div class="test-join">2 500 <span>грн</span></div>
+							<div class="join-line">1 учасник</div>
+							<hr>
+							<ul class="uk-list">
+								<li>Роздаткові матеріали</li>
+								<li>Кава брейк</li>
+								<li>Сертифікат учасника</li>
+								<li>Сюрприз від організатора</li>
+							</ul>
+							<a href="#" class="uk-button button-accent">реєстрація</a>
+						</div>
+					</div>
+					<div class="uk-width-1-2@s uk-width-1-4@m">
+						<div class="join-item-cost uk-card uk-card-default uk-card-body uk-card-hover uk-text-center">
+							<br>
+							<div class="join-line">1.02 – 15.02.2018</div>
+							<div class="test-join">3 000 <span>грн</span></div>
+							<div class="join-line">1 учасник</div>
+							<hr>
+							<ul class="uk-list">
+								<li>Роздаткові матеріали</li>
+								<li>Кава брейк</li>
+								<li>Сертифікат учасника</li>
+								<li>Сюрприз від організатора</li>
+							</ul>
+							<a href="#" class="uk-button button-accent">реєстрація</a>
+						</div>
+					</div>
+					<div class="uk-width-1-2@m">
+						<div class="uk-card uk-cover-container uk-background-primary">
+							
+								<img src="./img/join.png" uk-cover>
+								<canvas></canvas>
+								<div class="uk-overlay uk-overlay-default uk-position-center uk-text-center">
+					                <h3 class="h4">Знижки</h3>
+					                <div class="offer">Учасник УАРМ - 10%</div>
+									<div class="offer">Учасник УПМЗУ - 10%</div>
+									<div class="offer">Клієнт адвокатського бюро - 5%</div>
+									<div class="offer">Знижки не сумуються. До уваги береться найбільша знижка.</div>
+
+					            </div>
+					            <!-- <div class="uk-text-center uk-overlay uk-overlay-primary">
+					            	<h3 class="h4">Знижки</h3>
+					                <div class="offer">Учасник УАРМ - 10%</div>
+									<div class="offer">Учасник УПМЗУ - 10%</div>
+									<div class="offer">Клієнт адвокатського бюро - 5%</div>									
+					            </div> -->
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+	<section class="section section-feedback" id="feedback">
+		<div class="feedback-box">
+			<div class="uk-container">
+				<h2 class="h2 s-title">Відгуки<div class="section-feedback-bg"></div></h2>
+
+				<div class="feedback-item">
+					<div class="uk-grid" uk-grid>
+						<div class="uk-width-2-3 uk-margin-auto">
+							<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Безопасную своего журчит она до, буквоград, рукопись по всей ручеек текст, толку сих вопроса страна над.</p>
+							<div class="feedback-item-title">Микола Миколайович</div>
+						</div>
+					</div>
+					<img src="./img/icon/left-arrow.svg" width="35" height="35" class="uk-position-center-left uk-position-small svg-icon">
+					<img src="./img/icon/right-arrow.svg" width="35" height="35" class="uk-position-center-right uk-position-small svg-icon">
+        			
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer bg-light" id="contacts">
+		<div class="uk-container">
+			<div class="uk-grid uk-grid-small uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid uk-height-match="target: > div > .uk-card; row: false">
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">
+						<h2 class="h2 s-title uk-margin-remove-bottom">Контакти</h2>
+						<p class="uk-text-center">
+							Деталі можна дізнатися за телефоном: <br>
+							<span class="phonemail">044 223 06 50</span>
+						</p>
+						<p class="uk-text-center">
+							або написати на е-mail: <br>
+							<span class="phonemail">js@babich-law.com</span>
+						</p>	
+
+						<div class="uk-text-center">
+							<div class="">Контактна особа:</div>
+							<img class="uk-border-circle" width="75" height="75" src="./img/author-5_5.jpg">
+							<span class="uk-text-middle">Юлія Савчук</span>
+						</div>
+						
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10161.505910617985!2d30.5239900286499!3d50.45271374411968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1513670815562" width="100%" height="449" frameborder="0" style="border:0" allowfullscreen uk-responsive></iframe>
+					</div>
+				</div>
+				<div class="uk-width-1-1">
+					<div class="uk-text-center footer-copy">2017 Legal Lab</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+	
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
