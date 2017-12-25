@@ -25,8 +25,8 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
-html, body
-	height: 100%
+// html, body
+// 	height: 100%
 
 body
 	font-size: 17px
@@ -51,6 +51,7 @@ body
 .bg-color
 	background-color: #f9fafc
 
+
 .uk-card-default
 	.uk-card-header
 		border-color: darken(#f9fafc, 2%)
@@ -58,7 +59,8 @@ body
 .header
 	position: relative
 	min-height: 700px
-	background-image: url("../img/854.jpg")
+	background-image: url("../img/banner2.jpg")
+	// background-position: center
 	background-size: cover
 .header-menu
 	border-bottom: 1px solid rgba(255,255,255, .25)
@@ -85,6 +87,18 @@ body
 		background-color: rgba(0,0,0, .2)
 	.header-subtitle
 		color: #fff
+.uk-navbar-toggle
+	color: #fff
+	&:hover
+		color: darken(#fff, 20%)
+@media only screen and (max-width : 860px)
+	.uk-navbar-right
+		.uk-navbar-nav
+			display: none
+@media only screen and (min-width : 860px)
+	.uk-navbar-right
+		.uk-navbar-toggle
+			display: none			
 
 .section-about
 	.about-text
@@ -143,16 +157,34 @@ body
 .time-title
 	font-size: 18px
 	font-weight: normal
-
+.pr-list
+	li
+		position: relative
+		padding-left: 25px
+		line-height: 1.5
+		span
+			position: absolute
+			left: 0
+			top: 50%
+			margin: auto
+			transform: translate(0,-50%)
+.pr-bg-section
+	// border-bottom: 1px solid $accent!important
+	border-left: 10px solid $accent!important
+	// background-color: lighten($accent, 5%)
+	// color: #fff
+.pr-bg-one
+	// background-color: darken(#f9fafc, 2%)
+.pr-bg-two
+	// background-color: darken(#f9fafc, 4%)
 
 .speak-item
 	position: relative
 	max-width: 250px
 	margin: 0 auto	
 	background-color: #FFF
-	padding-bottom: 20px
-	cursor: pointer
-	transition: transform linear .125s
+	// padding-bottom: 20px
+	// cursor: pointer	
 	canvas
 		height: 250px
 		width: 100%
@@ -165,8 +197,9 @@ body
 		font-size: 18px
 	.speak-subtitle
 		text-align: center
-	&:hover
-		transform: translateY(-5px)
+		font-size: 16px
+		line-height: 1.5
+	
 
 .partners-item
 	max-width: 150px
@@ -181,6 +214,10 @@ body
 	background-position: center
 	background-size: cover
 	background-color: #f9fafc
+	.uk-card-badge
+		right: 10px
+		top: 10px
+		background-color: $accent
 .join-item-cost	
 	font-size: 18px	
 	color: #444
@@ -190,16 +227,16 @@ body
 	// 	transform: translateY(-5px)
 	hr
 		border-color: $light-dark
-.offer
-	// color: $accent
+
 
 
 .test-join
 	font-size: 3.5rem
 	font-family: $title-font
+	font-weight: 600
 	color: $accent
 	span
-		font-size: 16px
+		font-size: 26px
 		font-family: $default-font
 
 .section-feedback
@@ -219,12 +256,13 @@ body
 
 
 .section-feedback
-	padding-bottom: 100px!important
+	// padding-bottom: 100px!important
 .feedback-item
-	position: relative
+	position: relative	
 	p
 		font-style: italic
 		color: #555
+		margin-left: 10px
 	.feedback-item-title
 		text-align: center
 	.svg-icon
@@ -233,6 +271,27 @@ body
 		transition: opacity linear .25s
 		&:hover
 			opacity: .75
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+	background-color: $accent
+.owl-theme .owl-dots .owl-dot span
+	background-color: lighten($accent, 30%)
+#chevron-left,
+#chevron-right
+	position: absolute!important
+	top: 50%	
+	margin: 15px
+	transform: translateY(-50%) translateY(-15px)
+#chevron-left
+	left: 0
+#chevron-right
+	right: 0
+
+.section-more
+	padding-bottom: 100px!important
+	.more-items
+		div > div
+			canvas
+				height: 200px
 
 
 
@@ -251,6 +310,14 @@ body
 	font-size: 3rem
 	position: relative
 	margin-bottom: 50px
+
+.uk-offcanvas-bar
+	background-color: #22313F
+	.uk-nav-primary > li > a
+		font-family: $title-font
+		font-size: 18px
+		&:hover
+			color: #fff!important
 
 
 
