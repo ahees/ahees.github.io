@@ -1,7 +1,7 @@
 $(function() {
 
 	// Custom JS
-	UIkit.scrollspy('.speak-box-grid', {
+	UIkit.scrollspy('.spe1ak-box-grid', {
 		cls: 'uk-animation-slide-bottom',
 		target: '> div > .speak-item',
 		delay: 300,

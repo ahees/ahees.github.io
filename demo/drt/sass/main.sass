@@ -73,11 +73,14 @@ body
 	.header-lead		
 	.header-title	
 		color: #fff	
-		font-family: $default-font
-		text-transform: uppercase
+		font-family: $title-font
+		// font-family: $default-font
+		// text-transform: uppercase
 		background-color: rgba(0,0,0, .2)
-		padding: 15px 20px
+		padding: 5px 15px
 		border: 1px solid rgba(255,255,255, .25)
+		font-size: 2rem
+		font-weight: 600
 	.uk-countdown-number,
 	.uk-countdown-separator,
 	.uk-countdown-label
@@ -146,7 +149,7 @@ body
 .pr-time
 	position: relative
 	width: 200px
-	padding: 20px 0
+	padding: 10px 0 5px 0
 	text-align: center
 	font-size: 18px
 	color: #777	
@@ -227,6 +230,11 @@ body
 	// 	transform: translateY(-5px)
 	hr
 		border-color: $light-dark
+.offer
+	&:last-child
+		margin-top: 20px
+		font-size: 20px
+		font-weight: 600
 
 
 
@@ -235,12 +243,16 @@ body
 	font-family: $title-font
 	font-weight: 600
 	color: $accent
+	text-shadow: 2px 2px 2px rgba(150, 150, 150, .5)
 	span
 		font-size: 26px
 		font-family: $default-font
 
 .section-feedback
-
+	.feedback-item
+		p
+			text-align: center
+	
 .footer
 	background-color: #f9fafc
 	.uk-card
@@ -292,6 +304,14 @@ body
 		div > div
 			canvas
 				height: 200px
+	.uk-thumbnav
+		img
+			display: block
+			height: 50px
+			width: 100%
+			max-width: 100px
+			zoom: 1
+
 
 
 
