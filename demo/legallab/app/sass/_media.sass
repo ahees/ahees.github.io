@@ -1,0 +1,93 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+@media only screen and (max-width : 962px)
+	/**/
+	.section-what
+		.what-item-grid
+			max-width: 550px
+			margin: 0 auto
+	.bb-img
+		display: none
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.box-square		
+		&:before
+			width: 75%
+			left: calc(12.5% - 20px)
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.about-text
+		text-indent: 0em
+		text-align: justify
+	.box-square
+		h2
+			font-size: 1.45em
+		&:before
+			width: 75%
+			left: calc(12.5% - 20px)
+			height: 100%
+			top: -20px
+
+	.main-block-text
+		// text-align: center
+		// text-align: justify
+		// padding: 0 1em
+		padding: 0
+		margin-top: 1.5em
+	.bb-img
+		display: none
+	.list-b
+		li			
+			padding-left: 10px					
+			line-height: 1.6
+	.abs-round		
+		top: 7px
+		left: -15px
+			
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/	
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 962px)
+	/**/
+	.bb-img2
+		display: none
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
