@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+ 
+	<div class="navigation">
+		
+		<div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-lig1ht; top: 200">
+			<nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
+			    <div class="uk-navbar-center">
+
+			        <ul class="uk-navbar-nav">
+			            <li><a href="#home" uk-scroll>Главная</a></li>
+			            <li><a href="#about" uk-scroll="offset: 50">О нас</a></li>
+			            <li><a href="#why" uk-scroll="offset: 50">Почему мы</a></li>	            
+			        </ul>					
+			        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#off-menu" uk-toggle>Меню</a>
+			        <div class="uk-navbar-item">						
+						<a href="#modal-form" uk-toggle>Задать вопрос</a>						
+					</div>
+
+			    </div>
+			</nav>
+		</div>
+		
+	</div>
+
+<!--     <div class="popup-form">
+    	
+    	<form class="uk-grid-small" uk-grid>
+		    <div class="uk-width-1-2@s">
+		        <img src="img/IMG_7976k.jpg">
+		    </div>
+		    <div class="uk-width-1-2@s">
+
+				<div class="uk-margin">
+					<label class="uk-form-label" for="form-name">Имя:</label>
+					<div class="uk-form-controls">
+					<input class="uk-input" id="form-name" type="text" placeholder="">
+					</div>
+				</div>
+				<div class="uk-margin">
+					<label class="uk-form-label" for="form-phone">Номер телефону:</label>
+					<div class="uk-form-controls">
+					<input class="uk-input" id="form-phone" type="text" placeholder="">
+					</div>
+				</div>
+				<div class="uk-margin">
+					<label class="uk-form-label" for="form-email">E-mail:</label>
+					<div class="uk-form-controls">
+					<input class="uk-input" id="form-email" type="text" placeholder="">
+					</div>
+				</div>
+				<div class="uk-margin">
+					<label class="uk-form-label" for="form-themequestion">Тема вопроса:</label>
+					<div class="uk-form-controls">
+					<input class="uk-input" id="form-themequestion" type="text" placeholder="">
+					</div>
+				</div>
+		        
+		    </div>
+		    <div class="uk-width-1-1">
+		    	
+				<div class="uk-margin">
+					<label class="uk-form-label" for="form-question">Тема вопроса:</label>
+					<div class="uk-form-controls">
+						<textarea class="uk-textarea" id="form-question" rows="5" placeholder=""></textarea>
+					</div>
+				</div>
+
+		    </div>
+
+			<div class="uk-width-1-1">
+				<div class="uk-text-right">
+					<div class="uk-margin" uk-margin>
+						<div uk-form-custom="target: true">
+							<input type="file">
+							<input class="uk-input uk-form-width-medium" type="text" placeholder="Прикрепить документ" disabled>
+						</div>
+						<button class="uk-button uk-button-default">Отправить</button>
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+    </div> -->
+
+    
+
+    <div class="test-color">
+    	<div class="color color1"></div>
+    	<div class="color color2"></div>
+    	<div class="color color3"></div>
+    	<div class="color color4"></div>    	
+    </div>
+
+	<div class="header" id="home">
+		<div class="uk-grid uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+			<div>
+				
+				<div class="header-content">						
+						
+					<div class="header-content-wrapper">
+						<img src="./img/logo.svg">	
+					</div>
+					
+				</div>
+				
+			</div>
+			<div>
+				<div class="header-img uk-flex uk-flex-middle uk-flex-center">
+					
+					<div class="header-img-box">
+						<div class="content-subtitle">Мы знаем, как Вам помочь!</div>
+						<div class="content-subtitle content-subtitle-last">И сделаем это абсолютно бесплатно.</div>
+					</div>
+								
+				</div>
+			</div>
+		</div>
+	</div>
+
+ 	<section class="section-textblock section">
+		<div class="uk-container">
+			<div class="textblock-grid uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				
+				<div class="textblock-img" style="background-image: url('./img/template/tblock1.jpg');"></div>
+				<div class="textblock-text uk-flex uk-flex-middle">
+					В наше время потребность в донорах ооцитов и суррогатных матерях постоянно растет. Это связано с тем, что все больше и больше пар сталкиваются с проблемами бесплодия и единственным шансом для них стать родителями является именно ваша помощь. К сожалению, не все клиники и их агентства-партнеры, работающие в этой сфере, до конца честны и добросовестны.
+				</div>
+
+			</div>
+
+			<div class="textblock-grid uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				
+				<div class="textblock-img uk-flex-last@s" style="background-image: url('./img/template/tblock2.jpg');"></div>
+				<div class="textblock-text uk-flex uk-flex-middle">
+					Если вы решили принять участие в программе суррогатного материнства или стать донором ооцитов, но опасаетесь, защищены ли вы юридически, подписывая документы, предлагаемые репродуктивной клиникой/агентством/юристами?
+				</div>
+
+			</div>
+
+			<div class="textblock-grid uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				
+				<div class="textblock-img" style="background-image: url('./img/template/tblock3.jpg');"></div>
+				<div class="textblock-text uk-flex uk-flex-middle">
+					Вы всегда можете задать нам свой вопрос, и мы обязательно ответим вам и проконсультируем по всем интересующим вас вопросам. Вы делаете благородное дело, поэтому должны чувствовать себя максимально комфортно, защищено и свободно!
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="section section-about" id="about">
+		<div class="uk-container">
+			<h2 class="h s-title">Кто мы</h2>
+			<div class="about-content">
+				<p>
+					Центр правовой помощи суррогатным матерям и донорам ооцитов - это социальный проект, основной деятельностью которого является бесплатное оказание юридической и консультационной помощи суррогатным матерям и донорам ооцитов с соблюдением полной анонимности.
+				</p>
+				<p>
+					Центр не является коммерческим агентством, не осуществляет поиск суррогатных матерей и доноров ооцитов, не выступает в роли посредника между генетическими родителями, суррогатными матерями, репродуктивными клиниками и агентствами.
+				</p>	
+			</div>
+		</div>
+	</section>
+
+	<section class="section section-why" id="why">
+		<h2 class="h2 s-title">Чем мы можем быть вам полезны</h2>
+		<div class="uk-container">
+			
+
+		<div class="why-box">
+			<ul class="list listFlex listBetween workingProcessList">
+				<li class="workingProcessItem item1">
+					<div class="hover-li">
+						<div class="workingProcessItemIco">
+							<div class="circle"></div>
+						</div>
+						
+						<div class="workingProcessItemTitle">
+							бесплатная <br>онлайн консультация
+						</div>
+					</div>
+					
+				</li>
+			
+				<li class="workingProcessItem item2">
+			
+					<div class="hover-li">
+						<div class="workingProcessItemIco">
+							<div class="circle"></div>
+						</div>
+						
+						<div class="workingProcessItemTitle">
+							правовая поддержка
+						</div>
+					</div>
+					
+				</li>
+			
+				<li class="workingProcessItem item3">
+			
+					<div class="hover-li">
+						<div class="workingProcessItemIco">
+							<div class="circle"></div>
+						</div>
+						<div class="workingProcessItemTitle">
+							соблюдение анонимности
+						</div>
+					</div>
+					
+				</li>
+			
+				<li class="workingProcessItem item4">
+					<div class="hover-li">
+						<div class="workingProcessItemIco">
+							<div class="circle"></div>
+						</div>
+						
+						<div class="workingProcessItemTitle">
+							исключение возможных рисков
+						</div>
+					</div>
+					
+				</li>
+			
+			</ul>
+		</div>
+
+		<div class="why-box-text">
+			Мы поможем оградить Вас от всех возможных рисков, связанных с недобросовестными посредниками на рынке!
+		</div>
+
+
+		</div>
+	</section>
+
+	<section class="section section-faq">
+		<div class="uk-container">
+			<h2 class="h2 s-title">Часто задаваемые вопросы</h2>
+
+				<div class="faq-content">
+					<ul class="faq-accordion">
+						<li>
+							<div class="toggle">
+								<div class="answer uk-grid-collapse" uk-grid>
+									<div class="uk-width-auto uk-visible@s"><div class="answer-img" style="background-image: url('./img/template/quest1.jpg');"></div></div>
+									<div class="answer-text uk-width-expand uk-flex uk-flex-middle uk-flex-center">
+										Законны ли проведения программы донорства яйцеклеток и суррогатного материнства в Украине?
+									</div>
+									<div class="answer-icon uk-width-auto uk-flex uk-flex-middle uk-flex-center"><span uk-icon="icon: chevron-left; ratio: 2"></span></div>	
+								
+								</div>
+							</div>
+							<div class="inner">
+								<div class="1uk-accordion-content">
+									<p>Украина относится к тем странам, в которых применение суррогатного материнства и донорства ооцитов (яйцеклеток) полностью законно. Данный вопрос регулирует целый ряд нормативно-правовых актов.</p>
+
+									<p>Например, в статье 281 Гражданского кодекса Украины прямо предусмотрено: Совершеннолетние женщина или мужчина имеют право по медицинским показаниям на проведение касаемо них лечебных программ вспомогательных репродуктивных технологий согласно порядку и условиям, установленными законодательством.</p>
+
+									<p>Наиболее подробно порядок применения вспомогательных репродуктивных технологий регулируется соответствующей Инструкцией, утвержденной Приказом Министерства здравоохранения Украины №787 от 09.09.2013 года.</p>
+
+								</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="toggle">
+								<div class="answer uk-grid-collapse" uk-grid>
+									<div class="uk-width-auto uk-visible@s"><div class="answer-img" style="background-image: url('./img/template/quest2.jpg');"></div></div>
+									<div class="answer-text uk-width-expand uk-flex uk-flex-middle uk-flex-center">
+										Какие документы нужны для участия в программе?
+									</div>
+									<div class="answer-icon uk-width-auto uk-flex uk-flex-middle uk-flex-center"><span uk-icon="icon: chevron-left; ratio: 2"></span></div>	
+								
+								</div>
+							</div>
+							<div class="inner">
+								<div class="1uk-accordion-content">
+									Согласно законодательству, для участия в программе вам необходимо предоставить:
+									<ul class="1uk-list">
+										<li>заявление на участие в программе;</li>
+										<li>копию паспорта;</li>
+										<li>копию свидетельства о браке или о расторжении брака;</li>
+										<li>копию свидетельства о рождении ребенка;</li>
+										<li>согласие мужа на ваше участие в программе суррогатного материнства.</li>
+									</ul>
+									 
+									Вас так же могут попросить предоставить копию идентификационного кода.
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="toggle">
+								<div class="answer uk-grid-collapse" uk-grid>
+									<div class="uk-width-auto uk-visible@s"><div class="answer-img" style="background-image: url('./img/template/quest3.jpg');"></div></div>
+									<div class="answer-text uk-width-expand uk-flex uk-flex-middle uk-flex-center">
+										Кто может стать донором яйцеклеток?
+									</div>
+									<div class="answer-icon uk-width-auto uk-flex uk-flex-middle uk-flex-center"><span uk-icon="icon: chevron-left; ratio: 2"></span></div>	
+								
+								</div>
+							</div>
+							<div class="inner">
+								<div class="1uk-accordion-content">
+									
+										<strong>В соответствии с пунктами 5.4.-5.5. Приказа Министерства здравоохранения Украины №787 от 09.09.2013 года донорами ооцитов (яйцеклеток) могут быть:</strong>
+										<ul class="u1k-list">
+											<li>лица женского пола;</li>
+											<li>близкие родственники;</li>
+											<li>анонимные добровольные доноры;</li>
+											<li>пациентки программ ВРТ, которые по письменно оформленному добровольному согласию предоставляют реципиенту часть своих ооцитов.</li>
+										</ul>
+
+										<br>	
+									
+										<strong>Женщина, которая хочет стать донором ооцитов (яйцеклеток) должна соответствовать следующим требованиям:</strong>
+										<ul class="u1k-list">
+											<li>быть в возрасте от 18 до 36 лет;</li>
+											<li>иметь здорового ребенка и удовлетворительное соматическое здоровье;</li>
+											<li>не иметь негативных фенотипических проявлений, противопоказаний для участия в программе донации ооцитов, наследственных заболеваний, а также вредных привычек, таких как: наркомания, алкоголизм, токсикомания.</li>
+										</ul>
+																		
+
+
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="toggle">
+								<div class="answer uk-grid-collapse" uk-grid>
+									<div class="uk-width-auto uk-visible@s"><div class="answer-img" style="background-image: url('./img/template/quest4.jpg');"></div></div>
+									<div class="answer-text uk-width-expand uk-flex uk-flex-middle uk-flex-center">
+										Кто может стать суррогатной матерью?
+									</div>
+									<div class="answer-icon uk-width-auto uk-flex uk-flex-middle uk-flex-center"><span uk-icon="icon: chevron-left; ratio: 2"></span></div>	
+								
+								</div>
+							</div>
+							<div class="inner">
+								<div class="1uk-accordion-content">
+
+									<strong>В соответствии с разделом VI  Приказа Министерства здравоохранения Украины №787 от 09.09.2013 года суррогатной матерью может быть совершеннолетняя дееспособная женщина при условии:</strong>
+									<ul>
+										<li>наличия собственного здорового ребенка;</li>
+										<li>добровольно письменно оформленного заявления суррогатной матери;</li>
+										<li>отсутствия медицинских противопоказаний.</li>
+									</ul>
+
+									<br>
+									
+									<strong>При этом необходимыми условиями для проведения суррогатного материнства являются:</strong>
+									<ul>
+										<li>наличие медицинских показаний к СМ;</li>
+										<li>документы, необходимые для проведения СМ;</li>
+										<li>супруги (или один из будущих родителей), в интересах которого осуществляется СМ, должны (должен) иметь генетическую связь с ребенком;</li>
+										<li>суррогатная мать не должна иметь непосредственную генетическую связь с ребенком.</li>
+										<li>Разрешается вынашивание беременности близкими родственниками будущих родителей (мать, сестра, двоюродная сестра и т.д.).</li>
+									</ul>
+
+								</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>			
+			
+		</div>
+	</section>
+
+	<footer class="footer">
+	 	<div class="uk-container">
+	 		IVF-LAW 2018
+	 	</div>
+	 </footer> 
+
+	 <div id="off-menu" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-text-center uk-offcanvas-bar-animation uk-offcanvas-slide">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav="">
+                <li><a href="#home" uk-scroll>Главная</a></li>
+			    <li><a href="#about" uk-scroll="offset: 50">О нас</a></li>
+			    <li><a href="#why" uk-scroll="offset: 50">Почему мы</a></li>
+            </ul>
+
+        </div>
+    </div>
+	
+	
+
+	<div id="modal-form" uk-modal>
+		<div class="uk-modal-dialog">
+		    <button class="uk-modal-close-default" type="button" uk-close></button>
+		    <div class="uk-modal-header">
+		        <h2 class="uk-modal-title">Задать вопрос</h2>
+		    </div>
+		    <div class="uk-modal-body">
+
+
+				<div class="popup-form">
+	    	
+			    	<form class="uk-grid-small" uk-grid>
+					    <div class="uk-width-1-2@s">
+							<div class="form-img"></div>
+					    </div>
+					    <div class="uk-width-1-2@s">
+
+							<div class="uk-margi1n">
+								<label class="uk-form-label" for="form-name">Имя:</label>
+								<div class="uk-form-controls">
+								<input class="uk-input" id="form-name" type="text" placeholder="">
+								</div>
+							</div>
+							<div class="uk-margi1n">
+								<label class="uk-form-label" for="form-phone">Номер телефону:</label>
+								<div class="uk-form-controls">
+								<input class="uk-input" id="form-phone" type="text" placeholder="">
+								</div>
+							</div>
+							<div class="uk-margi1n">
+								<label class="uk-form-label" for="form-email">E-mail:</label>
+								<div class="uk-form-controls">
+								<input class="uk-input" id="form-email" type="text" placeholder="">
+								</div>
+							</div>
+							<div class="uk-marg1in">
+								<label class="uk-form-label" for="form-themequestion">Тема вопроса:</label>
+								<div class="uk-form-controls">
+								<input class="uk-input" id="form-themequestion" type="text" placeholder="">
+								</div>
+							</div>
+					        
+					    </div>
+					    <div class="uk-width-1-1">
+					    	
+							<div class="uk-margin">
+								<label class="uk-form-label" for="form-question">Тема вопроса:</label>
+								<div class="uk-form-controls">
+									<textarea class="uk-textarea" id="form-question" rows="5" placeholder=""></textarea>
+								</div>
+							</div>
+
+					    </div>
+
+						<div class="uk-width-1-1">
+							<div class="uk-text-right">
+								<div class="uk-margin" uk-margin>
+									<div uk-form-custom="target: true">
+										<input type="file">
+										<input class="uk-input uk-form-width-medium" type="text" placeholder="Прикрепить документ" disabled>
+									</div>
+									<button class="uk-button uk-button-default">Отправить</button>
+								</div>
+							</div>
+						</div>
+
+					</form>
+
+	    		</div>
+
+		        
+		    </div>
+		    
+		</div>
+	</div>
+
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens l*/
+@media only screen and (max-width : 1200px)
+	/**/
+	.section-why		.hover-li
+			// width: 90%
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+
+/* m */
+@media only screen and (max-width : 960px)
+	/**/
+	.header
+		height: 300px
+	.header-content
+		height: 300px
+		line-height: 300px
+		&:after
+			// content: ''
+			// position: absolute
+			// display: block
+			// bottom: 0px
+			// width: 0px
+			// height: 0px
+			border-top: 150px solid transparent
+			border-bottom: 150px solid transparent
+			border-left: 20px solid #fff
+			right: -20px
+	.header-img
+		height: 300px
+
+	// .section-why	// 	.listFlex
+	// 		display: -webkit-flex
+	// 		display: -moz-flex
+	// 		display: -ms-flexbox
+	// 		display: flex
+	// 		-webkit-flex-flow: row wrap
+	// 		-ms-flex-flow: row wrap
+	// 		flex-flow: row wrap
+	// 		flex-wrap: wrap
+	// 	.workingProcessItem
+	// 		width: 50%
+	// 		min-height: 200px
+	// 	li
+	// 		height: 300px
+	// 	.hover-li
+	// 		height: 75%
+	// 		width: 90%
+	// 		max-width: 310px	
+	// 		// width: 100%
+	// 		// width: 75%
+	// 		// padding: 25px 0 10px
+	// 	.workingProcessItem:before,
+	// 	.workingProcessItem:after
+	// 		display: none
+	// 	.workingProcessItem:nth-child(odd):before,
+	// 	.workingProcessItem:nth-child(even):after
+	// 		display: block
+	// 		position: absolute
+	// 		top: 70px			
+	// 		transition: .5s ease-in-out
+	// 		height: 10px			
+	// 		background-image: url('../img/circle2.png')
+	// 		background-size: contain
+	// 		background-position: 100%
+	// 		pointer-events: none
+	// 		content: ''
+	// 		z-index: 1
+	// 	.workingProcessItem:nth-child(odd):before			
+	// 		left: calc(50% + 48px)			
+	// 		right: 0			
+	// 	.workingProcessItem:nth-child(even):after			
+	// 		left: 0			
+	// 		right: calc(50% + 48px)	
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.section-why
+		.listFlex
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flexbox
+			display: flex
+			-webkit-flex-flow: row wrap
+			-ms-flex-flow: row wrap
+			flex-flow: row wrap
+			flex-wrap: wrap
+		.workingProcessItem
+			width: 50%
+			min-height: 200px
+		li
+			height: 300px
+		.hover-li
+			height: 75%
+			// width: 90%
+			max-width: 200px	
+			// width: 100%
+			// width: 75%
+			// padding: 25px 0 10px
+		.workingProcessItem:before,
+		.workingProcessItem:after
+			display: none
+		.workingProcessItem:nth-child(odd):before,
+		.workingProcessItem:nth-child(even):after
+			display: block
+			position: absolute
+			top: 70px			
+			transition: .5s ease-in-out
+			height: 10px			
+			background-image: url('../img/circle2.png')
+			background-size: contain
+			background-position: 100%
+			pointer-events: none
+			content: ''
+			z-index: 1
+		.workingProcessItem:nth-child(odd):before			
+			left: calc(50% + 48px)			
+			right: 0			
+		.workingProcessItem:nth-child(even):after			
+			left: 0			
+			right: calc(50% + 48px)	
+
+/* s */
+@media only screen and (max-width : 640px)
+	/**/
+	.header
+		height: auto
+	.header-img
+		height: 200px
+
+	.section-why
+		.listFlex
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flexbox
+			display: flex
+			-webkit-flex-flow: column wrap
+			-ms-flex-flow: column wrap
+			flex-flow: column wrap
+			flex-wrap: nowrap
+		.workingProcessItem
+			width: 100%	
+		.workingProcessItemIco
+			margin-bottom: 0	
+		.hover-li
+			// max-width: 320px
+			background-color: #fff
+			padding: 10px 0 0
+			// position: relative
+			// z-index: 100
+		.workingProcessItem:after,
+		.workingProcessItem:before
+			display: none
+		.workingProcessItem:before,
+		.workingProcessItem:after
+			position: absolute	
+			left: calc(50% - 5px)!important	
+			// top: 100%!important
+			// bottom: 0!important
+			transition: .5s ease-in-out
+			width: 10px!important
+			height: 100%!important	
+			// background-image: url('../img/circle2.png')
+			// background-size: contain
+			// background-position: 100%
+			// background-color: pink
+			pointer-events: none
+			content: ''
+			z-index: 1
+		.workingProcessItem:last-child:before,
+		.workingProcessItem:last-child:after
+			display: none
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+	.uk-navbar-center
+		.uk-navbar-nav
+			display: none
+	.uk-navbar-toggle
+		display: flex
+
+	.answer
+		.answer-icon
+			width: 50px
+	.answer-text
+		padding: 0 5px
+		text-align: center
+	.header-content
+		height: 200px
+		line-height: 200px		
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
