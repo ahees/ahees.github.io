@@ -81,14 +81,13 @@ h1, h2, h3, h4, h5, h6
 		background-color: #fff
 		// border-bottom: 1px solid rgba(#e5e5e5, .5)
 		box-shadow: 0px 5px 10px rgba(0,0,0, .10)
-	.uk-navbar-item a, .uk-navbar-nav > li > a
+	.uk-navbar-nav > li > a
 		// font-size: 16px
 		font-family: $title-font
 		letter-spacing: 1.2px
 		color: #5e5e5e		
 	
-	.uk-navbar-nav,
-	.uk-navbar-item		
+	.uk-navbar-nav		
 		a			
 			position: relative	
 			transition: .5s ease-in-out	
@@ -146,14 +145,15 @@ h1, h2, h3, h4, h5, h6
 	// background-image: url('http://i.piccy.info/i9/ecf8b5803938b2724cbaff3a1cf8daf3/1519918121/61643/1188123/151394389415893868.jpg')
 	// background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-211486.jpg')
 	// background-image: url('../img/_img_0001.jpg')
-	background-image: url('../img/template/headerbg.jpg')
+	background-image: url('../img/home.jpg')
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
 	.header-img-box
 		text-align: center
 		position: relative
-		background-color: rgba(0,0,0, .1)
+		background-color: rgba(0,0,0, .2)
+		// box-shadow: 10px 0 20px rgba(0,0,0, .2)
 		padding: 10px 20px
 		color: darken(#ffffff, 0)
 		font-size: 20px
@@ -186,17 +186,17 @@ h1, h2, h3, h4, h5, h6
 	line-height: 20px
 	vertical-align: middle
 	display: inline-block
-	.content-subtitle-last
-		margin-top: 15px
-		position: relative
-		&:after
-			position: absolute
-			content: ''
-			width: 50px
-			height: 5px
-			bottom: -10px
-			left: calc(50% - 25px)	
-			background-color: yellow
+	// .content-subtitle-last
+	// 	margin-top: 15px
+	// 	position: relative
+	// 	&:after
+	// 		position: absolute
+	// 		content: ''
+	// 		width: 50px
+	// 		height: 5px
+	// 		bottom: -10px
+	// 		left: calc(50% - 25px)	
+	// 		background-color: yellow
 
 
 
@@ -218,7 +218,8 @@ h1, h2, h3, h4, h5, h6
 .section-about
 	.s-title:after
 		background-color: $color4
-.section-why	.s-title:after
+.section-why	
+	.s-title:after
 		background-color: $color1
 .section-faq
 	.s-title:after

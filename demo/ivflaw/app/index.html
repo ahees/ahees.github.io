@@ -42,8 +42,10 @@
 			            <li><a href="#why" uk-scroll="offset: 50">Почему мы</a></li>	            
 			        </ul>					
 			        <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#off-menu" uk-toggle>Меню</a>
-			        <div class="uk-navbar-item">						
-						<a href="#modal-form" uk-toggle>Задать вопрос</a>						
+			        <div class="uk-navbar-item">
+
+			        	<a href="#modal-form" class="uk-button uk-button-danger" uk-toggle>Задать вопрос</a>						
+						<!-- <a href="#modal-form" uk-toggle>Задать вопрос</a>						 -->
 					</div>
 
 			    </div>
@@ -425,7 +427,9 @@
 		<div class="uk-modal-dialog">
 		    <button class="uk-modal-close-default" type="button" uk-close></button>
 		    <div class="uk-modal-header">
-		        <h2 class="uk-modal-title">Задать вопрос</h2>
+		        <h2 class="uk-modal-title">
+		        	Задать вопрос юристу бесплатно
+		        </h2>
 		    </div>
 		    <div class="uk-modal-body">
 
@@ -445,7 +449,7 @@
 								</div>
 							</div>
 							<div class="uk-margi1n">
-								<label class="uk-form-label" for="form-phone">Номер телефона:</label>
+								<label class="uk-form-label" for="form-phone">Номер телефону:</label>
 								<div class="uk-form-controls">
 								<input class="uk-input" id="form-phone" type="text" placeholder="">
 								</div>
@@ -467,7 +471,7 @@
 					    <div class="uk-width-1-1">
 					    	
 							<div class="uk-margin">
-								<label class="uk-form-label" for="form-question">Текст сообщения:</label>
+								<label class="uk-form-label" for="form-question">Тема вопроса:</label>
 								<div class="uk-form-controls">
 									<textarea class="uk-textarea" id="form-question" rows="5" placeholder=""></textarea>
 								</div>
