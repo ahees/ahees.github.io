@@ -60,6 +60,7 @@ body
 	.s-title
 		position: relative
 		text-align: center
+		margin-bottom: 50px
 		&:before			
 			display: block
 			content: ''
@@ -506,6 +507,96 @@ body
 	-ms-transform: translateY(-8px) rotate(-45deg)
 	-o-transform: translateY(-8px) rotate(-45deg)
 	transform: translateY(-8px) rotate(-45deg)
+
+
+
+
+
+/* experiment ydalit */
+
+.head
+	position: relative
+	height: 100vh
+	min-height: 600px
+	background-image: url('http://i.piccy.info/i9/7e31c94e0b91db447597fa6edb78d9e5/1521924267/149172/1189595/3.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	overflow: hidden
+	margin-bottom: 50px
+	.sl
+		max-width: 900px
+		width: 100%
+		background-color: rgba(255,255,255, .75)
+		padding: 50px 75px
+	// img
+	// 	min-height: 700px
+	.menu
+		background-color: rgba(0,0,0, .15)
+		color: #ffffff
+		.uk-navbar-container
+			background-color: transparent
+			.uk-navbar-nav >
+				li >
+					a
+						color: #fff
+		.menu-phone
+			color: #ffffff
+			border-style: solid	
+			border-color: #fff		
+			background-color: rgba(0,0,0, .45)
+	h1
+		position: relative
+		z-index: 2
+		text-transform: uppercase
+		text-align: center
+		font-size: 1.85em
+	.content-header-text
+		text-align: center
+		font-size: 18px
+		// color: #ffffff
+	.hamburger .line
+		background-color: #ffffff
+
+	// .sl
+	// 	background-color: rgba($accent-color, .5)
+	// 	box-shadow: 0 0 100px rgba($accent-color, 1)
+	// 	padding: 150px 0
+@media only screen and (max-width : 480px)
+	/**/
+	.head
+		h1
+			font-size: 1.3em
+		.sl
+			padding: 20px 10px
+
+
+.servslider-box
+	position: relative
+	// min-height: 320px
+	// height: 320px	
+	// overflow: hidden
+	> div
+		// height: inherit
+	.uk-slider-items
+		li
+			background-color: pink
+			// margin: 0 10px
+	.slider-navigation
+		position: absolute
+	.uk-slideshow-items
+		// height: inherit!important	
+@media only screen and (max-width : 640px)
+	/**/
+	.servslider-box
+		// height: 700px		
+
+/* experiment ydalit */
+
+
+
+
+
 
 
 @import "media" // Всегда в конце
