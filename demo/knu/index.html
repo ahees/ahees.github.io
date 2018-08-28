@@ -108,7 +108,7 @@
 		</header>
 
 
-		<section class="section section-about">
+		<section class="section section-about" id="about">
 
 			<div class="uk-container">
 				<h2 class="section-title">Про проект</h2>
@@ -210,7 +210,7 @@
 		</section>
 
 
-		<section class="section section-bg1">
+		<section class="section section-bg1" id="program">
 			<div class="uk-container">
 
 
@@ -356,7 +356,7 @@
 			</div>
 		</section>
 
-		<section class="section section-news">
+		<section class="section section-news" id="news">
 
 			<div class="uk-container">
 				<h2 class="section-title">Новини</h2>
@@ -407,7 +407,7 @@
 
 		</section>
 
-		<section class="section section-anons">
+		<section class="section section-anons" id="anons">
 
 			<div class="uk-container">
 				<h2 class="section-title">Анонси</h2>
@@ -441,46 +441,12 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="uk-grid-small" uk-grid>
-					<div class="uk-width-1-1@s">
-						<div class="anons-i">
-							<div class="anons-i-img" style="background-image: url('./img/Анонс.jpg')">								
-							</div>
-							<div class="anons-i-text">
-								<p>
-									<span>2 жовтня</span> відбудеться офіційне відкриття 4 сезону навчання в Університети юних правознавців.
-								</p>
-								<p>
-									Заповнюй
-									<a href="#" class="uk-link">анкету</a> зараз – встигни стати частинкою великого дійства.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div> -->
-
-				<!-- <div class="anons-wrapper">
-		
-					<div class="anons-item uk-width-2-3@s">
-						<img src="./img/Анонс.jpg" alt="anons" width="150" class="uk-float-left">
-						<div>
-							<p>
-								<span>2 жовтня</span> відбудеться офіційне відкриття 4 сезону навчання в Університети юних правознавців.
-							</p>
-							<p>
-								Заповнюй
-								<a href="#" class="uk-link">анкету</a> зараз – встигни стати частинкою великого дійства.
-							</p>
-						</div>
-					</div>
-		
-				</div> -->
-
+				
 			</div>
 
 		</section>
 
-		<section class="section section-team">
+		<section class="section section-team" id="team">
 
 			<div class="uk-container">
 				<h2 class="section-title">Команда</h2>
@@ -511,9 +477,9 @@
 
 					<div class="team-item">
 
-						<a class="uk-inline" href="./img/team/team2.jpg">
+						<a class="uk-inline" href="./img/team/team2_1.jpg">
 							<div class="uk-cover-container">
-								<img src="./img/team/team2.jpg" alt="" uk-cover>
+								<img src="./img/team/team2_1.jpg" alt="" uk-cover>
 								<canvas></canvas>
 							</div>
 						</a>
@@ -522,9 +488,9 @@
 
 					<div class="team-item">
 
-						<a class="uk-inline" href="./img/team/team3.jpg">
+						<a class="uk-inline" href="./img/team/team3_1.jpg">
 							<div class="uk-cover-container">
-								<img src="./img/team/team3.jpg" alt="" uk-cover>
+								<img src="./img/team/team3_1.jpg" alt="" uk-cover>
 								<canvas></canvas>
 							</div>
 						</a>
@@ -538,7 +504,7 @@
 
 		</section>
 
-		<section class="section section-fr">
+		<section class="section section-fr" id="friends">
 			<div class="uk-container">
 				<div class="default-wrapp1er uk-card uk-card-default uk-card-body">
 					<h2 class="section-title">Співпраця</h2>
@@ -636,12 +602,12 @@
 
 				<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
 
-					<li><a href="#">Про проект</a></li>
-					<li><a href="#">Програма</a></li>
-					<li><a href="#">Новини</a></li>
-
-
-					<li class="uk-nav-header">Header</li>
+					<li><a href="#about" uk-scroll="offset: 50">Про проект</a></li>
+					<li><a href="#program" uk-scroll="offset: 50">Програма лекцій та графік проведення</a></li>
+					<li><a href="#news" uk-scroll="offset: 50">Новини</a></li>
+					<li><a href="#anons" uk-scroll="offset: 50">Анонси</a></li>
+					<li><a href="#team" uk-scroll="offset: 50">Команда</a></li>
+					<li><a href="#friends" uk-scroll="offset: 50">Співпраця</a></li>
 
 				</ul>
 
