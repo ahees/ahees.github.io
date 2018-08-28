@@ -1,0 +1,142 @@
+@import '../vars'
+
+.navbar
+    margin-bottom: 25px
+
+
+.nav-logo
+    width: 230px
+.nav-logo-mob
+    display: none
+    height: 75px
+.uk-sticky-fixed
+    box-shadow: 0 5px 5px 5px rgba(47,53,66,.1)
+
+
+
+.header1_bg
+    // background-image: url('../img/red3_2.jpg')
+    // background-image: url('http://imgclf.112.ua/original/2015/09/15/182681.jpg')
+    // background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b5/Червоний_корпус_КНУ_1.jpg')
+    // background-image: url('https://st2.depositphotos.com/2164829/12372/i/950/depositphotos_123726204-stock-photo-taras-shevchenko-national-university-of.jpg')
+    background-image: url('../img/red2_1.jpg')
+    height: 500px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+.header1_content
+    display: flex
+    align-items: center
+    .h-title
+        font-family: $font2
+        font-weight: 600
+        font-size: 2.5em
+    p
+        font-size: 18px
+.header1
+    margin-top: 25px
+
+.button-accent
+    color: #fff
+    font-weight: 600
+    letter-spacing: 1px
+    background-color: $color1
+    background-color: #EAB543
+    border-bottom: 3px solid darken(#EAB543, 10%)
+    border-radius: 5px
+    &:hover,
+    &:focus
+        background-color: darken(#EAB543, 5%)
+        color: #ffffff
+
+
+
+#nav-icon3
+    width: 40px
+    height: 20px
+    position: relative
+    margin: 5px auto
+    transform: rotate(0deg)
+    transition: .5s ease-in-out
+    cursor: pointer
+    opacity: 0.85
+
+
+#nav-icon3 span
+    display: block
+    position: absolute
+    height: 4px
+    width: 100%
+    background: #d3531a
+    background: $default-black
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+
+#nav-icon3 span:nth-child(1)
+    top: 0px
+
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3)
+    top: 10px
+
+
+#nav-icon3 span:nth-child(4)
+    top: 20px
+
+
+#nav-icon3.open span:nth-child(1)
+    top: 18px
+    width: 0%
+    left: 50%
+
+
+#nav-icon3.open span:nth-child(2)
+    transform: rotate(45deg)
+
+
+#nav-icon3.open span:nth-child(3)
+    transform: rotate(-45deg)
+
+
+#nav-icon3.open span:nth-child(4)
+    top: 18px
+    width: 0%
+    left: 50%
+
+.button-st
+    font-size: 18px
+    color: $default-black
+    padding: 5px 15px
+    // font-family: $font2
+    // font-weight: 600
+    text-transform: uppercase
+    border: 1px solid rgba($default-black, .5)
+    border-radius: 5px
+
+#mmenu
+    .uk-offcanvas-bar
+        // background-color: #EAB543
+    ul
+        li
+            a
+                font-size: 18px
+                font-family: $font1
+
+@media only screen and (max-width : 390px)
+    .nav-logo-mob
+        width: 50px
+    .uk-navbar-item
+        padding: 0 5px
+        .button-accent
+            padding: 0 15px
+            margin-right: 5px
+@media only screen and (max-width : 550px)
+    .nav-logo
+        display: none
+    .nav-logo-mob
+        display: block
+    .header1
+        margin-top: 0

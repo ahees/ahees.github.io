@@ -1,0 +1,63 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $font1
+	overflow-x: hidden
+	opacity: 1
+	color: $default-black
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+.index
+	.header
+		height: 100vh
+		min-height: 700px
+		background-image: url('../img/red_korp.jpg')
+		background-size: cover
+		background-position: center
+.menu
+	.logo-img
+		width: 220px
+@import '_partial/dev'
+@import '_partial/all'
+@import '_partial/mmenu'
+@import '_partial/sabout'
+@import '_partial/sprogram'
+@import '_partial/snews'
+@import '_partial/sanons'
+@import '_partial/steam'
+@import '_partial/sfriends'
+@import "media" // Всегда в конце

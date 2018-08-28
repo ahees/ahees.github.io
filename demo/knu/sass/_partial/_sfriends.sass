@@ -1,0 +1,43 @@
+@import '../vars'
+
+.grid-logo
+    div
+        img
+            height: 100%
+            max-width: 225px
+            margin: 0 auto
+
+.friends-content
+    margin: 0 auto
+    margin-top: 50px
+    text-align: center
+
+.feedback
+    padding: 50px 0
+    background-color: $color1
+
+.input-fr
+    position: relative
+.error-fr
+    display: none
+    position: absolute
+    bottom: -30px
+    left: 50%
+    transform: translateX(-50%)
+    background-color: $color1
+    // border: 2px solid $color1
+    color: #ffffff
+    font-size: 14px
+    padding: 0 25px
+.button-fr
+    background-color: #55E6C1
+    color: #ffffff
+    // border-radius: 5px
+    border: none
+    border-bottom: 3px solid darken(#55E6C1, 15%)
+    &:focus,
+    &:hover
+        background-color: darken(#55E6C1, 10%)
+        color: #ffffff
+        border-bottom: 3px solid darken(#55E6C1, 15%)
+        // border-color: #55E6C1

@@ -1,0 +1,112 @@
+@import "../vars"
+
+.section-bg1
+    background-color: $color2
+    background-image: url('../img/test1.png')
+    background-repeat: repeat
+    background-position: center
+    background-attachment: fixed
+    // background-size: contain
+.section-bg2
+    background-color: $color3
+    background-image: url('../img/test2.png')
+    background-repeat: repeat
+    background-position: center
+
+
+.default-wrapper
+    position: relative
+    padding: 50px 25px
+    background-color: #fff
+    // border-radius: 50px
+    box-shadow: 0 10px 60px 0 rgba(27,15,70,0.22)
+
+
+
+.footer
+    position: relative
+    height: 300px
+    background-color: $color3
+    background-image: url("../img/test2.png")
+    background-repeat: repeat
+    background-position: center
+    z-index: -1
+
+.section-fr
+    position: relative
+    margin-bottom: -300px
+
+
+// anketa
+#new_anketa
+    .anketa-box
+        .anketa-btn
+            width: 40%
+            padding: 10px
+            margin: 0 5px
+            border-radius: 5px
+            color: $default-black
+            font-family: $font2
+            font-size: 1em
+            img
+                width: 150px
+                margin: 0 auto
+                display: block
+            &:first-child
+                &:hover,
+                &:focus
+                    // background-color: $color1
+            &:last-child
+                &:hover,
+                &:focus
+                    // background-color: $color3
+            &:hover,
+            &:focus
+                background-color: #f7f8f9
+                color: $default-black
+.anketa-title
+    text-transform: uppercase
+    font-size: 2.4em
+    font-weight: 600
+    font-family: $font2
+    color: $default-black
+    text-align: center
+    margin: 10px 0 5px 0
+    padding: 0
+
+.uk-modal-full
+    form
+        .uk-input
+            border-color: $color3
+    .uk-modal-dialog
+        // background-color: $color1
+        background-color: #f7f8f9
+        // background-image: url('../img/test2.png')
+        background-repeat: repeat
+        background-position: center
+        // background-size: cover
+.anketa_bg
+    // height: 100vh
+    width: 100%
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+.uk-checkbox + span
+    display: block
+    padding-left: 25px
+    margin-top: -28px
+    line-height: 1.5
+    font-size: 14px
+@media only screen and (max-width : 640px)
+	#new_anketa
+        .anketa-box
+            flex-wrap: wrap
+            .anketa-btn
+                width: 100%
+                max-width: 300px
+                padding: 10px
+                margin: 0 5px
+                border-radius: 5px
+                color: $default-black
+                font-family: $font2
+                font-size: 1em

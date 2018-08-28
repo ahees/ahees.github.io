@@ -1,0 +1,39 @@
+@import '../vars'
+.team-wrapper
+    display: flex
+    justify-content: center    
+    box-sizing: border-box
+.team-item
+    box-sizing: border-box
+    width: 25%
+    max-width: 275px
+    margin: 5px
+    // width: 275px
+    // margin: 0 1em
+    canvas
+        width: 275px
+        height: 275px
+        // border-radius: 1em
+
+
+
+
+
+@media only screen and (max-width : 680px)
+	.team-wrapper
+        flex-wrap: wrap
+        // flex-direction: row
+        .team-item
+            width: 50%
+@media only screen and (max-width : 480px)
+	.team-wrapper
+        flex-wrap: wrap
+        .team-item
+            width: 100%
+@media only screen and (max-width : 860px)
+    .team-wrapper
+        .team-item
+            canvas
+                height: 200px
+        
+

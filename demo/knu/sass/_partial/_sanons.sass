@@ -1,0 +1,77 @@
+@import '../vars'
+
+// .anons-item
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     box-shadow: 0 10px 10px 10px rgba(47,53,66,.035)
+//     margin: 0 auto
+//     & > div
+//         padding-left: 2em
+//     span
+//         font-size: 20px
+//         font-weight: 600
+.anons-i
+    // padding: 25px
+    box-shadow: 0 10px 10px 10px rgba(47,53,66,.075)
+    display: flex
+    .anons-i-img
+        width: 320px
+        height: 420px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+    .anons-i-text
+        width: 100%
+        padding: 0 25px
+
+
+
+
+
+.anons-bg
+    display: flex
+    position: relative    
+    &:before
+        position: absolute
+        content: ''        
+        width: 110%
+        top: 50%
+        left: 50%
+        padding-bottom: 100%
+        transform: translate(-50%, -50%) scale(.75)
+        background-image: url('https://sketchapp.com//images/pages/home/cloud-shapes.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+
+.anons-bg-wrapper
+    margin: auto    
+.anons-bg-img
+    max-width: 250px
+    width: 100%    
+    overflow: hidden
+    background: #FFFFFF
+    border-radius: 10px
+    border: 0 solid rgba(42,16,106,0.11)
+    box-shadow: 0 10px 60px 0 rgba(27,15,70,0.22)
+
+
+.anons-items
+    text-align: center
+.anons-item-date
+    font-family: $font2
+    font-size: 1.25em
+    text-transform: uppercase
+    font-weight: 500
+    color: rgba($default-black, .75)
+    color: $color3
+    text-align: center
+    span
+        font-size: 1.75em
+.anons-item-content
+    text-align: justify
+.anons-promo
+    text-align: center
+    width: 50px
+    margin: 0 auto
