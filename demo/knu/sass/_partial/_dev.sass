@@ -354,3 +354,33 @@
             display: flex
             align-items: center            
             justify-content: center
+
+.logo-big
+    display: block
+.logo-small
+    display: none
+    width: 100px
+    margin: 0 auto
+// .top-header
+//     .uk-container
+//         & > div
+//             flex-wrap: wrap
+@media only screen and (max-width : 480px)
+    .top-header
+        .uk-container
+            & > div
+                flex-wrap: wrap
+    .logo-small
+        width: 100px
+        margin: 10px auto
+    .new-header 
+        min-height: 500px
+        .new-header-box 
+            padding: 5px
+            .h-title
+                font-size: 2em
+@media only screen and (max-width : 720px)
+    .logo-big
+        display: none
+    .logo-small
+        display: block
