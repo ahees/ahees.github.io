@@ -123,3 +123,234 @@
     // color: #ffffff
     // font-size: 18px
     padding: 75px 0
+
+
+// PRAVKI
+.top-header
+    padding: 2em 0
+    background-image: url('http://pvd-ua.com/assets/templates/img/bg.png')
+    .top-logo
+        width: 275px
+        // margin: 0 auto
+    .button-accent
+        font-weight: 400
+.top-menu
+    .uk-navbar-container:not(.uk-navbar-transparent)
+        background-color: #ffb733
+        background: #fdc830
+        background: -webkit-linear-gradient(to right, #fdc830, #f37335)
+        background: linear-gradient(to right, #fdc830, #f37335)
+    .uk-navbar-nav
+        & > li
+            transition: all .25s ease-in-out
+            & > a
+                color: #ffffff
+                text-align: center
+                height: 60px
+                line-height: 1.5
+            &:nth-child(1)
+                background-color: #ffcb2e
+                &:hover
+                    background-color: darken(#ffcb2e,5%)
+            &:nth-child(2)
+                background-color: #66cfd5
+                &:hover
+                    background-color: darken(#66cfd5,5%)
+            &:nth-child(3)
+                background-color: #4499a7
+                &:hover
+                    background-color: darken(#4499a7,5%)
+            &:nth-child(4)
+                background-color: #97a5c3
+                &:hover
+                    background-color: darken(#97a5c3,5%)
+            &:nth-child(5)
+                background-color: #f65f18
+                &:hover
+                    background-color: darken(#f65f18,5%)
+            &:nth-child(6)
+                background-color: #b27fdc
+                &:hover
+                    background-color: darken(#b27fdc,5%)
+            &:nth-child(7)
+                background-color: #fda98f
+                &:hover
+                    background-color: darken(#fda98f,5%)
+
+.new-header
+    min-height: 800px
+    background-color: $color1
+    // background-image: url('../img/red3.jpg')
+    // background-image: url('https://imgclf.112.ua/original/2015/09/15/182681.jpg')
+    // background-image: url('../img/182681.jpg')
+    // background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8c/Universidad_Roja_de_Kiev.jpg')
+    // background-image: url('../img/red3_2.jpg')
+    background-image: url('../img/red_bg2.jpg')
+    // background-image: url('https://kidsheaven.wpengine.com/wp-content/uploads/2017/01/doodle_bg.png')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    // align-items: flex-end
+    .new-header-box
+        position: relative
+        background-color: rgba(0,0,0, .25)
+        padding: 25px
+        border: 1px solid rgba(255,255,255, .25)
+        .h-title
+            font-family: $font1
+            font-weight: 600
+            font-size: 4em
+            color: #ffffff
+            letter-spacing: 1.25px
+            margin: 0
+            text-align: center
+    .new-header-line
+        width: 100%
+        background: #fdc830
+        background: -webkit-linear-gradient(to right, #fdc830, #f37335)
+        background: linear-gradient(to right, #fdc830, #f37335)
+        // margin-bottom: 50px
+        padding: 50px 0
+        opacity: 0.5
+        h1
+            margin: 0
+
+
+.newteam-item-lead
+    display: flex
+    justify-content: center
+    text-align: center
+    canvas
+        height: 275px
+        width: 275px
+    .title
+        font-size: 18px
+        // color: $color3
+        font-weight: 600
+        margin-bottom: 10px
+        text-transform: uppercase
+    .subtitle
+        color: rgba($default-black, .5)
+        span
+            display: block
+            font-size: 20px
+            font-weight: 600
+            margin: 15px 0 5px
+            color: $default-black
+#team
+    // background-color: #f7f8f9
+.newteam-wrapper
+    margin-top: 50px
+.team-grid
+    margin-top: 50px
+    canvas
+        height: 250px
+        width: 275px
+    & > div
+        margin-bottom: 25px
+    .team-grid-box
+        display: flex
+        align-items: center
+        height: 250px
+        width: 275px
+        background-color: #f7f8f9
+        background-color: $color3
+        text-align: center
+        // padding-left: 15px
+        .title,
+        .subtitle
+            margin-left: 15px
+        .title
+            font-size: 18px
+            // color: $color3
+            font-weight: 600
+            margin-bottom: 15px
+            text-transform: uppercase
+        .subtitle
+            color: rgba($default-black, .5)
+            color: #ffffff
+
+
+.pre
+    position: relative
+    background-color: #fff
+    margin-top: -75px
+    box-shadow: 0 -50px 20px rgba(0,0,0,.075)
+    .grid-pre
+        margin: 0 auto
+        & > div > div
+            // border: 1px solid rgba(255,165,0,.25)
+            border: 1px solid rgba($color3, .25)
+            // background-color: rgba($color3, .05)
+            padding: 25px
+            display: flex
+            align-items: center
+        ul
+            list-style-type: none
+            margin: 0
+            padding: 0
+            li
+                line-height: 1.5
+                margin-bottom: 12px
+                position: relative
+                padding-left: 20px
+                span
+                    font-weight: 600
+                &:before
+                    position: absolute
+                    content: ''
+                    left: 0
+                    top: 4px
+                    width: 10px
+                    height: 10px
+                    border-radius: 50%
+                    border: 2px solid $color3
+
+.section-ontest
+    background-color: $color1
+    background-image: url('../img/test2.png')
+    // background-image: url('../img/new_bg/doodle_bg.png')
+    background-repeat: repeat
+    background-position: center
+
+.ontest-block
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-around
+    flex-wrap: wrap
+    padding: 50px
+    // background-color: rgba($default-black, .035)
+    background-color: #fff
+    img
+        width: 75px
+    & > div
+        text-align: center
+        margin: 1em 0
+        // margin: 0 25px
+
+.advantages
+    background: #fdc830
+    background: -webkit-linear-gradient(to right, #fdc830, #f37335)
+    background: linear-gradient(to right, #fdc830, #f37335)
+    text-align: center
+    &-grid
+        div:first-child
+            background-color: $color3
+        div:nth-child(2)
+            background-color: $color2
+        div:last-child
+            background-color: $color1
+        & > div
+            padding: 25px 0
+            // font-weight: 600
+            font-size: 20px
+            color: #ffffff
+            letter-spacing: .0275rem
+            display: flex
+            align-items: center            
+            justify-content: center
