@@ -33,6 +33,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.75
+	// font-family: $default-font
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
@@ -52,7 +53,7 @@ body
 	// font-weight: 700
 	// text-transform: uppercase
 .semibold
-	font-family: $default-font-semibold
+	// font-family: $default-font-semibold
 	font-weight: normal
 b, strong
 	font-family: $default-font-bold
@@ -69,160 +70,166 @@ body
 	background-position: center
 	// background-size: cover
 body.home
+	// &:after
+	// 	position: absolute
+	// 	content: ''
+	// 	background-image: url('../img/headerbg.jpg')
+	// 	background-repeat: no-repeat
+	// 	width: 100%
+	// 	height: 600px
+	// 	left: 0
+	// 	top: 100px
+	// 	background-position: center
+	// 	background-size: cover
+	// 	// z-index: -1
+	// 	opacity: 0.5
+
+
+@import "_partial/topheader"
+@import "_partial/price"
+@import "_partial/footer"
+
+
+
+// .hero
+// 	position: relative
+// 	display: flex
+// 	width: 100%
+// 	justify-content: center
+// 	margin-top: 150px	
+// 	z-index: 2
+// 	.hero-box
+// 		position: relative
+// 		background-color: #fff
+// 		padding: 25px 50px 50px
+// 		box-shadow: 0 10px 20px 10px rgba(242,241,242,.75)
+// 		.hero-title
+// 			position: relative
+// 			font-family: $title-font
+// 			font-size: 60px
+// 			text-transform: uppercase
+// 			color: $font-color
+// 			letter-spacing: 1.5px
+// 			text-align: center
+			
+// 		.hero-subtitle
+// 			font-size: 20px
+// 			color: rgba($dark-color, .75)
+// 	.hero-line
+// 		display: block
+// 		height: 2px
+// 		background-color: $font-color
+// 		width: 150px
+// 		margin: 0 auto 15px
+
+// .hero-text
+// 	position: relative
+// 	margin-top: 100px
+// 	text-align: center
+// 	z-index: 2
+
+// .hero-circle
+// 	margin: 100px 0
+// 	position: relative
+// 	display: flex
+// 	justify-content: center
+// 	.cblock
+// 		// background-color: red
+// 		border-radius: 50%
+// 		position: relative
+// 		width: 200px
+// 		height: 200px
+// 		margin: 0 10px
+// 		// background-image: url(../img/flower1.png)
+// 		background-repeat: no-repeat
+// 		background-position: center
+// 		background-size: cover
+// 		display: flex
+// 		justify-content: center
+// 		align-items: center
+// 		.cblock-img
+// 			width: 150px
+// 			height: 150px
+// 			background-repeat: no-repeat
+// 			background-position: center
+// 			background-size: cover
+// 			border-radius: 50%
+// 			box-shadow: 0 10px 20px 10px rgba($accent-color, .35)
+// 		&.active
+// 			border-radius: 0
+// 			background-color: transparent
+// 			background-image: url(../img/flower1.png)
+// 			.cblock-img
+// 				box-shadow: none
+// 				width: 175px
+// 				height: 175px
+
+
+.sec-title-box
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 25px 0
+	// background-color: red
+.sec-title
+	margin: 0	
+	display: inline-block
+	font-family: $title-font
+	font-weight: normal
+	font-size: 36px	
+	position: relative
+	&:before
+		position: absolute
+		content: ''
+		height: 90px
+		width: 90px
+		// width: 100%
+		background-image: url(../img/titleb.svg)
+		background-repeat: no-repeat
+		// right: calc(100% + 15px)
+		left: -150px
+		top: 50%
+		transform: translateY(-50%)
 	&:after
 		position: absolute
 		content: ''
-		background-image: url('../img/headerbg.jpg')
+		height: 90px
+		width: 90px
+		// width: 35px
+		// width: 100%
+		background-image: url(../img/titlea.svg)
 		background-repeat: no-repeat
-		width: 100%
-		height: 600px
-		left: 0
-		top: 100px
-		background-position: center
-		background-size: cover
-		// z-index: -1
-		opacity: 0.5
-.header
-	position: relative
-	background: #ffffff
-	box-shadow: 0 10px 20px 10px rgba(242,241,242,.5)
-	z-index: 2
-	.top-line
-		background-color: #F6F7FC
-		height: 35px
-		line-height: 35px
-		text-align: right
-		.social
-			list-style-type: none
-			margin: 0
-			padding: 0
-			li
-				display: inline-block
-				font-size: 14px
-				&:first-child
-					letter-spacing: 1px
-					margin-right: 15px		
-				img
-					width: 20px
-					// opacity: 0.5
-				svg
-					width: 25px
-					opacity: 0.65
-					margin-right: 5px
-	.uk-navbar-container
-		background-color: red
-		background-color: #ffffff
-		padding: 5px 0
-	.uk-logo
-		width: 150px
-		height: 100%
-		padding: 0
-		margin-right: 25px
-		img
-			width: 100%
-			zoom: 1
-	.uk-navbar-nav
-		li
-			a
-				font-size: 20px
-				letter-spacing: 1px
-				font-family: $title-font
+		// left: calc(100% + 15px)
+		right: -160px
+		top: 50%
+		transform: translateY(-50%)
 
-
-
-.hero
-	position: relative
-	display: flex
-	width: 100%
-	justify-content: center
-	margin-top: 150px	
-	z-index: 2
-	.hero-box
-		position: relative
-		background-color: #fff
-		padding: 25px 50px 50px
-		box-shadow: 0 10px 20px 10px rgba(242,241,242,.75)
-		.hero-title
-			position: relative
-			font-family: $title-font
-			font-size: 60px
-			text-transform: uppercase
-			color: $font-color
-			letter-spacing: 1.5px
-			text-align: center
-			
-		.hero-subtitle
-			font-size: 20px
-			color: rgba($dark-color, .75)
-	.hero-line
-		display: block
-		height: 2px
-		background-color: $font-color
-		width: 150px
-		margin: 0 auto 15px
-
-.hero-text
-	position: relative
-	margin-top: 100px
-	text-align: center
-	z-index: 2
-
-.hero-circle
-	margin: 100px 0
-	position: relative
-	display: flex
-	justify-content: center
-	.cblock
-		// background-color: red
-		border-radius: 50%
-		position: relative
-		width: 200px
-		height: 200px
-		margin: 0 10px
-		// background-image: url(../img/flower1.png)
-		background-repeat: no-repeat
-		background-position: center
-		background-size: cover
-		display: flex
-		justify-content: center
-		align-items: center
-		.cblock-img
-			width: 150px
-			height: 150px
-			background-repeat: no-repeat
-			background-position: center
-			background-size: cover
-			border-radius: 50%
-			box-shadow: 0 10px 20px 10px rgba($accent-color, .35)
-		&.active
-			border-radius: 0
-			background-color: transparent
-			background-image: url(../img/flower1.png)
-			.cblock-img
-				box-shadow: none
-				width: 175px
-				height: 175px
 
 .s-title
 	font-family: $title-font
 	font-size: 36px
 	text-align: center
-
-.lang-block
+	display: inline-block
 	position: relative
-	background-color: #f6f7fc
-	padding: 5px 10px
-	border-radius: 5px
-	ul
-		list-style-type: none
-		margin: 0
-		padding: 0
-		li
-			display: inline-block
-			margin: 0 5px
-			a
-				font-size: 16px
-				color: $font-color
+	// margin: 125px 0
+	// overflow: visible
+	&:before
+		position: absolute
+		content: ''
+		width: 100%
+		height: 100px
+		background-image: url(../img/titleb.svg)
+		background-repeat: no-repeat
+		// background-position: center
+		background-size: contain
+		// left: -100px
+		left: 100px
+		top: 50%
+		transform: translateY(-50%)
+
+
+
 
 
 
@@ -266,90 +273,6 @@ body.home
 	p
 		margin: 7px
 
-.section-price
-	padding-bottom: 0
-.usluga-box
-	position: relative
-	background-color: #f6f7fc
-	.inostr
-		margin: 50px 0
-
-	.paket-box
-		display: flex
-		justify-content: center
-		
-		table
-			border: 0
-			box-sizing: border-box
-			border-spacing: 0
-			border-radius: 5px
-			overflow: hidden
-			box-shadow: 0 10px 20px 0px rgba(242,241,242,.5)
-			thead
-				background-color: #ecedf2
-				th
-					padding: 20px
-					text-align: center
-			tbody
-				tr
-					background-color: #fff
-					td
-						padding: 20px
-						text-align: center
-						line-height: 22px
-						font-size: 16px
-						max-width: 500px
-						border-bottom: 1px solid #ecedf2
-						&:first-child
-							padding: 20px
-					&:last-child
-						td
-							background-color: rgba(#ecedf2, .25)
-							font-family: $default-font-semibold
-							border-bottom: 0
-	.neinostr
-		margin: 50px 0
-		.list-circle
-			li
-				font-size: 16px
-				&:before
-					background-color: $accent-color2
-					box-shadow: 0px 10px 20px 0px rgba($accent-color2,0.75)
-.cicon
-	width: 35px
-	height: 35px
-	display: flex
-	justify-content: center
-	align-items: center
-	color: #fff	
-	margin: 0 auto
-	border-radius: 50%
-	font-size: 22px
-	line-height: 35px
-	
-.cicon-plus
-	background-color: $accent-color
-	box-shadow: 0px 10px 15px 0px rgba($accent-color,.75)
-.cicon-minus
-	background-color: $accent-color2
-	box-shadow: 0px 10px 15px 0px rgba($accent-color2,0.75)
-
-.switcher-price
-	& > div		
-		text-align: center
-		padding: 15px 0
-		a
-			color: rgba($dark-color, .75)
-			text-decoration: none
-			outline: none
-			font-family: $title-font
-			font-size: 24px
-			
-	.uk-active
-		background-color: #f6f7fc
-		border-radius: 10px 10px 0 0
-		a
-			color: $dark-color
 	
 
 .section-faq
@@ -394,10 +317,11 @@ body.home
 				box-shadow: 0px 10px 15px 0px rgba($accent-color2,0.75)
 			.faq-title
 				font-size: 20px
-				font-family: $default-font-semibold
+				font-family: $default-font-bold
 			.faq-answer
 				margin-top: 20px
-				font-family: $default-font-italic
+				font-family: $default-font
+				font-style: italic
 				color: rgba($dark-color, .75)
 
 .section-team	
@@ -439,56 +363,75 @@ body.home
 
 
 
-.footer
+
+// test
+.test-hero
 	position: relative
-	background-color: #292D3E
-	color: #fff
-	padding: 30px 0
-	// margin-top: 500px
-	.footer-title
-		font-family: $title-font
-		color: #fff
-		font-size: 18px
-		text-transform: uppercase
-		letter-spacing: 1px
+	// z-index: 2
+	background-color: #fff
+	// background: linear-gradient(-135deg, #f54ea2, #ff7676)
+	background-image: url('../img/9.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	padding: 150px 0
+	// padding: 0
 	&:before
-		display: none
 		position: absolute
 		content: ''
-		transform: rotate(180deg)
-		background-image: url('../img/headerbg.jpg')
-		background-repeat: no-repeat
-		width: 100%
-		height: 600px
 		left: 0
-		top: -600px
+		top: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(to left, #ffffff, transparent)
+		background-color: rgba(#fff, .86)
+	.test-hero-img
+		position: relative
+		display: flex
+		width: 100%
+		height: 100%
+		justify-content: center		
+		overflow: hidden
+		// &:before
+		// 	position: absolute
+		// 	content: ''
+		// 	width: 80%
+		// 	height: 80%
+		// 	left: 50%
+		// 	top: 50%
+		// 	transform: translate(-50%,-50%)
+		// 	border: 2px solid $font-color
+		// 	box-shadow: 0 0px 130px 130px rgba(#fff, 1)
+	img
+		max-height: 420px
+		// box-shadow: 0 0px 20px 0 rgba($font-color, .25)
+
+	.test-hero-title
+		font-family: 'Circe-Bold'
+		text-transform: uppercase
+		font-size: 64px
+		line-height: 64px
+		font-weight: normal
+		color: $font-color
+		color: $font-color
+		// text-shadow: 1px 1px 2px black
+	.test-hero-sub
+		font-size: 22px
+		color: rgba($font-color, .75)
+	.test-line
+		height: 2px
+		width: 175px
+		margin: 15px auto
+		background-color: $font-color
+	.bg-alemona
+		position: relative
+		min-height: 400px
+		background-image: url('../img/newbg.svg')
+		background-repeat: no-repeat
 		background-position: center
-		background-size: cover
-		z-index: -1
-		opacity: 0.5
-	.mapsite
-		margin: 0
-		padding: 0
-		list-style-type: none
-		color: rgba(255,255,255, .75)
-		font-size: 14px
-		a
-			color: rgba(255,255,255, .75)
-			transition: color .35s ease-in-out
-			text-decoration: none
-			&:hover
-				color: $accent-color2
-	.footer-social
-		list-style-type: none
-		padding: 0
-		margin: 0
-		color: rgba(255,255,255, .75)
-		font-size: 14px
-		li
-			margin-bottom: 10px
-		svg
-			width: 25px
-			margin-right: 10px
+		background-size: contain
+		// opacity: 0.75
+// end test
 
 
 @import "media" // Всегда в конце
