@@ -49,6 +49,14 @@
 				font-family: $open-sans	
 				font-weight: normal
 				text-transform: none
+.top-line-box
+	display: flex
+	justify-content: right
+	.link
+		// padding: 0 15px
+		margin-right: 20px
+		font-size: 16px
+		color: $font-color
 .lang-block
 	position: relative
 	background-color: #f6f7fc
@@ -153,7 +161,11 @@
 			display: none
 		.navbar-mmenu
 			display: block
-
+@media only screen and (max-width : 520px)
+	/**/
+	.top-line-box		
+		.link
+			display: none
 @media only screen and (max-width : 480px)
 	/**/
 	.uk-offcanvas-bar
