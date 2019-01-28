@@ -1,0 +1,55 @@
+.section-faq
+    position: relative
+    .list-faq
+        margin: 0
+        padding: 0
+        list-style-type: none
+        margin-top: 50px
+        li
+            position: relative
+            margin: 0
+            padding: 0
+            padding-left: 70px
+            margin-bottom: 35px
+            &:before
+                position: absolute
+                content: '?'
+                color: #fff
+                font-family: $default-font-bold
+                text-align: center
+                font-size: 20px
+                line-height: 40px
+                left: 0
+                top: 0
+                width: 40px
+                height: 40px
+                background-color: $accent-color2
+                border-radius: 5px
+                box-shadow: 0px 10px 15px 0px rgba($accent-color2,0.75)
+            .faq-title
+                font-size: 20px
+                line-height: 26px
+                font-family: $default-font-bold
+            .faq-answer
+                margin-top: 20px
+                font-family: $default-font
+                font-style: italic
+                color: rgba($dark-color, .75)
+
+@media only screen and (max-width : 860px)
+	/**/
+
+	
+
+@media only screen and (max-width : 480px)
+	/**/
+	.section-faq
+        .list-faq            
+            li                
+                padding-left: 40px
+                margin-bottom: 35px
+                &:before
+                    top: 3px
+                    width: 30px
+                    height: 30px
+                    line-height: 30px

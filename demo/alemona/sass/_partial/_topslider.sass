@@ -1,0 +1,121 @@
+@import "../vars"
+.hero-block
+	position: relative
+	background-color: #fff
+	background-image: url('../img/9.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	padding: 50px 0 50px 0
+	&:after
+		position: absolute
+		content: ''
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+		background-color: rgba(#fff, .75)
+	&:before
+		position: absolute
+		content: ''
+		left: 0
+		top: 0
+		bottom: 0
+		width: 100%
+		background: linear-gradient(to left, #ffffff 50%, transparent)
+	.test-hero-img
+		position: relative
+		display: flex
+		width: 100%
+		height: 100%
+		justify-content: center		
+		overflow: hidden
+		background-color: #fff
+		padding: 0 0 50px 0
+		// box-shadow: 0 0px 50px 50px rgba(#fff, 1)
+	.bg-alemona
+		position: relative
+		z-index: 5
+	.test-hero-title
+		font-family: 'Circe-Bold'
+		text-transform: uppercase
+		font-size: 64px
+		line-height: 64px
+		font-weight: normal
+		color: $font-color
+		// text-shadow: 1px 1px 2px black
+	.test-hero-sub
+		font-size: 22px
+		line-height: 28px
+		color: rgba($font-color, .75)
+	.test-line
+		height: 2px
+		width: 175px
+		margin: 15px auto
+		background-color: $font-color
+	.owl-dots
+		.owl-dot
+			span
+				transition: all .35s ease-in-out
+			&.active
+				span
+					background-color: $accent-color2
+					box-shadow: 0 5px 5px 5px rgba($accent-color2, .25)
+			&:hover
+				span
+					background-color: $accent-color2
+					box-shadow: 0 5px 5px 5px rgba($accent-color2, .25)
+.slider-box
+	position: relative
+	width: 100%
+	max-width: 400px
+	height: 400px	
+	&:after
+		position: absolute
+		content: ''
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-image: url('../img/maska.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		// overflow: hidden
+.slider-item
+	width: 100%
+	max-width: 400px
+	height: 400px
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	// overflow: hidden
+
+
+
+@media only screen and (max-width : 860px)
+	/**/
+	.hero-block
+		padding-bottom: 0
+	.slider-box,
+	.slider-item
+		width: 300px
+		height: 300px
+@media only screen and (max-width : 700px)
+	/**/
+	.hero-block
+		// padding-bottom: 0
+		.test-hero-title
+			font-size: 48px
+
+@media only screen and (max-width : 640px)
+	/**/
+	.hero-block
+		padding: 100px 0 0 0
+		background-image: none
+		background-position: top
+		background-size: cover
+		.bg-alemona
+			padding-bottom: 50px
+		.test-hero-img
+			box-shadow: 0 0px 50px 50px rgba(#fff, 1)

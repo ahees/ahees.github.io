@@ -1,3 +1,4 @@
+@import "../vars"
 .header
 	position: relative
 	background: #ffffff
@@ -33,7 +34,11 @@
 		width: 150px
 		height: 100%
 		padding: 0
-		margin-right: 25px
+		// margin-right: 25px
+		a
+			width: 100%
+			text-decoration: none
+			outline: none
 		img
 			width: 100%
 			zoom: 1
@@ -60,8 +65,96 @@
 				font-size: 16px
 				color: $font-color
 
-@media only screen and (max-width : 750px)
+.uk-offcanvas-bar
+	background-color: #fff
+	color: $font-color
+	width: 320px
+
+	.uk-close
+		color: rgba($font-color, .5)
+		&:hover
+			color: rgba($font-color, .75)
+	.mmenu-list
+		position: relative
+		list-style-type: none
+		margin-top: 25px
+		li
+			a
+				color: #666
+				text-decoration: none
+				transition: color .45s ease-in-out
+			&:hover
+				a
+					color: $accent-color2
+	.mmenu-social
+		background-color: #f6f7fc
+		padding: 20px 0px 20px 35px
+		border-radius: 5px
+		.social
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				a
+					color: #666666
+					font-size: 16px
+					text-decoration: none	
+					transition: color .45s ease-in-out	
+				svg
+					width: 20px
+					margin-right: 10px
+				&:hover
+					a
+						color: $accent-color2
+				&:first-child
+					a
+						letter-spacing: 1px
+	.mmenu-logo
+		margin-left: 35px
+		img
+			width: 200px
+.uk-offcanvas-overlay::before
+	background-color: rgba($accent-color2, .5)
+.navbar-mmenu
+	display: block
+	position: relative
+	margin-right: 10px
+.btn-menu
+	position: relative
+	display: block
+	width: 25px
+	height: 20px
+	cursor: pointer
+	span
+		display: block
+		position: absolute
+		content: ''
+		height: 3px
+		background-color: rgba($font-color, .75)
+		width: 25px
+		transition: background-color .25s ease-in-out
+		&:nth-child(2)
+			left: 0
+			top: 8px		
+		&:first-child
+			left: 0
+			top: 2px
+		&:last-child
+			bottom: 3px
+			left: 0
+	&:hover
+		span
+			background-color: rgba($font-color, .99)
+
+@media only screen and (max-width : 860px)
 	/**/
 	.header
 		.uk-navbar-nav
 			display: none
+		.navbar-mmenu
+			display: block
+
+@media only screen and (max-width : 480px)
+	/**/
+	.uk-offcanvas-bar
+		width: 270px

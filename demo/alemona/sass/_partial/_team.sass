@@ -1,0 +1,70 @@
+@import "../vars"
+
+.section-team	
+    // background-color: #f6f7fc
+    background: transparent
+    .team-box
+        display: flex
+        flex-direction: row        
+        justify-content: center
+        margin-top: 75px
+        .team-item
+            margin: 0 10px
+            opacity: 0.5
+            .team-item-img
+                width: 250px
+                height: 250px
+                background-position: center
+                background-repeat: no-repeat
+                background-size: cover
+            &.uk-active
+                opacity: 1
+    .team-connect
+        // background-color: tomato
+        margin-top: 25px
+    .team-name,
+    .team-job
+        text-align: center
+    .team-name
+        font-family: $default-font-bold
+        font-size: 24px
+    .team-job
+        color: rgba($dark-color, .65)
+        // background-color: red
+        // color: red
+    .team-desc
+        margin-top: 15px
+        text-align: justify
+
+@media only screen and (max-width : 860px)
+	/**/
+	.section-team
+        .team-box
+            .team-item
+                margin: 0 10px
+                opacity: 0.5
+                .team-item-img
+                    width: 200px
+                    height: 200px
+
+@media only screen and (max-width : 650px)
+	/**/
+	.section-team
+        .team-box
+            .team-item
+                margin: 0 10px
+                opacity: 0.5
+                .team-item-img
+                    width: 150px
+                    height: 150px
+
+@media only screen and (max-width : 500px)
+	/**/
+	.section-team
+        .team-box
+            .team-item
+                margin: 0 10px
+                opacity: 0.5
+                .team-item-img
+                    width: 100px
+                    height: 100px
