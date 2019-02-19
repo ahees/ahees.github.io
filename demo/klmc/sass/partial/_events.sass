@@ -1,0 +1,45 @@
+@import "../vars"
+
+.events-item
+	position: relative
+	background-color: #fff
+	border: 1px solid rgba(156, 162, 162, 0.15)
+	.events-item-header
+		font-size: 24px
+		font-family: $light-font
+		text-align: center
+		text-transform: uppercase
+		padding: 15px 0 10px
+		border-bottom: 2px solid $accent
+	.events-item-footer
+		// border-top: 1px solid rgba(156, 162, 162, 0.15)
+		background-color: #f8f8f8
+		display: flex
+		justify-content: space-between
+		padding: 10px 25px
+		&-title
+			font-family: $light-font
+			font-size: 18px
+		a
+			img
+				// width: 8px
+				height: 13px
+	&-body
+		.body-item
+			position: relative
+			padding: 10px
+			border-bottom: 1px solid rgba(156, 162, 162, 0.15)
+			.body-date
+				font-size: 14px
+				font-family: $light-font
+				color: #817f7f
+			.body-title
+				line-height: 24px
+				margin: 15px 0
+				.body-title-first
+					font-family: $light-font
+			.body-links
+				text-align: right
+				.more
+					font-family: $light-font
+					color: $accent

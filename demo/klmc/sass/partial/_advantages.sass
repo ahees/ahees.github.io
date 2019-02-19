@@ -1,0 +1,64 @@
+@import "../vars"
+
+.section-advantages
+	position: relative
+	background-image: url('../img/bg_why.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	.advantages-left
+		position: relative
+		margin-top: 75px
+		padding: 25px
+		border: 1px solid #054e84
+		font-family: $light-font
+		font-size: 22px
+		line-height: 34px
+		text-align: justify
+		p:first-child
+			margin-top: 0
+		p:last-child
+			margin-bottom: 0
+	.advantages-right
+		position: relative
+		background-color: #054e84
+		margin-left: -1px
+		padding: 40px 35px
+		color: #ffffff
+		h3
+			margin: 0
+			padding: 0
+			color: #ffffff
+			text-transform: uppercase
+			font-size: 22px
+			line-height: 36px
+		.advantages-line
+			position: relative
+			font-family: $bold-font
+			font-size: 24px
+			padding-left: 35px
+			margin-top: 25px
+			img
+				// width: 30px
+				position: absolute
+				left: 0
+				top: 7px
+		.adv
+			margin: 0
+			li
+				font-size: 22px
+				line-height: 30px
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+		p
+			font-family: $bold-font
+			font-size: 22px
+			line-height: 30px
+			margin-bottom: 0
+
+@media only screen and (max-width : 480px)
+	/**/
+	.section-advantages
+		.advantages-right
+			padding: 25px

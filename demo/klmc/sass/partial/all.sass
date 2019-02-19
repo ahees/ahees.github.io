@@ -1,23 +1,75 @@
 @import "../vars"
 .section
-  position: relative
-  padding: 50px 0
-.title-box
-  text-align: center
-  .title
     position: relative
-    font-family: $bold-font
-    font-size: 36px
-    line-height: 46px
-    // margin: 0
-    // padding: 0
-    text-transform: uppercase
-    &::before
-      position: absolute
-      content: ''
-      height: 5px
-      width: 160px
-      background-color: $accent
-      left: 50%
-      bottom: -20px
-      transform: translateX(-50%)
+    padding: 50px 0
+.title-box
+    text-align: center
+    .title
+        position: relative
+        font-family: $bold-font
+        font-size: 36px
+        line-height: 46px
+        // margin: 0
+        // padding: 0
+        text-transform: uppercase
+        &::before
+            position: absolute
+            content: ''
+            height: 5px
+            width: 160px
+            background-color: $accent
+            left: 50%
+            bottom: -20px
+            transform: translateX(-50%)
+
+.social-bar
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+        display: inline-block
+        margin-right: 6px
+        a
+            text-decoration: none
+            img
+                width: 40px
+                height: auto
+        &:last-child
+            margin-right: 0
+
+.uk-offcanvas-overlay::before
+    background-color: rgba($accent, .25)
+.uk-offcanvas-bar
+    background-color: #384052
+.offmenu-list
+    list-style-type: none
+    margin: 0
+    padding: 0
+    margin-top: 25px
+    li
+        a
+            font-family: $light-font
+            font-size: 20px
+
+@media only screen and (max-width : 768px)
+    /**/
+    .social-bar
+        li
+            margin-right: 0
+            a
+                img
+                    width: 35px
+
+
+@media only screen and (max-width : 640px)
+    /**/
+    .title-box
+        .title
+            font-size: 30px
+    .social-bar
+        li
+            display: block
+            margin-right: 0
+            a
+                img
+                    width: 25px

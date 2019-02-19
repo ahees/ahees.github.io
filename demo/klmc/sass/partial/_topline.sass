@@ -1,0 +1,73 @@
+@import "../vars"
+
+.top-hero-box
+    position: relative
+    background-color: #fff
+    // height: 120px  
+    padding: 10px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.hero-slogan
+    text-align: center
+    font-size: 22px
+    font-family: $light-font
+    line-height: 30px
+    color: $accent
+    span
+        display: block
+        font-family: $bold-font
+        text-transform: uppercase
+        font-size: 24px
+        color: $font-color
+
+.hero-logo
+    width: 150px
+.top-social
+
+.top-menu
+    // height: 50px
+    background-color: #f8f8f8
+
+.uk-navbar-item, .uk-navbar-nav > li > a, .uk-navbar-toggle
+	min-height: 60px
+.uk-navbar-nav > li > a
+	font-size: 20px
+	font-family: $light-font
+	text-transform: none
+.top-line
+	text-align: center
+	background-color: #f5f5f5
+	font-size: 20px
+	font-family: $light-font
+	color: $accent
+	height: 45px
+	line-height: 45px
+
+@media only screen and (max-width : 860px)
+    /**/
+    .top-menu
+        .uk-navbar-center
+            display: none
+@media only screen and (max-width : 768px)
+    /**/
+    .hero-slogan
+        font-size: 20px
+        span
+            font-size: 22px
+    
+@media only screen and (max-width : 640px)
+    /**/
+    .hero-slogan
+        font-size: 18px
+        line-height: 26px
+        // text-align-last: left
+        span
+            font-size: 20px
+    
+@media only screen and (max-width : 960px)
+    /**/
+    .uk-navbar-nav > li > a
+        font-size: 18px
+        padding: 0 10px

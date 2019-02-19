@@ -1,0 +1,85 @@
+@import "../vars"
+
+.why-grid
+	margin-top: 75px
+	& > div
+		.why-item
+			height: 100px
+		&:nth-child(odd)
+			.why-item
+				// background-color: tomato
+				justify-content: flex-end
+				.why-item-img
+					margin-left: 25px
+				.why-item-title
+					text-align: right
+		&:nth-child(even)
+			.why-item
+				// background-color: red
+				justify-content: flex-start
+				.why-item-img
+					order: -1
+					margin-right: 25px
+
+				// justify-content: flex-start
+	.why-item
+		position: relative
+		display: flex
+		align-items: center
+		flex-shrink: 0
+		// width: 100%
+		.why-item-img
+			position: relative
+			display: flex
+			width: 90px
+			height: 90px
+			border-radius: 50%
+			border: 2px solid rgba($accent, .22)
+			justify-content: center
+			align-items: center
+			flex-shrink: 0
+			img
+				// width: 40px
+			&:before
+				position: absolute
+				content: ''
+				width: 70px
+				height: 70px
+				border-radius: 50%
+				border: 2px solid $accent
+		.why-item-title
+			width: auto
+			font-family: $light-font
+			font-size: 24px
+			line-height: 32px
+.why-text
+	text-align: center
+	font-size: 24px
+	font-family: $light-font
+	margin-top: 75px
+
+@media only screen and (max-width : 960px)
+	/**/
+	.why-grid
+		margin-top: 75px
+		& > div
+			.why-item
+				height: 100px
+				flex-direction: row-reverse
+			&:nth-child(odd)
+				.why-item
+					// background-color: tomato
+					justify-content: flex-end
+					.why-item-img
+						margin-left: 0
+						margin-right: 15px
+					.why-item-title
+						text-align: left
+			&:nth-child(even)
+				.why-item
+					// background-color: red
+					justify-content: flex-end
+					.why-item-img
+						order: 1
+						margin-right: 15px
+						margin-left: 0
