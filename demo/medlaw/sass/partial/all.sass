@@ -130,8 +130,49 @@ header
         top: 0
         width: 100%
         height: 100%
-        background-image: linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.80))
+        background-image: linear-gradient(top, rgba(0,0,0,0.80), rgba(0,0,0,0.75))
         // z-index: -1
-    .onas-box
+.onas-box
+    position: relative
+    color: #ffffff
+    p
+        font-size: 1.5em
+        text-align: center
+
+.number-item
+    position: relative
+    margin-top: 50px
+    text-align: center
+    &-number
+        font-size: 4em
+        line-height: 1.1em
+    &-title
+        // font-size: 20px
+    .number-line
+        height: 1px
+        background-color: #fff
+        width: 150px
+        margin: 20px auto
+.circle-list
+    list-style-type: none
+    margin: 0
+    padding: 0
+    margin-top: 75px
+    li
         position: relative
-        color: #ffffff
+        font-size: 1.1em
+        padding-left: 70px
+        margin-bottom: 50px
+        &:before
+            position: absolute
+            content: '>'
+            font-size: 28px
+            color: #ffffff
+            line-height: 46px
+            text-align: center
+            width: 50px
+            height: 50px
+            left: 0
+            top: -5px
+            border-radius: 50%
+            background-color: $yellow-color
