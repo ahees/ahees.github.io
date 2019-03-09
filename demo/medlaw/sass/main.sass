@@ -29,11 +29,12 @@ body textarea:required:valid
 // 	height: 100%
 
 body
-	font-size: 16px
+	font-size: 18px
 	min-width: 320px
 	position: relative
 	line-height: 1.75
 	font-family: $default-font
+	font-family: $two-font
 	overflow-x: hidden
 	opacity: 1
 	color: $dark-color
@@ -45,6 +46,14 @@ body
 	max-width: 100%
 	height: auto
 
-@import "partial/all"
+@import "partial/style"
+@import "partial/header"
+@import "partial/about"
+@import "partial/org"
+@import "partial/conf"
+@import "partial/program"
+@import "partial/speak"
+@import "partial/price"
+@import "partial/contacts"
 
 @import "media" // Всегда в конце

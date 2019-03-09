@@ -1,0 +1,63 @@
+@import "../vars"
+
+.section-price
+    padding: 0
+    position: relative
+    .box-link
+        margin-top: 50px
+        text-align: center
+    .price-text
+        text-align: center
+        font-size: 18px
+        margin-top: 25px
+.price-box
+    position: relative
+    margin-top: 75px
+    ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        border: 1px solid rgba(0,0,0, .05)
+        li
+            padding: 15px 10px
+            font-size: 1.2em
+            background-color: #fff
+            text-align: center
+            &:nth-child(even)
+                background-color: rgba(0,0,0, .025)
+.cost,
+.dat
+    font-size: 1.5em
+    font-family: $semi-bold
+.cost
+    margin-left: 15px
+.dat
+    margin-right: 15px
+.section-price-wrapper
+    position: relative
+    background-color: rgba(#ffffff, .85)
+    padding: 50px 0
+
+.price-left
+    background-color: #f8f8f8
+    padding: 75px 50px
+    z-index: 2
+.price-right
+    position: relative
+    background-image: url('../img/7.jpg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    &:before
+        position: absolute
+        content: ''
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg, $blue-color, #8E2DE2)
+        opacity: 0.5
+
+@media only screen and (max-width : 768px)
+    .price-left
+        padding: 50px 25px
