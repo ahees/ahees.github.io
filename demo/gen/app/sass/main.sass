@@ -1,0 +1,316 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+body
+	font-size: 18px
+	font-weight: 300
+	min-width: 320px
+	position: relative
+	line-height: 1.5555
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: #333333
+	// background-image: url('../img/bgp.png')
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.h
+	// font-family: $title-font
+	font-weight: 300
+
+
+
+.header
+	position: relative
+	height: 100vh
+	background-image: url('../img/3.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	&:before
+		position: absolute
+		content: ''
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba($accent, .25)
+	.header-block
+		position: absolute
+		background-color: rgba($accent, .95)
+		width: 50%
+		color: #ffffff
+		bottom: 0
+		right: 0
+		// top: 50%
+		// transform: translateY(-50%)
+		text-align: center
+		padding: 50px 25px
+		.header-title
+			color: #ffffff
+		span
+			font-size: 22px
+	.menu
+		position: relative
+		// background-color: rgba(0,0,0, .25)
+		background-color: rgba(255,255,255, .75)
+		// margin-top: 20px
+		// border-radius: 5px
+		// padding: 0 25px
+	.logo
+		width: 200px
+	.uk-navbar-nav > li > a
+		font-size: 16px
+		font-weight: 400
+		color: #333333
+		min-height: 125px
+	.uk-navbar-nav > li:hover > a
+		color: $accent
+
+
+.h-title
+	text-align: center
+	font-size: 3em
+	margin-bottom: 50px
+.section
+	position: relative
+	padding: 100px 0
+	p
+		font-size: 20px
+		text-align: justify
+		// text-align: center
+.section-about
+	p
+		font-size: 22px
+
+#fanketa
+	.uk-form-label
+		font-size: 20px
+		color: $accent
+		// font-weight: 400
+	.uk-form-controls
+		padding-left: 25px
+		padding-top: 15px
+	label		
+		margin-right: 25px
+	.uk-checkbox:checked,
+	.uk-checkbox:indeterminate,
+	.uk-radio:checked
+		background-color: $accent
+	.uk-radio
+		margin-right: 5px
+		border-radius: 0
+	.next-block
+		display: inline-block
+		padding: 10px 25px		
+		background-color: #f3f3f3
+		transition: color .25s ease-in-out, background-color .3s ease-in-out
+		&.active
+			cursor: pointer
+			background-color: $accent
+			color: #ffffff
+	label.error
+		font-size: 14px
+		color: #e74c3c
+	.block-a,
+	.block-b,
+	.block-c,
+	.block-d
+		display: none
+	.block-active
+		display: block
+.sub-button
+	padding: 10px 25px
+	font-size: 18px
+	text-transform: none
+	// background-color: #f3f3f3
+	background-color: $accent
+	color: #ffffff
+	transition: color .25s ease-in-out, background-color .3s ease-in-out
+	&:disabled
+		background-color: #f3f3f3
+		color: #333333
+.section-anketa
+	position: relative
+	background-color: #f8f8f8
+	background-color: $accent
+	// background-image: url('../img/banner_thumb_87.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	&:before
+		display: none
+		position: absolute
+		content: ''
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba($accent, .5)
+.anketa-box
+	position: relative
+	background-color: #fff
+	padding: 75px
+	box-shadow: 0 0px 15px rgba(0,0,0, .2)
+.anketa-title
+	font-size: 2.5em
+	text-align: center
+.result-anketa
+	display: none
+	font-size: 20px
+	text-align: center
+	.h
+		color: $accent
+
+.section-contacts
+	background-color: $accent
+	background-color: #fffbf9
+.c-grid
+	> div:first-child
+		display: flex
+		align-items: center
+		text-align: right
+.list-maps
+	padding: 100px 50px 100px 25px
+	a
+		position: relative
+		font-size: 24px
+		color: #ffffff
+		color: #333333
+		text-decoration: none
+		span
+			color: rgba(255,255,255, .4)
+			color: rgba($accent, .85)
+			display: block
+			font-size: 18px
+	> div
+		position: relative
+		padding-bottom: 20px
+		&:before
+			position: absolute
+			content: ''
+			height: 1px
+			width: 100px
+			right: 0
+			bottom: 10px
+			background-color: rgba(0,0,0, .14)
+			transition: width .35s ease-in-out, background-color .35s ease-in-out
+	> div.uk-active
+		&:before
+			width: 200px
+			background-color: rgba($accent, .85)
+.c-switcher
+	height: 100%
+	width: 100%
+	> div
+		width: 100%
+		height: 100%
+		min-height: 300px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		
+.paket-box
+	width: 100%
+	display: flex
+	justify-content: center
+	margin: 75px 0
+	// flex-direction: row
+.paket-item		
+	background-color: #fff
+	width: 320px
+	width: 45%
+	// height: 400px
+	margin: 0 10px
+	border-radius: 5px
+	overflow: hidden
+	box-shadow: 0 0px 15px 5px rgba(0,0,0, .075)
+	transition: background-color .5s ease-in-out, color .55s ease-in-out
+	&-img
+		height: 200px
+		background-image: url('../img/banner_thumb_87.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+	&:hover
+		background-color: $accent
+		color: #ffffff
+		.paket-price
+			color: #ffffff
+	.paket-price
+		padding: 25px
+		text-align: center
+		font-size: 26px
+		font-weight: 500
+		color: $accent
+		transition: color .55s ease-in-out
+	.paket-title
+		text-align: center
+		padding: 20px 25px 0 25px
+		font-weight: 500
+		font-size: 20px
+
+
+
+
+.block
+	margin-bottom: 50px
+.answer
+	display: flex
+	justify-content: center
+	margin-top: 20px
+	.a
+		cursor: pointer
+		padding: 10px 25px
+		margin: 0 10px
+		background-color: #f8f8f8
+		transition: color .325s ease-in-out, background-color .325s ease-in-out
+		&.active
+			background-color: #9b59b6
+			color: #ffffff
+
+.footer
+	background-color: $accent
+	border-top: 1px solid rgba(255,255,255, .15)
+	padding: 15px 0
+	.footer-logo
+		width: 85px
+		img
+			opacity: 0.5
+	.footer-name
+		font-size: 14px
+		color: rgba(255,255,255, .5)
+	.footer-box
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+@import "media" // Всегда в конце
