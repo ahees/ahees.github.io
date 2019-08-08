@@ -1,0 +1,155 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+// html, body
+// 	height: 100%
+
+body
+	font-size: 18px
+	font-weight: 300
+	min-width: 320px
+	position: relative
+	line-height: 1.5555
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1	
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background: $accent!important
+@font-face
+    font-family: "HeliosThinC-exp"
+    src: url("../fonts/helios/HeliosThinC.ttf")
+.h
+	font-family: "HeliosThinC-exp"
+	font-weight: normal
+	text-transform: uppercase
+	text-align: center
+h2.h
+	font-size: 40px
+.uk-card
+	margin: 55px 0!important
+.anketa
+	.alabel
+		font-size: 18px
+		font-family: "Cuprum"
+		font-weight: normal
+		// color: rgb(176, 81, 123)
+		color: $accent
+		margin-top: 10px
+	.alabel + .uk-form-controls
+		margin-bottom: 10px
+	.uk-input:focus,
+	.uk-textarea:focus,
+	.uk-select:focus
+		border-color: lighten($accent, 10%)
+	.uk-textarea::placeholder
+		font-size: 14px
+	.uk-select
+		option
+			font-size: 14px
+	.uk-input,
+	.uk-textarea,
+	.uk-select
+		font-size: 14px
+	.uk-checkbox:checked,
+	.uk-radio:checked
+		background-color: $accent
+	.single
+		font-size: 14px
+		.uk-checkbox
+			margin-left: 15px
+			margin-right: 5px
+			// font-size: 16px
+.error
+	color: tomato
+	font-size: 14px
+#metaother,
+#contraother,
+#perenesginother,
+#ginzother,
+#prohodmattrybother,
+#molzother,
+#sssysother,
+#nervsysother,
+#sechwlother,
+#endsysother,
+#trasysother,
+#autohvoother,
+#legsysother,
+#onkoother,
+#infzahother,
+.radio-none,
+.error,
+.other-block
+	display: none
+	// height: 30px
+	
+.form-text
+	font-size: 18px
+	margin: 5px 0 20px
+	text-align: justify
+.yesanketa
+	position: relative
+	label		
+		display: block
+		font-size: 14px
+		line-height: 18px
+		padding-left: 25px
+	#yesanketa
+		position: absolute
+		top: 5px
+		left: 15px
+.uk-button-default
+	color: #ffffff
+	background-color: rgba($accent, .85)
+	border-color: transparent
+	transition: background-color .5s ease-in-out
+	&:hover:enabled,
+	&:active:enabled,
+	&:focus:enabled
+		background-color: $accent 
+		color: #ffffff
+		border-color: transparent
+
+@import "media" // Всегда в конце

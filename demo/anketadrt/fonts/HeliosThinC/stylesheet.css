@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'HeliosThinC';
+    src: url('HeliosThinC.woff2') format('woff2'),
+        url('HeliosThinC.woff') format('woff'),
+        url('HeliosThinC.ttf') format('truetype'),
+        url('HeliosThinC.svg#HeliosThinC') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
