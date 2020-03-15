@@ -1,0 +1,198 @@
+@import "../vars"
+
+
+
+.section-header
+	display: flex
+	height: 100vh
+	& > div
+		display: flex
+		height: 100%
+		width: 50%
+	& > div:first-child
+		background-color: green
+		background-color: #f8f8f8
+		align-items: center
+		text-align: center
+		justify-content: center
+	& > div:last-child
+		position: relative
+		background-image: url('../img/bg1.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: linear-gradient(-45deg, #5683e9, #ea2d51)
+			opacity: 0.5
+			transition: opacity .45s ease-in-out
+.header-header
+	p
+		font-size: 22px
+	.h-lead
+		font-size: 76px
+.header-form
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 200px
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	background-color: #2f3542
+	color: #ffffff
+	transition: .45s ease-in-out
+	.span_click
+		font-size: 20px
+		text-transform: uppercase
+		cursor: pointer
+		opacity: 1
+		position: absolute
+		transition: opacity .15s ease-in-out
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+	&:hover
+		background-color: darken(#2f3542, 5%)
+	&.open
+		background-color: #eccc68
+		// background-color: #ffa502
+		z-index: 1000
+		.span_click
+			text-align: center
+			opacity: 0
+			// transition-delay: .5s
+			transition: opacity .5s ease-in-out
+		.header-form-box
+			height: 100%
+			margin-top: 25px
+			opacity: 0
+			animation: slide 1s ease .5s forwards
+
+.cl-form
+	position: absolute
+	right: 0
+	top: -50px
+	transform: rotate(0deg)
+	cursor: pointer
+	transition: transform .4s ease-in-out
+	svg
+		fill: #ffffff
+		width: 30px
+	&:hover
+		transform: rotate(90deg)
+@keyframes slide
+	0%
+		opacity: 0
+		visibility: hidden
+	100%
+		opacity: 1
+		visibility: visible
+
+@keyframes azaza
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+
+.header-form-box
+	// z-index: 1000
+	position: relative
+	// display: none
+	height: 0
+	opacity: 0
+	visibility: hidden
+	opacity: 0
+	height: 0
+	transition: all .35s ease-in-out
+	input[type=text],
+	textarea
+		width: 410px
+		// width: 100%
+		// padding: 25px
+		position: relative
+		background-color: rgba(255,255,255, .3)
+		border-color: transparent
+		color: #333333
+		font-family: $default-font
+		margin-bottom: 10px
+	::-moz-placeholder
+		color: #333333
+		font-size: 14px
+.uk-textarea,
+.uk-input,
+.uk-form-controls
+	position: relative
+
+.form-nav
+	display: flex
+	justify-content: center
+.button
+	padding: 10px 25px
+	font-family: $default-font
+	font-size: 15px
+	text-transform: uppercase
+	box-shadow: 0
+	margin-left: 2px
+	cursor: pointer
+.button-transparent
+	background-color: transparent
+	color: #ffffff
+	border: 1px solid rgba(#ffffff, .5)
+
+.header-form
+	&.error
+		background-color: #ff6348
+	&.success
+		background-color: #2ed573
+.error-input
+	display: block
+	opacity: 0
+	text-transform: none
+	font-size: 14px
+	background-color: #ff6348
+	position: absolute
+	width: 100%
+	bottom: -5px
+	transition: opacity .35s linear
+
+.box-error
+	display: none
+	// width: 100%
+	width: 320px
+	padding: 25px
+	// margin: 0 auto
+	background-color: darken(#2ed573, 3%)
+
+@media only screen and (max-width : 860px)
+	/**/
+	.section-header
+		height: auto
+		flex-direction: column
+		& > div
+			width: 100%
+			height: 100%
+		& > div:first-child
+			min-height: 500px
+			display: none
+		& > div:last-child
+			min-height: 700px
+			align-items: center
+			justify-content: center
+			.header-header
+				position: relative
+				text-align: center
+				color: #ffffff
+				.h-lead
+					color: #ffffff
+	.header-form-box
+		input[type=text],
+		textarea
+			width: 310px

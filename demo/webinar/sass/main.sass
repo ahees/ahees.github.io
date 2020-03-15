@@ -1,0 +1,457 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5556
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: #2f3542
+	font-weight: normal
+	// letter-spacing: 1px	
+	// transition: opacity 1s ease-in-out
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.link
+	position: relative
+	display: inline-block
+	background-color: #f9f9f9
+	padding: 15px 30px
+	color: #333333
+	text-transform: uppercase
+	letter-spacing: 1px
+	font-size: 16px
+	font-family: $medium-font
+	transition: color .3s ease-in-out, background-color .35s ease-in-out
+	&:hover,
+	&:focus
+		background-color: #f4f4f4
+		color: #333333
+		text-decoration: none
+		outline: none
+.link-accent
+	background-color: orange
+	color: #ffffff
+	&:hover,
+	&:focus
+		color: #ffffff
+		background-color: #FF9133
+button.link
+	border: none
+	cursor: pointer
+	font-family: $default-font
+.topline
+	position: relative
+	background-color: lighten($accent, 10%)
+	padding: 10px 0
+	text-align: center
+	font-family: $medium-font
+	font-size: 18px
+	z-index: 2
+	// color: #FF9133
+	span
+		font-family: $bold-font
+		font-size: 20px
+		color: orange
+
+.header
+	position: relative
+	background-color: rgba(#f0f0f3, .5)
+	.header-subtitle
+		font-family: $bold-font
+		text-transform: uppercase
+		font-size: 20px
+	.header-title
+		font-family: $bold-font
+		font-weight: normal
+		span
+			color: #FF9133
+	.header-text
+		font-size: 18px
+		margin: 40px 0
+	.header-box
+		position: relative
+		display: flex
+		padding: 150px 0
+		align-items: center
+		.header-left,
+		.header-right
+			width: 50%
+		.header-left
+			z-index: 2
+		.header-right
+			display: flex
+			justify-content: center
+			// text-align: center
+			// align-items: center
+			
+.header-hero
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 400px
+	height: 400px
+	z-index: 2
+	background-color: #F7F7F9
+	box-shadow: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 rgba(#aeaec0, .5)
+	.lines
+		position: absolute		
+		width: 200px
+		height: 100px
+		background-image: url("../img/lines.png")
+		background-repeat: no-repeat
+		bottom: 0px
+		left: 0px
+		z-index: 0
+	.hero-img
+		position: relative
+		width: 300px
+		height: 300px
+		background-color: #333333
+		background-image: url("https://w.wallhaven.cc/full/49/wallhaven-49vlpd.jpg")
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		z-index: 2		
+		.hero-name
+			position: absolute
+			background-color: orange
+			padding: 15px
+			font-family: $medium-font
+			bottom: -10px
+			right: -10px
+.absh
+	position: absolute
+	width: 50px
+	height: 50px
+	background-repeat: no-repeat
+	background-position: center
+	opacity: .25
+.abs1	
+	background-image: url("../img/abs1.svg")	
+	top: 50px
+	left: 25px
+	animation: 2s ease-in-out infinite horizont
+.abs2	
+	background-image: url("../img/abs2.svg")	
+	left: 25%
+	top: 50%
+	animation: 2s ease-in-out infinite vertical
+.abs3	
+	background-image: url("../img/abs3.svg")	
+	left: 50%
+	top: 75px
+	animation: 2s ease-in-out infinite horizont
+.abs4	
+	background-image: url("../img/abs4.svg")	
+	left: -120px
+	bottom: 125px
+	animation: 2s ease-in-out infinite vertical
+.abs5	
+	background-image: url("../img/abs5.svg")	
+	right: 0
+	top: 100px
+	animation: 2s ease-in-out infinite horizont
+.abs6	
+	background-image: url("../img/abs6.svg")	
+	top: 60%
+	right: 45%
+	animation: 2s ease-in-out infinite vertical
+.abs7	
+	background-image: url("../img/abs7.svg")	
+	right: 100px
+	bottom: 100px
+	animation: 2s ease-in-out infinite horizont
+
+			// animation: 2s ease infinite header
+@keyframes horizont
+	0%
+		transform: translateX(0)
+	50%
+		transform: translateX(10px)
+	100%
+		transform: translateX(0)
+@keyframes vertical
+	0%
+		transform: translateY(0)
+	50%
+		transform: translateY(10px)
+	100%
+		transform: translateY(0)
+.section
+	position: relative
+	background-color: #fff
+	padding: 125px 0	
+.section-title
+	position: relative
+	font-size: 36px
+	font-family: $bold-font
+	text-align: center
+	margin: 0
+	padding: 0 0 100px 0
+	z-index: 2
+
+.program
+	ul
+		position: relative
+		list-style-type: none
+		margin: 0
+		padding: 0
+		z-index: 2
+		// background-color: gray
+		li
+			position: relative
+			padding-left: 75px
+			font-size: 18px
+			line-height: 22px
+			font-family: $bold-font
+			// background-color: green
+			&:not(:first-child)
+				margin-top: 75px
+			span
+				position: absolute
+				width: 40px
+				height: 40px
+				background-color: orange
+				color: #ffffff
+				border-radius: 10px
+				text-align: center
+				line-height: 40px
+				left: 0px
+				box-shadow: 0px 0px 15px 0px rgba(#FF9133,0.75)
+			&:last-child
+				span
+					// bottom: -20px
+					// bottom: 0
+		&::before
+			position: absolute
+			content: ''
+			left: 20px
+			// left: 0px
+			top: 0
+			height: 100%
+			width: 1px
+			background-color: rgba(0,0,0, .15)
+
+.speaker-box
+	display: flex
+	justify-content: space-between
+.speaker-img,
+.speaker-text
+	width: 49%
+.speaker-img
+	// flex-shrink: 0
+	background-image: url("https://w.wallhaven.cc/full/95/wallhaven-95mqvk.jpg")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+.speaker-text
+	box-sizing: border-box
+	// flex-shrink: 0
+	// flex-basis: content
+	background-color: rgba(0,0,0, .035)
+	padding: 50px
+.speaker-title
+	font-size: 24px
+	font-family: $bold-font
+	text-transform: uppercase
+	margin: 0
+	padding: 0 0 25px 0
+.speaker-subtitle
+	margin: 0
+	padding: 0
+	font-family: $medium-font
+	font-size: 20px
+	// color: #555555
+.speaker-list
+	margin: 50px 0 0 0
+	padding: 0
+	// list-style-type: none
+	li
+		position: relative
+		font-size: 16px
+		line-height: 26px
+		text-align: justify
+		&::before
+			position: absolute
+			content: ''
+			width: 105px
+			background-color: orange
+			height: 3px
+			// left: -20px
+			bottom: -15px
+		&:not(:last-child)
+			margin-bottom: 45px
+
+.section-repeat
+	background-color: #f9f9f9
+	background-image: url("../img/bg_emotion.jpg")
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	text-align: center
+	&:before
+		position: absolute
+		content: ''
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#282C34, .86)
+	.section-title
+		padding-bottom: 50px
+		color: #ffffff
+	.repeat-text
+		position: relative
+		font-size: 18px
+		margin-bottom: 50px
+		color: #ffffff
+	.repeat-link
+		// margin-top: 20px
+
+.promo-grid
+	.promo-item
+		position: relative
+		border-radius: 20px
+		padding: 50px
+		background-color: #fff
+		box-shadow: 0 0 25px 15px rgba(242,241,242,.75)
+	.promo-title
+		position: relative
+		font-size: 22px
+		line-height: 24px
+		font-family: $bold-font
+		margin-bottom: 50px
+		&:before
+			position: absolute
+			height: 3px
+			width: 100px
+			content: ''
+			left: 0
+			// transform: translateX(-50%)
+			// top: -20px
+			bottom: -20px
+			background-color: orange
+
+.footer
+	position: relative
+	padding-top: 100px
+	background-color: #282C34
+	text-align: center
+	color: #ffffff
+	.section-title
+		color: #ffffff
+		padding-bottom: 50px
+	.list-contacts
+		list-style-type: none
+		margin: 0
+		padding: 0
+		margin-top: 20px
+		li:first-child
+			margin-bottom: 15px
+		a
+			font-family: $medium-font
+			color: #ffffff
+			font-size: 20px
+			letter-spacing: 1.5px
+			transition: color .3s ease-in-out
+			&:hover
+				color: orange
+				text-decoration: none
+.footer-fondy
+	display: flex
+	justify-content: center
+	padding: 50px 0 25px 0
+	div
+		background-color: rgba(#f9f9f9,1)
+		padding: 10px
+		margin: 0 5px
+	img
+		width: 75px
+		flex-shrink: 1
+		// margin: 0 5px
+
+.footer-link
+	background-color: rgba(#f9f9f9, .02)
+	padding: 20px 0
+	display: flex
+	justify-content: space-around
+	a
+		text-decoration: none
+		transition: color .3s ease-in-out
+		&:hover,
+		&:focus
+			color: orange
+	a:first-child
+		margin-right: 20px
+.footer-copyr
+	font-size: 14px
+	padding: 10px 0
+	color: rgba(255,255,255, .5)
+#modal-register
+	// background-color: orange
+	.modal-title
+		font-family: $bold-font
+		padding-bottom: 25px
+		text-align: center
+	.modal-body
+		display: flex
+		height: 100%
+		justify-content: center
+		align-items: center
+		background-color: rgba(#f0f0f3, .5)
+		// background-color: lighten($accent, 10%)
+	.form-box
+		max-width: 500px
+		width: 100%
+		padding: 20px
+		margin: 0 10px
+		background-color: #F7F7F9
+		box-shadow: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 rgba(#aeaec0, .5)
+		.uk-input
+			border-color: lighten($accent, 1%) 
+		.uk-form-label
+			font-size: 18px
+			text-transform: uppercase
+		.error
+			display: none
+			background-color: #ff7675
+			text-align: center
+			color: #ffffff
+			padding: 2px 0
+	.form-succes
+		display: none
+		text-align: center
+		font-size: 18px
+@import "media" // Всегда в конце
