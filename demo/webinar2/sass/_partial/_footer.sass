@@ -1,0 +1,59 @@
+@import "../vars"
+
+.footer
+	// position: relative
+	// padding-top: 50px
+	// background-color: #171717
+	// background-color: #222222
+	color: rgba(#ffffff, .55)
+	letter-spacing: 0.75px
+	font-size: 14px
+	letter-spacing: 1px
+	.h
+		font-size: 18px
+		color: rgba(#ffffff, .95)
+		margin: 0
+	.footer-content
+		// display: flex
+
+		// justify-content: center
+		.footer-item
+			display: none
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+			.footer-list
+				list-style-type: none
+				margin: 0
+				padding: 0
+				margin-top: 10px
+	.footer-bot
+		background-color: #282828
+		// margin-top: 50px
+		padding: 25px 0
+.footer-cop
+	display: flex
+	justify-content: space-between
+	a
+		position: relative
+		text-decoration: none
+	a.anim		
+		color: #8f94fb
+		letter-spacing: 1px
+		transition: color .4s ease-in-out
+		&:before
+			position: absolute
+			content: ""
+			bottom: -2px
+			height: 1px
+			width: 0%
+			background-color: #8f94fb
+			transition: width .4s ease-in-out
+		&:hover
+			// color: #4e54c8
+			&:before
+				width: 100%
+	.footer-social
+		img
+			width: 25px
+			margin-right: 10px

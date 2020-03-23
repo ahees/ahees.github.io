@@ -1,0 +1,62 @@
+@import "../vars"
+
+.stats
+	position: relative
+	overflow-x: hidden
+	.stats-grid
+		position: relative
+		margin: 75px 0
+		padding: 30px 25px
+		// border: 1px solid #333333
+		border: 3px solid #f9f9f9
+	.topleft
+		position: absolute
+		left: -110px
+	.topright
+		position: absolute
+		// right: 100px
+		right: -55px
+		width: 115px
+	.uk-grid-small
+		& > div
+			display: flex
+			// flex-wrap: no-wrap
+			// flex-shrink: 0 
+			span		
+				margin-left: 15px
+				display: block
+				font-size: 18px
+				line-height: 1.35
+			// background-color: green
+			span:last-child
+				font-family: $bold-font
+				margin-top: 10px
+
+
+.icon-circle
+	position: relative
+	width: 56px
+	height: 56px
+	background-color: #4d5c74
+	border-radius: 28px
+	overflow: hidden
+	flex-shrink: 0
+	img
+		position: absolute
+		width: 33px
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+
+@media only screen and (max-width : 960px)
+	/**/
+	.stats
+		.stats-grid
+			& > div:not(:first-child)
+				margin-top: 35px
+@media only screen and (max-width : 480px)
+	/**/
+	.stats
+		.topleft,
+		.topright
+			display: none!important

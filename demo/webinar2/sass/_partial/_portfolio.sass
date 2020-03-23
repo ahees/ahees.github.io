@@ -1,0 +1,73 @@
+@import "../vars"
+
+.section-portfolio
+	background-color: rgba(#efefef, .75)
+.portfolio-item
+	position: relative
+	width: 400px
+	width: 100%
+	height: 400px
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	cursor: pointer
+.p-grid
+	position: relative
+	margin-top: 75px
+	> div
+			display: flex
+	> div:nth-child(odd)
+		display: flex
+		justify-content: flex-end
+	.portfolio-item
+		position: relative
+		box-sizing: border-box
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: linear-gradient(-45deg, #5683e9, #ea2d51)
+			opacity: 0
+			// opacity: 1
+			transition: opacity .45s ease-in-out
+		&:hover
+			&:before
+				opacity: .75
+			.h-portfolio
+				top: 40%
+				opacity: 1
+			.link
+				bottom: 20%
+				opacity: 1
+		.h-portfolio,
+		.link
+			position: absolute
+			opacity: 0
+			width: 100%
+			text-align: center
+			transition: .4s ease-in-out
+		.h-portfolio
+			font-size: 22px
+			color: #ffffff
+			text-transform: none
+			top: 0%
+			transition-property: top, opacity
+		.link
+			color: #ffffff
+			bottom: 0%
+			// text-transform: uppercase
+			font-size: 16px
+			transition-property: bottom, opacity
+
+@media only screen and (max-width : 760px)
+	.portfolio-item
+		height: 300px
+@media only screen and (max-width : 640px)
+	.p-grid
+		> div
+			justify-content: center
+		> div:nth-child(odd)
+			justify-content: center

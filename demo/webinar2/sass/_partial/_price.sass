@@ -1,0 +1,253 @@
+@import "../vars"
+
+.price-list
+	margin: 0
+	padding: 0
+	list-style-type: none	
+	li
+		position: relative
+		// padding-left: 20px
+		margin-bottom: 10px
+		display: flex
+		flex-direction: column
+		div
+			padding-top: 5px
+			padding-left: 10px
+			line-height: 1.25	
+		svg
+			position: absolute
+			width: 10px
+			left: 0
+			top: 5px
+			fill: #333333
+			transition: fill .4s ease-in-out
+		strong			
+			padding: 3px
+			//display: inline-block
+			max-width: 75px
+			text-align: center
+			border-radius: 1px
+.price-box
+	margin-top: 100px
+	.price-item
+		position: relative
+		background-color: #fff
+		width: 100%
+		max-width: 500px
+		margin: 0 auto
+		padding: 25px
+		box-sizing: border-box
+		box-shadow: 0 0px 25px rgba(#34495e,0.075)
+		z-index: 1
+		transition: box-shadow .4s ease-in-out
+		.price-item-title
+			position: relative
+			font-family: $font-demi
+			font-size: 24px
+			//padding: 30px 20px 20px 20px
+			transition: color .8s ease-in-out
+			// transition-delay: .3s
+		.price-item-body
+			position: relative
+			padding-top: 5px
+			// padding: 20px
+			font-size: 16px
+			transition: color .6s ease-in-out
+			min-height: 220px
+		svg
+			transition: fill .6s ease-in-out
+		&:before
+			position: absolute
+			content: ""
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			// z-index: -1
+			opacity: 0
+			transition: opacity .8s ease-in-out
+		&:hover
+			.price-item-body,
+			.price-item-title
+				// color: #ffffff
+			.price-item-title
+				color: #444444
+			svg
+				// fill: #ffffff
+			&:before
+				opacity: 1
+	.green
+		.price-item-title
+			color: #AAFFA9
+			color: #2ecc71
+		strong
+			background: rgba(#2ecc71, .75)
+		&:before
+			background: #AAFFA9
+			background: rgba(#2ecc71, .75)
+			//background: -webkit-linear-gradient(45deg, #11FFBD, #AAFFA9)
+			//background: linear-gradient(45deg, #11FFBD, #AAFFA9)
+		&:hover
+			box-shadow: 0 1px 25px rgba(#AAFFA9,0.3)
+	.yellow
+		.price-item-title
+			color: #FFF176
+		strong
+			background: rgba(#FFF176, .75)
+		&:before
+			background: #FDC830
+			background: #FFF176
+			//background: -webkit-linear-gradient(45deg, #F37335, #FDC830)
+			//background: linear-gradient(45deg, #F37335, #FDC830)
+		&:hover
+			box-shadow: 0 1px 25px rgba(#FDC830,0.2)
+	.blue
+		.price-item-title
+			color: #4e54c8
+			color: #64B5F6
+		strong
+			background: rgba(#64B5F6, .75)
+		&:before
+			background: #4e54c8
+			background: #64B5F6
+			//background: -webkit-linear-gradient(-45deg, #8f94fb, #4e54c8)
+			//background: linear-gradient(-45deg, #8f94fb, #4e54c8)
+		&:hover
+			box-shadow: 0 1px 25px rgba(#4e54c8,0.2)
+	.red
+		.price-item-title
+			color: #FF416C
+			color: #EF5350
+		strong
+			background-color: rgba(#ff7979, .75)
+		&:before
+			background: #FF416C
+			background: #ff7979
+			//background: -webkit-linear-gradient(-45deg, #FF4B2B, #FF416C)
+			//background: linear-gradient(-45deg, #FF4B2B, #FF416C)
+		&:hover
+			box-shadow: 0 1px 25px rgba(#FF416C,0.2)
+
+
+
+
+
+
+
+
+
+// .price-box
+
+// 	margin-top: 100px
+// 	.price-item
+// 		position: relative
+// 		background-color: #fff
+// 		width: 100%
+// 		max-width: 500px
+// 		margin: 0 auto
+// 		box-sizing: border-box
+// 		box-shadow: 0 14px 25px rgba(#34495e,0.075)
+// 		z-index: 1
+// 		transition: box-shadow .4s ease-in-out
+// 		&:nth-child(2)
+// 		.price-item-title
+// 			font-family: $font-demi
+// 			font-size: 24px
+// 			padding: 30px 20px 20px 20px
+// 		.price-item-body
+// 			position: relative
+// 			padding: 20px
+// 			font-size: 16px
+// 			transition: color .4s ease-in-out
+// 			min-height: 200px
+// 			&:before
+// 				position: absolute
+// 				content: ""
+// 				top: 0
+// 				left: 0
+// 				width: 100%
+// 				height: 100%
+// 				z-index: -1
+// 				opacity: 0
+// 				transition: opacity .8s ease-in-out
+// 		&:hover
+// 			.price-item-body
+// 				color: #ffffff
+// 				&:before
+// 					opacity: 1
+// 				.price-list
+// 					svg
+// 						fill: #ffffff
+// 						transition: fill .4s ease-in-out
+// 	.basic
+// 		.price-item-title
+// 			color: #AAFFA9
+// 		.price-item-body
+// 			&:before
+// 				background: #AAFFA9
+// 				background: -webkit-linear-gradient(45deg, #11FFBD, #AAFFA9)
+// 				background: linear-gradient(45deg, #11FFBD, #AAFFA9)
+
+
+// 		&:hover
+// 			box-shadow: 0 1px 25px rgba(#AAFFA9,0.2)
+
+// 	.standart
+// 		.price-item-title
+// 			color: #FDC830
+// 		.price-item-body
+// 			&:before
+// 				background: #FDC830
+// 				background: -webkit-linear-gradient(45deg, #F37335, #FDC830)
+// 				background: linear-gradient(45deg, #F37335, #FDC830)
+				
+// 		&:hover
+// 			box-shadow: 0 1px 25px rgba(#FDC830,0.2)
+
+// 	.premium
+// 		.price-item-title
+// 			color: #4e54c8
+// 		.price-item-body
+// 			&:before
+// 				background: #4e54c8
+// 				background: -webkit-linear-gradient(-45deg, #8f94fb, #4e54c8)
+// 				background: linear-gradient(-45deg, #8f94fb, #4e54c8)
+
+// 		&:hover
+// 			box-shadow: 0 1px 25px rgba(#4e54c8,0.2)
+// 	.premium2
+// 		.price-item-title
+// 			color: #FF416C
+// 		.price-item-body
+// 			&:before
+// 				background: #FF416C
+// 				background: -webkit-linear-gradient(-45deg, #FF4B2B, #FF416C)
+// 				background: linear-gradient(-45deg, #FF4B2B, #FF416C)
+// 		&:hover
+// 			box-shadow: 0 1px 25px rgba(#FF416C,0.2)
+			
+// .price-list
+// 	margin: 0
+// 	padding: 0
+// 	list-style-type: none
+// 	li
+// 		position: relative
+// 		padding-left: 20px
+// 		margin-bottom: 10px
+// 		svg
+// 			position: absolute
+// 			width: 10px
+// 			left: 0
+// 			top: 5px
+// 			fill: #333333
+// 			transition: fill .4s ease-in-out
+
+
+@media only screen and (max-width : 960px)
+	.price-box
+		.price-item
+			margin-bottom: 50px
+
+@media only screen and (max-width : 640px)
+	.price-grid > *
+		padding-left: 0

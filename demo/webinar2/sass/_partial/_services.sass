@@ -1,0 +1,41 @@
+@import "../vars"
+
+.g-services
+	position: relative
+	margin-top: 75px
+.services-item
+	position: relative
+	background-color: #fff
+	padding: 25px
+	margin-bottom: 125px
+	position: relative
+	line-height: 1.45
+	text-align: center
+	font-size: 16px
+	transition: box-shadow .25s ease-in-out, background .5s ease-in-out, color .3s ease-in-out
+	.title
+		font-family: $font-demi
+		text-align: center
+		margin: 15px 0
+		font-size: 24px
+	img
+		width: 100px
+		// opacity: 0.75
+		margin: 0 auto
+		filter: grayscale(100%)
+		transition: filter .25s ease-in-out
+	&.active,
+	&:hover
+		background: rgba(#f8f8f8, .75)
+		box-shadow: 0 14px 25px rgba(#34495e,0.16)
+		img
+			filter: none
+
+@media only screen and (max-width : 960px)
+	.services-item
+		margin-bottom: 50px!important
+
+@media only screen and (max-width : 640px)
+	.services-item
+		max-width: 400px
+		margin: 0 auto
