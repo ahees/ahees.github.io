@@ -1,0 +1,182 @@
+.header
+	 background-color: #fff
+.header-menu
+	position: relative
+	border-top: 0.4px solid rgba(0,0,0 , .1)
+	border-bottom: 0.4px solid rgba(0,0,0 , .1)
+	padding: 38px 0
+	background-color: #fff
+	.info-call
+		display: none
+	.uk-navbar-nav
+		background-color: transparent
+		gap: 26px
+		// gap: 1em
+	.uk-navbar-nav > li > a
+		color: $default-color
+		min-height: auto
+		font-family: $title-font-sb
+		font-weight: normal
+		font-size: 12px
+		img
+			width: 8px
+		&:hover
+			color: $accentcolor
+			svg
+				path
+					fill: $accentcolor
+	.uk-navbar-dropdown
+		padding: 30px
+		width: auto
+		.uk-navbar-dropdown-nav
+			font-size: 12px
+			text-transform: uppercase
+			font-family: $title-font-sb
+			font-weight: normal
+			& > li
+				& > a
+					padding: 0
+					padding-bottom: 20px
+					&:hover
+						color: $accentcolor
+				&:last-child
+					a
+						padding-bottom: 0
+.header
+	.header-top
+		position: relative
+		padding: 34px 0
+		display: flex
+		justify-content: space-between
+		.header-search
+			position: absolute
+			background-color: tomato
+			left: 0
+			top: 0
+			height: 100%
+			width: 100%
+			z-index: 2
+	.info-item
+		font-size: 12px
+		font-family: $title-font-m
+		font-weight: normal
+		position: relative
+		padding-left: 20px
+		.icon
+			position: absolute
+			left: 0
+		&:last-child
+			span
+				display: block
+				font-family: $title-font-b
+				font-weight: normal
+				color: $accentcolor
+				&:last-child
+					font-size: 8px
+					font-family: $title-font-sb
+					text-transform: uppercase
+	.nav-lang
+		font-size: 16px
+		font-family: $title-font-sb
+		font-weight: normal
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			li
+				margin: 0
+				padding: 0
+	.header-top_logo
+		a
+			display: flex
+			color: #bf3e2a
+			text-transform: uppercase
+			font-size: 12px
+			font-family: $title-font-sb
+			font-weight: normal
+			// align-items: baseline
+			align-items: flex-end
+			text-decoration: none
+			span
+				line-height: 14px
+				margin-left: 9px
+	.header-top_info
+		display: flex
+		gap: 43px
+		.top_info-items
+			display: flex
+			gap: 60px
+		.top_info-nav
+			display: flex
+			align-items: center
+			gap: 25px
+.mob-menu
+	display: none
+	a
+		display: block
+		padding: 3px
+		&.active
+			background-color: #f2f2f2
+			border-radius: 4px
+			box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)
+	span
+		display: block
+		height: 2px
+		width: 24px
+		background-color: #242424
+		&:nth-child(2)
+			margin: 5px 0
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1250px)
+	/**/
+	.header
+		.header-top_info
+			.top_info-items
+				display: none
+	.header-menu
+		.info-call
+			display: block
+			// display: none
+			font-size: 12px
+			font-family: $title-font-m
+			font-weight: normal
+			position: relative
+			// padding-left: 20px
+			.icon
+				display: inline-block
+				// position: absolute
+				// left: 0
+			span
+				font-family: $title-font-b
+				font-weight: normal
+				color: $accentcolor
+				a
+					color: $accentcolor
+					letter-spacing: 0.75px
+				&:last-child
+					display: block
+					font-size: 8px
+					font-family: $title-font-sb
+					text-transform: uppercase
+		.uk-navbar-nav
+			display: none
+	.mob-menu
+		display: block
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.header
+		.header-top
+			padding: 16px 0
+		.header-top_logo
+			a
+				font-size: 8px
+				color: #000
+				span
+					line-height: 1.2em
+					margin-left: 2px
+					// line-height: 12px
+			img
+				width: 77px
+	.header-menu
+		padding: 16px 0

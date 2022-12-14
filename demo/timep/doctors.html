@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Time+</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="./css/main.min.css?1">
+
+
+</head>
+
+<body class="page">
+
+	<header class="header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+		<div class="uk-container">
+			<div class="header-top">
+				<div class="header-search none">
+					<input type="text">
+				</div>
+				<div class="header-top_logo">
+					<a href="#">
+						<img src="./img/logo.svg" alt="logo">
+						<span>клініка неврології та<br> нейроортопедії</span>
+					</a>
+				</div>
+				<div class="header-top_info">
+					<div class="top_info-items">
+						<div class="info-item info-location">
+							<div class="icon">
+								<img src="./img/icon/map-pin.svg" alt="location">
+							</div>
+							<span>м. Київ, вул.Дж.Макейна, 26,<br>
+								ст.м. Дружби народів</span>
+						</div>
+						<div class="info-item info-time">
+							<div class="icon">
+								<img src="./img/icon/clock.svg" alt="time">
+							</div>
+							<span>Пн - Пт: 8:00 - 21:00 <br>
+								Сб: 9:00 - 14:00</span>
+						</div>
+						<div class="info-item info-call">
+							<div class="icon">
+								<img src="./img/icon/phone.svg" alt="call">
+							</div>
+							<span>0 800 339 729</span>
+							<span>(дзвінки безкоштовні)</span>
+						</div>
+					</div>
+					<div class="top_info-nav">
+						<div class="nav-search">
+							<a href="#"><img src="./img/icon/search.svg" alt="search" id="nav-search"></a>
+						</div>
+						<div class="nav-lang">
+							<ul>
+								<li>UA <img src="./img/icon/arrowdown.svg" alt="icon"></li>
+							</ul>
+						</div>
+						<div class="mob-menu"><a href="#mmenu" class="mmenu" uk-toggle><span></span><span></span><span></span></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-menu">
+			<div class="uk-container">
+
+				<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
+					<div class="uk-navbar-left">
+
+						<div class="info-call">
+							<div class="icon">
+								<img src="./img/icon/phone.svg" alt="call">
+							</div>
+							<span><a href="#">0 800 339 729</a></span>
+							<span>(дзвінки безкоштовні)</span>
+						</div>
+
+							<ul class="uk-navbar-nav">
+									<!-- <li class="uk-active"><a href="#">Active</a></li>
+									<li>
+											<a href="#">Parent</a>
+											<div class="uk-navbar-dropdown">
+													<ul class="uk-nav uk-navbar-dropdown-nav">
+															<li class="uk-active"><a href="#">Active</a></li>
+															<li><a href="#">Item</a></li>
+															<li><a href="#">Item</a></li>
+													</ul>
+											</div>
+									</li> -->
+									<li><a href="#">Про клініку</a></li>
+									<li><a href="#">Консультація <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg>
+											</a>
+											<div class="uk-navbar-dropdown">
+												<ul class="uk-nav uk-navbar-dropdown-nav">
+														<li class="uk-active"><a href="#">ортопеда-травматолога</a></li>
+														<li><a href="#">вертебролога</a></li>
+														<li><a href="#">невропатолога</a></li>
+												</ul>
+											</div>
+									</li>
+									<li><a href="#">Що ми лікуємо <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
+									<li><a href="#">Методи лікування <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
+									<li><a href="#">Реабілітація <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
+									<li><a href="#">Ціни </a></li>
+									<li><a href="#">Лікарі <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
+									<li><a href="#">Контакти</a></li>
+							</ul>
+
+					</div>
+					<div class="uk-navbar-right">
+						<a href="#" class="btn-primary">
+							Замовити зворотній дзвінок
+						</a>
+					</div>
+				</nav>
+
+			</div>
+		</div>
+
+	</header>
+
+	<main class="main">
+
+		<div class="breadcrumbs">
+			<div class="uk-container">
+				<nav aria-label="Breadcrumb">
+					<ul class="uk-breadcrumb">
+							<li><a href="#">Головна</a></li>
+							<li><span>Лікарі</span></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<section class="section page-doctor">
+			<div class="uk-container">
+				<div>
+					<div class="center">
+						<div class="section-title">Наші Лікарі</div>
+					</div>
+					<div class="doctor-grid">
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+							<div class="item-title">Самохін
+								Анатолій Вікторович</div>
+								<div class="item-subtitle">Ортопед-травматолог</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+								<div class="item-title">Самохін
+									Анатолій Вікторович</div>
+									<div class="item-subtitle">Ортопед-травматолог</div>
+								</div>
+						</div>
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+								<div class="item-title">Самохін
+									Анатолій Вікторович</div>
+									<div class="item-subtitle">Ортопед-травматолог</div>
+								</div>
+						</div>
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+								<div class="item-title">Самохін
+									Анатолій Вікторович</div>
+									<div class="item-subtitle">Ортопед-травматолог</div>
+								</div>
+						</div>
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+								<div class="item-title">Самохін
+									Анатолій Вікторович</div>
+									<div class="item-subtitle">Ортопед-травматолог</div>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="center">
+						<div class="section-title">Наші реабілітологи</div>
+					</div>
+					<div class="doctor-grid">
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+							<div class="item-title">Самохін
+								Анатолій Вікторович</div>
+								<div class="item-subtitle">Ортопед-травматолог</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+								<div class="item-title">Самохін
+									Анатолій Вікторович</div>
+									<div class="item-subtitle">Ортопед-травматолог</div>
+								</div>
+						</div>
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+								<div class="item-title">Самохін
+									Анатолій Вікторович</div>
+									<div class="item-subtitle">Ортопед-травматолог</div>
+								</div>
+						</div>
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+								<div class="item-title">Самохін
+									Анатолій Вікторович</div>
+									<div class="item-subtitle">Ортопед-травматолог</div>
+								</div>
+						</div>
+						<div class="item">
+							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
+								<div class="item-title">Самохін
+									Анатолій Вікторович</div>
+									<div class="item-subtitle">Ортопед-травматолог</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="content">
+			<div class="uk-container">
+
+			</div>
+		</div>
+
+
+	</main>
+
+	<footer class="footer">
+		<div class="uk-container">
+			<div class="footer-footer">
+				<!-- <div> -->
+					<div class="footer-logo">
+						<a href="#"><img src="./img/logo_f.svg" alt="logo"></a>
+					</div>
+				<!-- </div> -->
+				<!-- <div> -->
+					<ul class="footer-links">
+						<li>
+							<a href="#">
+								Уколи гіалуронової кислоти у суглоб
+							</a>
+						</li>
+						<li><a href="#">
+							Плазмоліфтинг суглобів (PPP-терапія суглобів)
+						</a></li>
+						<li><a href="#">
+							Плазмотерапія (PRP-терапія суглобів)
+						</a></li>
+						<li><a href="#">
+							Пролотерапія
+						</a></li>
+						<li><a href="#">
+							Мануальна терапія
+						</a></li>
+						<li><a href="#">
+							Блокада суглобів
+						</a></li>
+						<li><a href="#">
+							Реабілітологи
+						</a></li>
+						<li><a href="#">
+							Блог
+						</a></li>
+					</ul>
+				<!-- </div> -->
+				<!-- <div> -->
+					<div class="footer-location">
+						<ul>
+							<li>
+								<span>Адреса:</span>
+								м. Київ, вул.Дж.Макейна <br>
+								(І.Кудрі), 26,<br>
+								ст.м. Дружби народів
+							</li>
+							<li>
+								<span>графік роботи:</span>
+								Пн - Пт: 8:00 - 21:00<br>
+								Сб: 9:00 - 14:00<br>
+								Неділя - вихідний
+							</li>
+							<li class="action action-email">
+								<img src="./img/icon/email.svg" alt="icon">
+								<a href="#">info@spinedoctor.com.ua</a>
+							</li>
+							<li class="action action-phone">
+								<img src="./img/icon/phone.svg" alt="icon">
+								<a href="#">0 800 339 729</a>
+							</li>
+						</ul>
+						<a href="#" class="btn-primary">Замовити зворотній дзвінок</a>
+					</div>
+				<!-- </div> -->
+				<!-- <div> -->
+					<ul class="footer-social">
+						<li><a href="#">
+							<img src="./img/icon/facebook-3-2.svg" alt="">
+						</a></li>
+						<li><a href="#">
+							<img src="./img/icon/instagram-5.svg" alt="">
+						</a></li>
+						<li><a href="#">
+							<img src="./img/icon/youtoube.svg" alt="">
+						</a></li>
+					</ul>
+				</div>
+			<!-- </div> -->
+			<div class="footer-copy">
+				<span>Ліцензія МОЗ України: Наказ №0000 від 00/00/0000</span>
+				<span>© Copyright 2013 - 2022. Клініка неврології та нейроортопедії</span>
+				<span><a href="#">Політика конфеденційності</a></span>
+			</div>
+		</div>
+	</footer>
+
+
+		<div id="mmenu" uk-offcanvas="overlay: true;">
+			<div class="uk-offcanvas-bar">
+
+					<button class="uk-offcanvas-close" type="button" uk-close></button>
+
+					<h3>Title</h3>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+			</div>
+		</div>
+
+
+	<script src="./libs/jquery/dist/jquery.min.js"></script>
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script>
+
+		$( "input,textarea" ).focusin(function() {
+			console.log($(this).next("label").hide())
+			// $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 1000 );
+		});
+		$( "input,textarea" ).blur(function() {
+			if ($(this).val() === '') {
+				console.log($(this).next("label").show())
+			}
+			// $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 1000 );
+		});
+
+	</script>
+	<script src="./js/scripts.min.js?1"></script>
+
+</body>
+
+</html>

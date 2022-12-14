@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Оцінка сервісу роботи М24</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="./css/main.min.css?1">
+
+
+</head>
+
+<body class="out">
+
+	<main class="main">
+
+		<div class="uk-container">
+
+			<div class="swiper-container swiper-doctor">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide item">
+						<div class="item-content" style="background-image: url('./img/doctor/muhomorov.jpg');"></div>
+					</div>
+					<div class="swiper-slide item">
+						<div class="item-content" style="background-image: url('./img/doctor/samohin.jpg');"></div>
+					</div>
+					<div class="swiper-slide item">
+						<div class="item-content" style="background-image: url('./img/doctor/ustimenko.jpg');"></div>
+					</div>
+					<div class="swiper-slide item">
+						<div class="item-content" style="background-image: url('./img/doctor/vorovey.jpg');"></div>
+					</div>
+					<div class="swiper-slide item">
+						<div class="item-content" style="background-image: url('./img/doctor/zavazkina.jpg');"></div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+
+		</div>
+		<p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Вершину прямо если выйти lorem дал своих свою! Осталось, своего. Заглавных языком свой страна бросил взгляд семантика страну буквенных залетают? Коварный точках путь лучше которой строчка первую? Диких текст там осталось маленький бросил снова за? Живет власти страну несколько, первую своих составитель lorem предложения своего вопрос взобравшись. Переписали буквенных речью ему, сбить родного осталось то правилами диких дорогу предложения своего мир деревни рукопись имени ipsum образ пояс которой, вопрос большой послушавшись что на берегу страну. Океана снова путь безопасную парадигматическая! Меня знаках на берегу, безопасную моей свой предложения строчка подзаголовок коварный продолжил?</p>
+
+	</main>
+
+
+	<script src="./libs/jquery/dist/jquery.min.js"></script>
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./js/scripts.min.js?1"></script>
+	<script>
+		const swiper_likar = new Swiper(".swiper-doctor", {
+			// Optional parameters
+			loop: false,
+			slidesPerView: "auto",
+			spaceBetween: 10,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+
+			breakpoints: {
+				// when window width is >= 320px
+				300: {
+					slidesPerView: 1.15
+				},
+				// when window width is >= 480px
+				600: {
+					slidesPerView: 2.5
+				},
+				// when window width is >= 640px
+				900: {
+					slidesPerView: 3.5
+				},
+				1200: {
+					slidesPerView: 4,
+					pagination: false
+				}
+			}
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+.section_form-wrapper
+	display: flex
+	flex-direction: row
+	gap: 10px
+	.form-right
+		max-width: 510px
+		// width: 50%
+		width: 100%
+		padding: 65px 0 55px 0
+		background-color: #f2f2f2
+		border-radius: 4px
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)
+	.form-left
+		// flex: auto
+		width: 100%
+		border-radius: 4px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+
+
+.fform
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	gap: 20px
+	height: 100%
+	width: 100%
+	& > div
+		display: block
+		width: 100%
+		max-width: 370px
+
+	.input
+		width: 100%
+		font-size: 12px
+		// width: 100%
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)
+		border-radius: 4px
+		border: none
+		padding: 10px 14px
+		background: #ffffff
+		outline: none
+		& ~ label
+			// display: inline-block
+			position: absolute
+			left: 14px
+			top: 10px
+			font-size: 12px
+			line-height: 1.2em
+			color: tomato
+	input
+		&:focus ~ label,
+		&:active ~ label
+		// &:not(:placeholder-shown) ~ label
+			display: none
+	.input-error
+		display: none
+		position: absolute
+		color: #D73232
+		font-size: 8px
+		bottom: -14px
+	.error
+		border: 1px solid #D73232
+	a
+		display: block
+		width: 100%
+		max-width: 370px
+		text-align: center
+	.form_bg
+		width: auto
+		flex: 1
+
+	.form-title
+		font-size: 20px
+		font-family: $title-font-sb
+		font-weight: normal
+		text-transform: uppercase
+.form_form
+@media only screen and (max-width : 768px)
+	/**/
+	.section_form-wrapper
+		display: flex
+		flex-direction: row
+		gap: 0px
+		.form-left
+			display: none
+		.form-right
+			width: 100%
+			padding: 30px 12px
+			max-width: 100%
+	.fform
+		.form-title
+			font-size: 16px

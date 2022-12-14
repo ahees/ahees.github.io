@@ -1,0 +1,77 @@
+.aboutclinic-about
+	background-color: #f2f2f2
+.aboutclinic-grid
+	& > div
+		// padding-left: 0
+.aboutclinic-about
+	// width: 45%
+	padding: 40px 30px 60px 30px
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)
+	.about-subtitle
+		font-family: $help-font-m
+		font-size: 14px
+		text-transform: uppercase
+		font-weight: normal
+		margin-bottom: 22px
+		// font-weight: 500
+	.about-title
+		font-family: $title-font-sb
+		font-size: 20px
+		line-height: 1.2em
+		text-transform: uppercase
+		margin-bottom: 36px
+	.about-text
+		font-size: 14px
+.about-images
+	// width: 45%
+	// height: 100%
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	gap: 10px
+	div,
+	img
+		flex: 1 0 48%
+	div
+		// min-height: 100px
+		border-radius: 4px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)
+		// width: 100%
+@media only screen and (max-width : 768px)
+	/**/
+	.aboutclinic-about
+		padding: 30px 12px
+		.about-subtitle
+			font-size: 12px
+			text-align: center
+		.about-title
+			font-size: 12px
+			text-align: center
+		.about-text
+			font-size: 12px
+	.about-images
+		div
+			background-position: center top
+
+	.about-images
+		// min-height: 260px
+@media only screen and (max-width : 640px)
+	/**/
+	.about-images
+		div
+			background-position: center
+			min-height: 150px
+			&:last-child
+				min-height: 200px
+				background-position: center top
+@media only screen and (max-width : 480px)
+	/**/
+	.about-images
+		div
+			// background-position: center top
+			min-height: 100px
+			&:last-child
+				min-height: 150px

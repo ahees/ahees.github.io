@@ -1,0 +1,178 @@
+/* button */
+.btn-primary
+	box-sizing:
+	display: inline-block
+	font-family: $title-font-sb
+	font-size: 12px
+	text-transform: uppercase
+	font-weight: normal
+	background: #BD4635
+	color: #fff
+	// padding: 10px 18px
+	padding: 4px 12px
+	border-radius: 5px
+	text-decoration: none
+	border: 3px solid #BD4635
+	&:hover
+		background: linear-gradient(180deg, #9D392B 28.98%, #BD4635 100%)
+		color: #fff
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25)
+		text-decoration: none
+	&:active,
+	&.active
+		background: #D26F60
+	&:focus,
+	&.focus
+		color: #ffffff
+		border-color: #F4DBD7
+		// border: 3px solid #F4DBD7
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25)
+	&:disabled,
+	&.disable
+		background: #B5B5B9
+.btn-arrowtop
+	position: relative
+	display: inline-block
+	font-family: $title-font-sb
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: normal
+	color: #101b36
+	line-height: 20px
+	padding-right: 20px
+	&::before
+		position: absolute
+		right: 0
+		top: 0
+		width: 20px
+		height: 20px
+		content: ''
+		background-image: url("../img/arrow-up-right.svg")
+	&:hover
+		color: $accentcolor
+		text-decoration: none
+	&:active,
+	&.active
+		color: #d26f60
+	&:focus,
+	&.focus
+		color: $accentcolor
+		border: 1px solid $accentcolor
+		padding-left: 5px
+a
+	color: #37373A
+	&:hover,
+	&:focus
+		color: $accentcolor
+/* Small Devices, Tablets */
+@media only screen and (max-width : 992px)
+	/**/
+	.btn-primary
+		font-size: 10px
+		padding: 8px 14px
+/* end button */
+/* section */
+.section
+	position: relative
+	background: #fff
+	padding-top: 100px
+.section-title
+	text-transform: uppercase
+	margin: 0
+	padding: 0
+	margin-bottom: 50px
+	font-size: 20px
+	font-family: $title-font-sb
+	font-weight: normal
+	line-height: 1.2em
+	position: relative
+	text-align: center
+	display: inline-block
+	&::before
+		position: absolute
+		content: ""
+		bottom: -5px
+		width: 100%
+		height: 2px
+		border-radius: 1px
+		background-color: $accentcolor
+.page
+	.section
+		padding-top: 30px
+.uk-modal.uk-open
+	backdrop-filter: blur(8px)
+	background: rgba(140, 140, 140, 0.5)
+@media only screen and (max-width : 768px)
+	/**/
+	.section
+		padding-top: 50px
+	.section-title
+		font-size: 16px
+		margin-bottom: 30px
+/* end section */
+/* grid */
+.mgrid
+	// display: flex
+	margin: 0 -5px -10px -5px
+	& > *
+		padding: 0 5px
+		margin-bottom: 10px
+/* end grid */
+
+
+.swiper-overflow-container
+	overflow-x: hidden
+	.s-container
+		overflow: visible
+		// outline: 2px solid red
+	.swiper-container
+		position: relative
+		overflow: visible
+		// background-color: black
+		padding-bottom: 60px
+		.swiper-pagination
+			// background-color: tomato
+			bottom: 0
+			.swiper-pagination-bullet
+				width: 9px
+				height: 9px
+				background-color: #E6E6E6
+				&-active
+					background-color: #B5B5B9
+.swiperBtn-next,
+.swiperBtn-prev
+	position: absolute
+	bottom: 0
+	width: 30px
+	height: 30px
+	cursor: pointer
+	z-index: 11
+	&.swiper-button-disabled
+		opacity: 0.5
+.swiperBtn-next
+	right: 0
+	background-image: url("../img/icon/arrow-right.svg")
+.swiperBtn-prev
+	left: 0
+	background-image: url("../img/icon/arrow-left.svg")
+@media only screen and (max-width : 768px)
+	/**/
+	.swiperBtn-next,
+	.swiperBtn-prev
+		display: none
+
+
+
+/* крошки */
+.breadcrumbs
+	margin-top: 10px
+	.uk-breadcrumb
+		margin: 0
+		padding: 0
+	.uk-breadcrumb > * > *
+		font-size: 10px
+		font-family: $title-font-sb
+		color: #99999e
+		text-transform: uppercase
+	.uk-breadcrumb > :last-child > span
+		color: #545458

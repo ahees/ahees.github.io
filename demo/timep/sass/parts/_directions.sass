@@ -1,0 +1,45 @@
+#swiper-directions
+	.swiper-wrapper
+		padding-bottom: 0
+	.swiper-pagination
+		// bottom: 0px
+		position: relative
+		margin-top: 20px
+		.swiper-pagination-bullet
+			background-color: #E6E6E6
+			&-active
+				background-color: #B5B5B9
+	.item
+		background-color: #f2f2f2
+		border-radius: 4px
+		height: 234px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-decoration: none
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)
+		text-align: center
+		&_icon
+			margin-bottom: 25px
+		&_title
+			text-transform: uppercase
+			font-family: $title-font-b
+			font-weight: normal
+			font-size: 16px
+			line-height: 1.2em
+			// padding: 0 20px
+		&:hover
+			.item_title
+				color: $accentcolor
+@media only screen and (max-width : 768px)
+	/**/
+	#swiper-directions
+		.item
+			height: 165px
+			&_title
+				font-size: 8px
+			&_icon
+				width: 52px
+				height: 52px
+				margin-bottom: 8px

@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Time+</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="./css/main.min.css?1">
+
+
+</head>
+
+<body class="">
+
+	<header class="header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+		<div class="uk-container">
+			<div class="header-top">
+				<div class="header-search none">
+					<input type="text">
+				</div>
+				<div class="header-top_logo">
+					<a href="#">
+						<img src="./img/logo.svg" alt="logo">
+						<span>клініка неврології та<br> нейроортопедії</span>
+					</a>
+				</div>
+				<div class="header-top_info">
+					<div class="top_info-items">
+						<div class="info-item info-location">
+							<div class="icon">
+								<img src="./img/icon/map-pin.svg" alt="location">
+							</div>
+							<span>м. Київ, вул.Дж.Макейна, 26,<br>
+								ст.м. Дружби народів</span>
+						</div>
+						<div class="info-item info-time">
+							<div class="icon">
+								<img src="./img/icon/clock.svg" alt="time">
+							</div>
+							<span>Пн - Пт: 8:00 - 21:00 <br>
+								Сб: 9:00 - 14:00</span>
+						</div>
+						<div class="info-item info-call">
+							<div class="icon">
+								<img src="./img/icon/phone.svg" alt="call">
+							</div>
+							<span>0 800 339 729</span>
+							<span>(дзвінки безкоштовні)</span>
+						</div>
+					</div>
+					<div class="top_info-nav">
+						<div class="nav-search">
+							<a href="#"><img src="./img/icon/search.svg" alt="search" id="nav-search"></a>
+						</div>
+						<div class="nav-lang">
+							<ul>
+								<li>UA <img src="./img/icon/arrowdown.svg" alt="icon"></li>
+							</ul>
+						</div>
+						<div class="mob-menu"><a href="#mmenu" class="mmenu" uk-toggle><span></span><span></span><span></span></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-menu" >
+			<div class="uk-container">
+
+				<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
+					<div class="uk-navbar-left">
+
+						<div class="info-call">
+							<div class="icon">
+								<img src="./img/icon/phone.svg" alt="call">
+							</div>
+							<span><a href="#">0 800 339 729</a></span>
+							<span>(дзвінки безкоштовні)</span>
+						</div>
+
+							<ul class="uk-navbar-nav">
+									<!-- <li class="uk-active"><a href="#">Active</a></li>
+									<li>
+											<a href="#">Parent</a>
+											<div class="uk-navbar-dropdown">
+													<ul class="uk-nav uk-navbar-dropdown-nav">
+															<li class="uk-active"><a href="#">Active</a></li>
+															<li><a href="#">Item</a></li>
+															<li><a href="#">Item</a></li>
+													</ul>
+											</div>
+									</li> -->
+									<li><a href="#">Про клініку</a></li>
+									<li><a href="#">Консультація <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg>
+											</a>
+											<div class="uk-navbar-dropdown">
+												<ul class="uk-nav uk-navbar-dropdown-nav">
+														<li class="uk-active"><a href="#">ортопеда-травматолога</a></li>
+														<li><a href="#">вертебролога</a></li>
+														<li><a href="#">невропатолога</a></li>
+												</ul>
+											</div>
+									</li>
+									<li><a href="#">Що ми лікуємо <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
+									<li><a href="#">Методи лікування <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
+									<li><a href="#">Реабілітація <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
+									<li><a href="#">Ціни </a></li>
+									<li><a href="#">Лікарі <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
+									<li><a href="#">Контакти</a></li>
+							</ul>
+
+					</div>
+					<div class="uk-navbar-right">
+						<a href="#modal-form" class="btn-primary" uk-toggle>
+							Замовити зворотній дзвінок
+						</a>
+					</div>
+				</nav>
+
+			</div>
+		</div>
+
+	</header>
+
+	<main class="main">
+
+		<!-- <div id="mmenu" class="uk-dropbar uk-dropbar-top" uk-drop='{"clsDrop":"uk-dropbar","container":".main","target-y":".header","mode":"click","stretch":true,"bgScroll":"false","animation":"reveal-top","animateOut":true,"duration":300,"toggle":"false"}'>
+			<div class="uk-container">
+				<ul class="mmenu-list">
+					<li>sdasd</li>
+					<li>sdasd</li>
+					<li>sdasd</li>
+				</ul>
+			</div>
+		</div> -->
+		<div class="uk-container lead-container">
+			<div id="home_leader">
+				<div class="home_leader-right">
+					<div class="swiper" id="swiper-lead">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide item" style="background-image: url('../img/home/s1.jpg')">
+								<h2 class="h2">
+									консультація доктора медичних наук, професора, ортопеда самохіна А.В.
+								</h2>
+								<h4 class="h4">
+									Консультація доктора медичних наук, професора, ортопеда Самохіна А.В.
+								</h4>
+								<div>
+									<a href="#" class="btn-primary">отримати консультацію</a>
+								</div>
+							</div>
+							<div class="swiper-slide item" style="background-image: url('../img/home/s1.jpg')">
+								<h2 class="h2">
+									Перевірка 2 стркои іваіваіваів іва ііва
+								</h2>
+								<h4 class="h4">
+									Консультація доктора медичних наук, професора, ортопеда Самохіна А.В.
+								</h4>
+								<div>
+									<a href="#" class="btn-primary">отримати консультацію</a>
+								</div>
+							</div>
+							<div class="swiper-slide item" style="background-image: url('../img/home/s1.jpg')">
+								<h2 class="h2">
+									Перевірка 2 стркои іваіваіваів іва ііва
+								</h2>
+								<h4 class="h4">
+									Консультація доктора медичних наук, професора, ортопеда Самохіна А.В.
+								</h4>
+								<div>
+									<a href="#" class="btn-primary">отримати консультацію</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="home_leader-left">
+					<a class="left-item">
+						<div>
+							<div class="icon">
+								<img src="./img/icon/napryam.svg" alt="напрями">
+							</div>
+							<span>Напрями</span>
+						</div>
+					</a>
+					<a class="left-item">
+						<div>
+							<div class="icon">
+								<img src="./img/icon/uslugi.svg" alt="полуги">
+							</div>
+							<span>наші послуги</span>
+						</div>
+					</a>
+					<a class="left-item">
+						<div>
+							<div class="icon">
+								<img src="./img/icon/location.svg" alt="розташування">
+							</div>
+							<span>Розташування</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!--  -->
+		<section class="section section_service">
+			<div class="uk-container">
+				<div class="center">
+					<h4 class="section-title">
+						Послуги
+					</h4>
+				</div>
+				<div class="service swiper" id="swiper-service">
+					<div class="swiper-wrapper">
+
+						<a href="#" class="swiper-slide item">
+							<div class="item_bg" style="background-image: url('./img/home/usl1.jpg')"></div>
+							<div class="item_title">Введення гіалуронової кислоти в суглоб</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<div class="item_bg" style="background-image: url('./img/home/usl2.jpg')"></div>
+							<div class="item_title">Плазмотерапія (PRP-терапія суглобів)</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<div class="item_bg" style="background-image: url('./img/home/usl3.jpg')"></div>
+							<div class="item_title">Пролетерапія при болях у суглобах</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<div class="item_bg" style="background-image: url('./img/home/usl4.jpg')"></div>
+							<div class="item_title">Реабілітація</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<div class="item_bg" style="background-image: url('./img/home/usl5.jpg')"></div>
+							<div class="item_title">Лікувальний масаж</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<div class="item_bg" style="background-image: url('./img/home/usl6.jpg')"></div>
+							<div class="item_title">Консультація невропатолога</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<div class="item_bg" style="background-image: url('./img/home/usl7.jpg')"></div>
+							<div class="item_title">Консультація ортопеда-травматолога</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<div class="item_bg" style="background-image: url('./img/home/usl8.jpg')"></div>
+							<div class="item_title">Консультація психіатра</div>
+						</a>
+
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="section section_directions">
+			<div class="uk-container">
+				<div class="center">
+					<h4 class="section-title">
+						Напрями
+					</h4>
+				</div>
+				<div class="directions swiper" id="swiper-directions">
+					<div class="swiper-wrapper">
+
+						<a href="#" class="swiper-slide item">
+							<img src="./img/icon/implant.svg" class="item_icon">
+							<div class="item_title">Ортопедія-травмотологія</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<img src="./img/icon/service_vertebr.svg" class="item_icon">
+							<div class="item_title">Вертебрологія</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<img src="./img/icon/service_reab.svg" class="item_icon">
+							<div class="item_title">Реабілітація</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<img src="./img/icon/service_nevrol.svg" class="item_icon">
+							<div class="item_title">Неврологія</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<img src="./img/icon/service_psyho.svg" class="item_icon">
+							<div class="item_title">Психологія</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<img src="./img/icon/service_psyhi.svg" class="item_icon">
+							<div class="item_title">Психіатрія</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<img src="./img/icon/service_endo.svg" class="item_icon">
+							<div class="item_title">Ендокринологія</div>
+						</a>
+						<a href="#" class="swiper-slide item">
+							<img src="./img/icon/service_revma.svg" class="item_icon">
+							<div class="item_title">Ревматологія</div>
+						</a>
+
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<!--  -->
+		<!--  -->
+		<section class="section swiper-overflow-container section_likar">
+			<div class="uk-container s-container">
+
+				<div class="center">
+					<h4 class="section-title">
+						Наші лікарі
+					</h4>
+				</div>
+
+				<div class="swiper-container swiper-doctor">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<div class="item">
+
+								<div class="item-bg" style="background-image: url('../img/doctor/muhomorov.jpg');">
+
+									<div class="item-content_in">
+										<div class="title">Самохін Анатолій Вікторович</div>
+										<div class="subtitle">Ортопед-травматолог</div>
+
+										<div class="item-content_out">
+											<!-- <div class="title">Пелепейченко</div> -->
+											<ul>
+												<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+												<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+												<li>Стаж: <span>40 років</span></li>
+											</ul>
+											<div class="item-link">
+												<a href="#" class="btn-arrowtop">Докладніше</a>
+											</div>
+											<div class="item-links">
+												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<div class="price">600 грн</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+
+								<div class="item-bg" style="background-image: url('../img/doctor/muhomorov.jpg');">
+
+									<div class="item-content_in">
+										<div class="title">Самохін Анатолій Вікторович</div>
+										<div class="subtitle">Ортопед-травматолог</div>
+
+										<div class="item-content_out">
+											<!-- <div class="title">Пелепейченко</div> -->
+											<ul>
+												<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+												<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+												<li>Стаж: <span>40 років</span></li>
+											</ul>
+											<div class="item-link">
+												<a href="#" class="btn-arrowtop">Докладніше</a>
+											</div>
+											<div class="item-links">
+												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<div class="price">600 грн</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+
+								<div class="item-bg" style="background-image: url('../img/doctor/muhomorov.jpg');">
+
+									<div class="item-content_in">
+										<div class="title">Самохін Анатолій Вікторович</div>
+										<div class="subtitle">Ортопед-травматолог</div>
+
+										<div class="item-content_out">
+											<!-- <div class="title">Пелепейченко</div> -->
+											<ul>
+												<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+												<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+												<li>Стаж: <span>40 років</span></li>
+											</ul>
+											<div class="item-link">
+												<a href="#" class="btn-arrowtop">Докладніше</a>
+											</div>
+											<div class="item-links">
+												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<div class="price">600 грн</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+
+								<div class="item-bg" style="background-image: url('../img/doctor/muhomorov.jpg');">
+
+									<div class="item-content_in">
+										<div class="title">Самохін Анатолій Вікторович</div>
+										<div class="subtitle">Ортопед-травматолог</div>
+
+										<div class="item-content_out">
+											<!-- <div class="title">Пелепейченко</div> -->
+											<ul>
+												<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+												<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+												<li>Стаж: <span>40 років</span></li>
+											</ul>
+											<div class="item-link">
+												<a href="#" class="btn-arrowtop">Докладніше</a>
+											</div>
+											<div class="item-links">
+												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<div class="price">600 грн</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+
+								<div class="item-bg" style="background-image: url('../img/doctor/muhomorov.jpg');">
+
+									<div class="item-content_in">
+										<div class="title">Самохін Анатолій Вікторович</div>
+										<div class="subtitle">Ортопед-травматолог</div>
+
+										<div class="item-content_out">
+											<!-- <div class="title">Пелепейченко</div> -->
+											<ul>
+												<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+												<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+												<li>Стаж: <span>40 років</span></li>
+											</ul>
+											<div class="item-link">
+												<a href="#" class="btn-arrowtop">Докладніше</a>
+											</div>
+											<div class="item-links">
+												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<div class="price">600 грн</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+
+								<div class="item-bg" style="background-image: url('../img/doctor/muhomorov.jpg');">
+
+									<div class="item-content_in">
+										<div class="title">Самохін Анатолій Вікторович</div>
+										<div class="subtitle">Ортопед-травматолог</div>
+
+										<div class="item-content_out">
+											<!-- <div class="title">Пелепейченко</div> -->
+											<ul>
+												<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+												<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+												<li>Стаж: <span>40 років</span></li>
+											</ul>
+											<div class="item-link">
+												<a href="#" class="btn-arrowtop">Докладніше</a>
+											</div>
+											<div class="item-links">
+												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<div class="price">600 грн</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+
+						<!--
+						<div class="swiper-slide item">
+							<div class="item-content" style="background-image: url('./img/doctor/samohin.jpg');">
+								<div class="flip1">
+									<div class="title">
+										Самохін Анатолій Вікторович
+									</div>
+									<div>
+										<ul>
+											<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+											<li>Направлення: <span>Ортопедія-травматологія</span></li>
+											<li>Стаж: <span>40 років</span></li>
+										</ul>
+									</div>
+									<div>
+										<a href="" class="btn-arrowtop">докладніше</a>
+
+									</div>
+									<div class="action" >
+										<a href="#" class="btn-primary">записатися на прийом</a>
+									</div>
+								</div>
+								<div class="flip2">content</div>
+							</div>
+						</div>
+						<div class="swiper-slide item">
+							<div class="item-content" style="background-image: url('./img/doctor/ustimenko.jpg');"></div>
+						</div>
+						<div class="swiper-slide item">
+							<div class="item-content" style="background-image: url('./img/doctor/vorovey.jpg');"></div>
+						</div>
+						<div class="swiper-slide item">
+							<div class="item-content" style="background-image: url('./img/doctor/zavazkina.jpg');"></div>
+						</div>-->
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiperBtn-prev"></div>
+					<div class="swiperBtn-next"></div>
+				</div>
+
+			</div>
+		</section>
+		<!--  -->
+		<!--  -->
+		<section class="section section_form">
+			<div class="uk-container">
+				<div class="section_form-wrapper">
+					<div class="form-left" style="background-image: url('./img/form.jpg');">
+
+					</div>
+					<div class="form-right">
+
+							<form action="" class="fform">
+								<legend class="form-title">
+									Записатися на прийом
+								</legend>
+								<div class="uk-position-relative">
+									<input id="fname" class="input" type="text" placeholder="">
+									<label for="fname">Ім'я</label>
+								</div>
+								<div class="uk-position-relative">
+									<input id="fphone" class="input error1" type="text" placeholder="" required>
+									<label for="fphone"><span>*</span>Номер телефону</label>
+									<div class="input-error">Вкажіть коректний номер телефону</div>
+								</div>
+								<div class="uk-position-relative">
+									<textarea id="fmsg" class="input" rows="5" placeholder=""></textarea>
+									<label for="fmsg">Коментар</label>
+								</div>
+								<a href="#" class="btn-primary">Надіслати</a>
+							</form>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<!--  -->
+		<section class="section section_aboutclinic">
+			<div class="uk-container">
+				<div class="center">
+					<h4 class="section-title">
+						Про клініку
+					</h4>
+				</div>
+				<div class="uk-grid uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match mgrid aboutclinic-grid " uk-grid>
+					<div>
+						<div class="aboutclinic-about">
+							<div class="about-subtitle">
+								КЛІНІКА НЕВРОЛОГІЇ ТА НЕЙРООРТЕПЕДІЇ
+							</div>
+
+							<div class="about-title">
+								Ми з ентузіазмом ставимося до надання послуг. Наші лікарі спеціалізуються лише на доказовій медицині.
+							</div>
+							<div class="about-text">
+								<p>
+									Клініка "Тайм +" вже понад двадцять років займається консервативним лікуванням суглобів, хребта і нервової системи.
+								</p>
+								<p>
+									Основні акценти зроблено на методиках, які допомагають швидко позбутися болю за рахунок ортопедичних маніпуляцій. Профілактичний напрямок роботи клініки забезпечують неврологи, ревматолог, кінезіотерапевти, масажисти, відділ сервісного супроводу і контролю якості лікування.
+									Основні акценти зроблено на методиках, які допомагають швидко позбутися болю за рахунок ортопедичних маніпуляцій. Профілактичний напрямок роботи клініки забезпечують неврологи, ревматолог, кінезіотерапевти, масажисти, відділ сервісного супроводу та контролю якості лікування.
+								</p>
+							</div>
+							<a href="#" class="btn-arrowtop">Докладніше</a>
+						</div>
+					</div>
+					<div>
+						<div class="about-images">
+							<div style="background-image: url('./img/home/about1.jpg');"></div>
+							<div style="background-image: url('./img/home/about2.jpg');"></div>
+							<div style="background-image: url('./img/home/about3.jpg');"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<!--  -->
+		<section class="section swiper-overflow-container section_reviews">
+			<div class="uk-container s-container uk-position-relative">
+				<div class="center">
+					<h4 class="section-title">
+						Відгуки
+					</h4>
+					<div class="reviews-subtitle">
+						Дані відгуки є достовірними та взяті з джерела Google
+					</div>
+					<a href="#" class="btn-arrowtop">Всі відгуки</a>
+				</div>
+
+				<div class="swiper-container swiper-reviews">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="item">
+								<div class="image"></div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiperBtn-prev"></div>
+					<div class="swiperBtn-next"></div>
+
+				</div>
+
+			</div>
+
+
+
+		</section>
+		<!--  -->
+		<!--  -->
+		<section class="section section_seo">
+			<div class="uk-container">
+				<div class="uk-grid uk-grid-collapse mgrid uk-child-width-1-2@s uk-child-width-1-1 uk-grid-match" uk-grid>
+					<div>
+						<div class="img" style="background-image: url('./img/seo.jpg');"></div>
+					</div>
+					<div>
+						<div class="text">
+							<div class="seo-subtitle">
+								Клиника неврологии и ортопедии Time+
+							</div>
+							<div class="seo-title">
+								Мы с энтузиазмом относимся к оказанию услуг. Наши врачи специализируются только на доказательной медицине.
+							</div>
+							<div class="seo-text">
+								Клиника «Тайм +» уже более двадцати лет занимается консервативным лечением суставов, позвоночника и нервной системы.
+								Основные акценты сделаны на методиках, которые помогают быстро избавиться от боли за счет ортопедических манипуляций. Профилактическое направление работы клиники обеспечивают неврологи, ревматолог, кинезиотерапевты, массажисты, отдел сервисного сопровождения и контроля качества лечения...
+							</div>
+							<a href="#" class="btn-arrowtop">Докладніше</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<!-- <div class="uk-container"> -->
+
+
+
+
+
+
+
+
+
+
+		<!-- </div> -->
+	</main>
+
+	<footer class="footer">
+		<div class="uk-container">
+			<div class="footer-footer">
+				<!-- <div> -->
+					<div class="footer-logo">
+						<a href="#"><img src="./img/logo_f.svg" alt="logo"></a>
+					</div>
+				<!-- </div> -->
+				<!-- <div> -->
+					<ul class="footer-links">
+						<li>
+							<a href="#">
+								Уколи гіалуронової кислоти у суглоб
+							</a>
+						</li>
+						<li><a href="#">
+							Плазмоліфтинг суглобів (PPP-терапія суглобів)
+						</a></li>
+						<li><a href="#">
+							Плазмотерапія (PRP-терапія суглобів)
+						</a></li>
+						<li><a href="#">
+							Пролотерапія
+						</a></li>
+						<li><a href="#">
+							Мануальна терапія
+						</a></li>
+						<li><a href="#">
+							Блокада суглобів
+						</a></li>
+						<li><a href="#">
+							Реабілітологи
+						</a></li>
+						<li><a href="#">
+							Блог
+						</a></li>
+					</ul>
+				<!-- </div> -->
+				<!-- <div> -->
+					<div class="footer-location">
+						<ul>
+							<li>
+								<span>Адреса:</span>
+								м. Київ, вул.Дж.Макейна <br>
+								(І.Кудрі), 26,<br>
+								ст.м. Дружби народів
+							</li>
+							<li>
+								<span>графік роботи:</span>
+								Пн - Пт: 8:00 - 21:00<br>
+								Сб: 9:00 - 14:00<br>
+								Неділя - вихідний
+							</li>
+							<li class="action action-email">
+								<img src="./img/icon/email.svg" alt="icon">
+								<a href="#">info@spinedoctor.com.ua</a>
+							</li>
+							<li class="action action-phone">
+								<img src="./img/icon/phone.svg" alt="icon">
+								<a href="#">0 800 339 729</a>
+							</li>
+						</ul>
+						<a href="#modal-form" class="btn-primary" uk-toggle>Замовити зворотній дзвінок</a>
+					</div>
+				<!-- </div> -->
+				<!-- <div> -->
+					<ul class="footer-social">
+						<li><a href="#">
+							<img src="./img/icon/facebook-3-2.svg" alt="">
+						</a></li>
+						<li><a href="#">
+							<img src="./img/icon/instagram-5.svg" alt="">
+						</a></li>
+						<li><a href="#">
+							<img src="./img/icon/youtoube.svg" alt="">
+						</a></li>
+					</ul>
+				</div>
+			<!-- </div> -->
+			<div class="footer-copy">
+				<span>Ліцензія МОЗ України: Наказ №0000 від 00/00/0000</span>
+				<span>© Copyright 2013 - 2022. Клініка неврології та нейроортопедії</span>
+				<span><a href="#">Політика конфеденційності</a></span>
+			</div>
+		</div>
+	</footer>
+
+
+		<div id="mmenu" uk-offcanvas="overlay: true;">
+			<div class="uk-offcanvas-bar">
+
+					<button class="uk-offcanvas-close" type="button" uk-close></button>
+
+					<h3>Title</h3>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+			</div>
+		</div>
+
+		<div id="modal-form" class="uk-flex-top" uk-modal>
+			<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+					<button class="uk-modal-close-default" type="button" uk-close></button>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			</div>
+		</div>
+
+
+	<script src="./libs/jquery/dist/jquery.min.js"></script>
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script>
+
+		const swiper_likar = new Swiper(".swiper-doctor", {
+			// Optional parameters
+			loop: false,
+			slidesPerView: "auto",
+			spaceBetween: 10,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+			navigation: {
+				nextEl: '.swiperBtn-next',
+				prevEl: '.swiperBtn-prev',
+			},
+
+			breakpoints: {
+				// when window width is >= 320px
+				300: {
+					slidesPerView: 1,
+					// navigation: false
+				},
+				// when window width is >= 480px
+				600: {
+					slidesPerView: 2,
+					// navigation: false
+				},
+				768: {
+					slidesPerView: 2.25,
+					pagination: false
+				},
+				800: {
+					slidesPerView: 2.5,
+					pagination: false
+				},
+				// when window width is >= 640px
+				900: {
+					slidesPerView: 3,
+					pagination: false
+				},
+				1200: {
+					slidesPerView: 4,
+					// navigation: false,
+					pagination: false
+				}
+			}
+		});
+
+		$( "input,textarea" ).focusin(function() {
+			console.log($(this).next("label").hide())
+			// $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 1000 );
+		});
+		$( "input,textarea" ).blur(function() {
+			if ($(this).val() === '') {
+				console.log($(this).next("label").show())
+			}
+			// $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 1000 );
+		});
+
+	</script>
+	<script src="./js/scripts.min.js?1"></script>
+
+</body>
+
+</html>
