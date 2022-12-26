@@ -1,0 +1,142 @@
+.page-consultation ~ .center_title,
+.page-consultation ~ .section_form
+	padding-top: 100px
+.page-consultation
+	.consultation-grid
+		display: flex
+		flex-direction: row
+		gap: 10px
+	.grid-nav
+		flex: 0 0 33%
+	.grid-content
+		flex: 1 1 auto
+		// flex-basis: auto
+		// flex-shrink: 2
+		background-color: #F2F2F2
+		border-radius: 4px
+		overflow-y: auto
+		// min-height: 0px
+		padding: 30px
+		font-size: 14px
+		line-height: 1.4em
+		.title
+			font-size: 20px
+			font-family: $title-font-sb
+			text-transform: uppercase
+			color: #BD4735
+			line-height: 1.2em
+		* + p
+			margin-top: 15px
+		p
+			margin-bottom: 15px
+		ul
+			margin: 0
+			// padding: 0
+	.img
+		border-radius: 4px
+		overflow: hidden
+		margin-bottom: 10px
+	.nav-nav
+		position: relative
+		padding: 30px
+		border-radius: 4px
+		background-color: #F2F2F2
+		// background-color: yellow
+		font-size: 16px
+		span
+			font-family: $title-font-sb
+			text-transform: uppercase
+		ul,
+		li
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				line-height: 1.2em
+				margin-top: 15px
+			a
+				font-family: $title-font-m
+				text-decoration: underline
+.page
+	.section-faq
+		padding-top: 100px
+	.faq-content
+		padding: 30px
+		background-color: #f2f2f2
+		border-radius: 4px
+		.title
+			font-size: 20px
+			font-family: $title-font-sb
+			text-transform: uppercase
+			color: #BD4735
+			line-height: 1.2em
+			margin-bottom: 30px
+	.uk-accordion > :nth-child(n+2)
+		margin-top: 0
+	.faq-grid
+
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		gap: 10px
+	.faq-grid_item
+		flex: 1 1 49%
+		&.uk-open
+			.uk-accordion-title
+				color: #BD4735
+				&::before
+					background-image: url("../img/icon/arrow-down-right.svg")
+	.uk-accordion-title
+		// display: inline-block
+		font-family: $title-font-sb
+		font-size: 16px
+		line-height: 1.2em
+		text-transform: uppercase
+		&::before
+			background-image: url("../img/icon/arrow-up-right.svg")
+	.uk-accordion-content
+		font-size: 14px
+		margin-top: 10px
+		p
+		// background-color: cyan
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.page-consultation
+		.grid-content
+			padding: 15px
+			.title
+				font-size: 16px
+		.nav-nav
+			padding: 15px
+			font-size: 14px
+			ul
+				li
+					margin-top: 8px
+	.page
+		.section-faq
+			padding-top: 50px
+		.uk-accordion-title
+			font-size: 14px
+		.faq-grid
+			.uk-accordion-title
+				font-size: 12px
+			.uk-accordion-content
+				font-size: 12px
+			// padding: 15px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 639px)
+	/**/
+	.page-consultation
+		.consultation-grid
+			flex-direction: column
+			flex-wrap: wrap
+			& > div
+				flex-basis: 100%
+	.page
+
+		.faq-grid
+			flex-direction: row
+			& > div
+				flex-basis: 100%

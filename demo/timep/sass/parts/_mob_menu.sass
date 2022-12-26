@@ -1,0 +1,59 @@
+#mmenu
+	.uk-offcanvas-bar
+		background-color: #fff
+		// background-color: tomato
+		color: #37373A
+		padding: 10px 15px
+	.uk-offcanvas-close
+		svg
+			width: 18px
+			height: 18px
+			line
+				stroke: #37373A
+	.menu_back
+		position: absolute
+		left: 15px
+		top: 10px
+		opacity: 0
+		cursor: pointer
+.wrapper-mmenu
+	position: relative
+	// width: 320px
+	// background-color: tomato
+	// padding: 20px
+	// min-height: 100vh
+	color: #37373a
+	margin-top: 40px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	a
+		text-decoration: none
+	.list-menu
+		position: relative
+		// min-height: 80%
+		& > .menu-item
+			margin-bottom: 30px
+			.item-title
+				font-family: $title-font-sb
+				font-size: 16px
+				text-transform: uppercase
+				color: #37373a
+
+		.item-content
+			display: none
+			&.active
+				display: block
+		.sublist-menu
+			margin-top: 35px
+			.menu-item
+				margin-bottom: 30px
+			.item-title
+				font-size: 14px
+				// margin-left: 10px
+		.menu-item.active
+			display: block
+			.item-title.parent
+				color: #BD4735
+		.menu-item.disable
+			display: none

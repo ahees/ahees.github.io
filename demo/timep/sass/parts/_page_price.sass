@@ -1,0 +1,56 @@
+#price-grid
+	& > div
+		margin-top: 50px
+	.uk-open
+		.uk-accordion-title
+			color: #bd4635
+	.uk-accordion-title
+		color: #bd4635
+		&::before
+			display: none
+	.wrapper-item
+		// background-color: tomato
+		display: flex
+		flex-flow: column nowrap
+		gap: 10px
+	.item
+		position: relative
+		background-color: #f2f2f2
+		border-radius: 4px
+		font-family: $title-font-sb
+		font-size: 14px
+		padding: 20px
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		.name
+			flex: 1 1 auto
+
+			// background-color: yellow
+			span
+				text-transform: uppercase
+		.price
+			flex: 1 0 auto
+			min-width: 150px
+			// background-color: cyan
+			font-size: 12px
+			text-transform: uppercase
+			text-align: right
+		.price-old
+			text-decoration: line-through
+		.price-new
+			font-family: $title-font-b
+			color: #bd4635
+			margin-left: 5px
+.page-price ~ .section_form
+	padding-top: 100px
+@media only screen and (max-width : 768px)
+	/**/
+	#price-grid
+		& > div
+			margin-top: 25px
+		.item
+			font-size: 10px
+			padding: 16px 12px
+		.wrapper-item
+			margin-top: 25px

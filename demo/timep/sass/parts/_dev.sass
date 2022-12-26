@@ -1,50 +1,100 @@
-.swiper-overflow-container
-	overflow-x: hidden
-	.s-container
-		overflow: visible
-		// outline: 2px solid red
-	.swiper-container
-		position: relative
-		overflow: visible
-		// background-color: black
-		padding-bottom: 60px
-		.swiper-pagination
-			// background-color: tomato
-			bottom: 0
-			.swiper-pagination-bullet
-				width: 9px
-				height: 9px
-				background-color: #E6E6E6
-				&-active
-					background-color: #B5B5B9
-// .ni
-// 	.item
-// 		background-color: tomato
-// 		height: 200px
-// .item
-// 	outline: 1px solid cyan
-// 	.image
-// 		width: 100%
-// 		height: 265px
-// 		// padding-bottom: 100%
-// 		background: #808080
-// 		background-image: url("../img/rev1.jpg")
-// 		background-repeat: no-repeat
-// 		background-size: cover
+// .swiper-overflow-container
+// 	overflow-x: hidden
+// 	.s-container
+// 		overflow: visible
+// 		// outline: 2px solid red
+// 	.swiper-container
+// 		position: relative
+// 		overflow: visible
+// 		// background-color: black
+// 		padding-bottom: 60px
+// 		.swiper-pagination
+// 			// background-color: tomato
+// 			bottom: 0
+// 			.swiper-pagination-bullet
+// 				width: 9px
+// 				height: 9px
+// 				background-color: #E6E6E6
+// 				&-active
+// 					background-color: #B5B5B9
+// // .ni
+// // 	.item
+// // 		background-color: tomato
+// // 		height: 200px
+// // .item
+// // 	outline: 1px solid cyan
+// // 	.image
+// // 		width: 100%
+// // 		height: 265px
+// // 		// padding-bottom: 100%
+// // 		background: #808080
+// // 		background-image: url("../img/rev1.jpg")
+// // 		background-repeat: no-repeat
+// // 		background-size: cover
 
-.swiperBtn-next,
-.swiperBtn-prev
-	position: absolute
-	bottom: 0
-	width: 30px
-	height: 30px
+// .swiperBtn-next,
+// .swiperBtn-prev
+// 	position: absolute
+// 	bottom: 0
+// 	width: 30px
+// 	height: 30px
+// 	cursor: pointer
+// 	z-index: 11
+// 	&.swiper-button-disabled
+// 		opacity: 0.5
+// .swiperBtn-next
+// 	right: 0
+// 	background-image: url("../img/icon/arrow-right.svg")
+// .swiperBtn-prev
+// 	left: 0
+// 	background-image: url("../img/icon/arrow-left.svg")
+.menu_back
+	padding: 10px
+	background-color: cyan
+	display: inline-block
 	cursor: pointer
-	z-index: 11
-	&.swiper-button-disabled
-		opacity: 0.5
-.swiperBtn-next
-	right: 0
-	background-image: url("../img/icon/arrow-right.svg")
-.swiperBtn-prev
-	left: 0
-	background-image: url("../img/icon/arrow-left.svg")
+	opacity: 0
+.dev-menu
+	position: relative
+	width: 320px
+	background-color: tomato
+	padding: 20px
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	.list-menu
+		position: relative
+		min-height: 80%
+		& > .menu-item
+			.item-title
+				font-family: $title-font-sb
+				font-size: 12px
+				text-transform: uppercase
+				&.parent
+					color: tomato
+		.item-content
+			display: none
+			&.active
+				display: block
+		.sublist-menu
+			padding: 10px 0
+
+			.item-title
+				font-size: 10px
+				margin-left: 10px
+		.menu-item.active
+			display: block
+			background-color: cyan
+		.menu-item.disable
+			display: none
+			// position: absolute
+
+			// left: 0
+			// top: 0
+			// width: 100%
+			// height: 100%
+
+
+
+

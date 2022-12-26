@@ -1,0 +1,199 @@
+.blog-grid
+	display: flex
+	flex-flow: row wrap
+	// background-color: tomato
+	gap: 10px
+	margin-right: -10px
+	& > div
+		flex: 0 0 calc((100% * 1 / 2) - 10px)
+	.item
+		// background-color: cyan
+		display: flex
+		// height: 100px
+	.img
+		flex-grow: 0
+		flex-shrink: 0
+		// min-width: 150px
+		// width: 240px
+		width: get-vw(240px)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+	.content
+		padding: 30px
+		display: flex
+		flex-flow: column nowrap
+		justify-content: space-between
+	.title
+		font-size: 16px
+		font-family: $title-font-sb
+		text-transform: uppercase
+		margin-bottom: 5px
+	.text
+		font-size: 14px
+		line-height: 1.43em
+	.action
+		margin-top: 15px
+.page-blog-one ~ .section_form
+	padding-top: 10px
+.blog-one_top
+	display: flex
+	width: 100%
+	flex-flow: row nowrap
+	gap: 10px
+	margin-right: -10px
+	.img-top
+		flex: 0 0 calc((100% * 5 / 12) - 10px)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		border-radius: 4px
+		overflow: hidden
+	.content-top
+		// flex: 0 0 auto
+		padding: 30px
+		.title
+			font-family: $title-font-sb
+			font-size: 20px
+			text-transform: uppercase
+			margin-bottom: 10px
+		.list-title
+			font-family: $title-font-sb
+			font-size: 12px
+			text-transform: uppercase
+		ul,
+		li
+			margin: 0
+			// padding: 0
+		ul
+			padding-left: 15px
+			display: flex
+			flex-flow: row wrap
+			margin-top: 10px
+			gap: 4px
+			margin-right: -4px
+			li
+				flex: 0 0 calc(100% * 1 / 3 - 4px)
+				font-size: 12px
+				line-height: 12px
+				// margin-bottom: 4px
+				a
+					text-decoration: underline
+	.author
+		display: flex
+		align-items: center
+		gap: 15px
+		margin-top: 25px
+	.author-img
+		border-radius: 50%
+		width: 54px
+		height: 54px
+		overflow: hidden
+	.author-title,
+	.author-name
+		font-family: $title-font-sb
+		font-size: 12px
+	.author-name
+		text-transform: uppercase
+		color: #bd4735
+	.author-name
+		font-size: 14px
+		// margin: 2px 0
+	.author-p
+		line-height: 1.2em
+.blog-one_content
+	padding: 30px
+	margin-top: 10px
+	.title
+		text-transform: uppercase
+		font-family: $title-font-b
+		font-size: 12px
+	p
+		font-size: 14px
+.page-blog-one ~ .page-blog-one_other
+	padding-top: 10px
+.page-blog-one_other
+	.blog-one_content
+		margin-top: 0
+	.title
+		font-family: $title-font-sb
+		font-size: 20px
+		color: #bd4735
+		margin-bottom: 20px
+	.other_link
+		margin: 0
+		padding: 0
+		list-style-type: none
+		display: flex
+		flex-flow: row wrap
+		margin-right: -15px
+		gap: 15px
+		li
+			flex: 1 1 calc(100% * 1 / 4 - 15px)
+			a
+				font-family: $title-font-sb
+				font-size: 12px
+				text-decoration: underline
+.page-blog
+	.load
+		margin-top: 50px
+@media only screen and (max-width : 992px)
+	/**/
+	.blog-grid
+		.img
+			width: 35%
+		.content
+			padding: 15px
+	.page-blog-one_other
+		.other_link
+			li
+				flex: 1 1 calc(100% * 1 / 3 - 15px)
+@media only screen and (max-width : 768px)
+	/**/
+	.blog-grid
+		flex-flow: column wrap
+		margin-right: 0
+		& > div
+			flex: 0 0 100%
+		.item
+			flex-flow: column wrap
+		.img
+			width: 100%
+			height: 200px
+	.blog-one_top
+		.content-top
+			padding: 15px
+		.author-name
+			font-size: 12px
+		.author-p
+			font-size: 12px
+	.blog-one_content
+		padding: 15px
+	.page-blog-one_other
+		.other_link
+			li
+				flex: 1 1 calc(100% * 1 / 2 - 15px)
+@media only screen and (max-width : 640px)
+	/**/
+	.blog-one_top
+		flex-direction: column
+		flex-wrap: wrap
+		margin-right: 0
+		.img-top
+			height: 200px
+			flex: 0 0 auto
+		.content-top
+			width: 100%
+			ul
+				li
+					flex-basis: calc(100% * 1 / 2 - 4px)
+@media only screen and (max-width : 480px)
+	/**/
+	.blog-grid
+		.img
+			height: 125px
+	.page-blog-one_other
+		.other_link
+			flex-flow: column wrap
+			li
+				flex: 1 1 100%

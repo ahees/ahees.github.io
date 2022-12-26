@@ -1,0 +1,38 @@
+// .uk-modal-dialog
+.uk-modal-body
+	padding: 0
+	width: 95vw
+	max-width: 1030px!important
+	background-color: #fafafa
+// 	background-color: tomato
+.grid-modal
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	& > div
+		flex: 1 1 calc(100% * 1 / 2)
+	.modal-form
+		padding: 50px 10px
+	.modal-bg
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+@media only screen and (max-width : 768px)
+	/**/
+	.uk-modal-body
+		// width: 100%
+		width: 80vw
+	.grid-modal
+		.modal-bg
+			display: none
+		.modal-form
+			flex: 1 1 100%
+			padding: 50px
+@media only screen and (max-width : 480px)
+	/**/
+	.uk-modal-body
+		// width: 100%
+		width: 95vw
+	.grid-modal
+		.modal-form
+			padding: 50px 25px

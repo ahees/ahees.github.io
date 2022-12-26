@@ -8,11 +8,11 @@
 	font-weight: normal
 	background: #BD4635
 	color: #fff
-	// padding: 10px 18px
-	padding: 4px 12px
+	padding: 10px 18px
+	// padding: 4px 12px
 	border-radius: 5px
 	text-decoration: none
-	border: 3px solid #BD4635
+	// border: 3px solid #BD4635
 	&:hover
 		background: linear-gradient(180deg, #9D392B 28.98%, #BD4635 100%)
 		color: #fff
@@ -24,7 +24,7 @@
 	&:focus,
 	&.focus
 		color: #ffffff
-		border-color: #F4DBD7
+		// border-color: #F4DBD7
 		// border: 3px solid #F4DBD7
 		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25)
 	&:disabled,
@@ -157,6 +157,9 @@ a
 	background-image: url("../img/icon/arrow-left.svg")
 @media only screen and (max-width : 768px)
 	/**/
+	.swiper-overflow-container
+		.swiper-container
+			padding-bottom: 40px
 	.swiperBtn-next,
 	.swiperBtn-prev
 		display: none
@@ -176,3 +179,87 @@ a
 		text-transform: uppercase
 	.uk-breadcrumb > :last-child > span
 		color: #545458
+
+/* universal */
+.action-price
+	display: flex
+	flex-direction: row
+	gap: 10px
+	&.revers
+		span
+			order: 2
+		a
+			order: 1
+	.price
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 1px solid #fafafa
+		color: #fafafa
+		letter-spacing: 0.5px
+		border-radius: 5px
+		font-size: 12px
+		font-family: $title-font-sb
+		text-transform: uppercase
+		min-width: 90px
+		flex: 1 0 auto
+		text-decoration: none
+		// max-width: 150px
+		&.revers
+			border-color: #37373A
+			color: #37373a
+	// a
+	// 	width: 100%
+	// 	text-align: center
+.list-doctor
+	list-style-type: none
+	margin: 0
+	padding: 0
+	&.revers
+		li
+			color: #fafafa
+	li
+		text-transform: uppercase
+		margin-bottom: 6px
+		font-size: 12px
+		line-height: 1.2em
+		font-family: $title-font-m
+		span
+			font-family: $title-font-b
+.list-check
+	list-style-type: none
+	margin: 0
+	padding: 0
+	display: flex
+	gap: 10px
+	flex-direction: row
+	flex-wrap: wrap
+	li
+		flex: 1 0 48%
+		font-size: 14px
+		line-height: 1.2em
+		position: relative
+		padding-left: 25px
+		&::before
+			position: absolute
+			content: url('../img/icon/check.svg')
+			width: 20px
+			height: 20px
+			top: 3px
+			left: 0
+.bold
+	font-family: $title-font-b
+.uppercase
+	text-transform: uppercase
+
+.block
+	position: relative
+	background: #F2F2F2
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16)
+	border-radius: 4px
+	overflow: hidden
+
+.uk-lightbox
+	// background-color: #fff
+	// filter: blur(5px)
+

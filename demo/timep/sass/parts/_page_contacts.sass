@@ -1,0 +1,114 @@
+.page-contacts
+	form
+		padding: 30px
+.contacts-grid
+	display: flex
+	flex-flow: row wrap
+	// background-color: tomato
+	gap: 10px
+	margin-right: -10px
+	& > div
+		min-height: 360px
+		flex: 1 1 calc(100% * 1 / 2 - 10px)
+	.title
+		font-family: $title-font-b
+		font-size: 16px
+		text-transform: uppercase
+		margin-bottom: 5px
+		span
+			color: #bd4635
+	.contacts-social
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			margin-left: 27px
+			&:first-child
+				margin-left: 0
+.contacts-map,
+.cimg
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+.contacts-grid_content
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	height: 100%
+	padding: 30px
+
+	.contacts-social
+		margin-bottom: 15px
+	.contacts-loc
+		display: flex
+		flex-direction: row
+		span
+			display: block
+			font-family: $title-font-b
+			font-size: 12px
+			text-transform: uppercase
+			margin-bottom: 8px
+		& > div
+			flex: 0 0 50%
+			font-family: $title-font-r
+			font-size: 14px
+			line-height: 18px
+	.action
+		.action-phone,
+		.action-email
+			position: relative
+			padding-left: 20px
+		.action-phone
+			a
+				font-family: $title-font-b
+				color: #bd4635
+				line-height: 14px
+			span
+				font-family: $title-font-m
+				font-size: 12px
+				text-transform: uppercase
+				margin-left: 10px
+				// line-height: 120px
+			img
+				position: absolute
+				top: 5px
+				left: 0
+		.action-email
+			font-family: $title-font-m
+			font-size: 14px
+			margin: 15px 0
+			img
+				position: absolute
+				top: 5px
+				left: 0
+@media only screen and (max-width : 768px)
+	/**/
+	.contacts-grid_content
+		padding: 15px
+		.contacts-loc > div
+			font-size: 12px
+		p
+			font-size: 14px
+		.action
+			.action-phone
+				a
+					font-size: 12px
+				img
+					width: 15px
+					top: 6px
+@media only screen and (max-width : 640px)
+	/**/
+	.contacts-grid
+		display: flex
+		flex-flow: column nowrap
+		// background-color: tomato
+		gap: 10px
+		margin-right: 0
+		.title
+			font-size: 14px
+		& > div
+			min-height: auto
+			flex: 1 1 100%
+		.cimg
+			min-height: 350px

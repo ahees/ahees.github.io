@@ -42,19 +42,34 @@
 		padding: 10px 14px
 		background: #ffffff
 		outline: none
+		// pointer-events: none
 		& ~ label
 			// display: inline-block
+			background: #ffffff
 			position: absolute
 			left: 14px
 			top: 10px
+			bottom: 10px
+			right: 14px
+			// left: 0
+			// top: 0
+			// width: 90%
+			// height: 90%
+			// padding-top: 10px
+			// padding-left: 14px
 			font-size: 12px
 			line-height: 1.2em
-			color: tomato
+			pointer-events: none
+			white-space: nowrap
+			// overflow: hidden
+			// color: tomato
 	input
 		&:focus ~ label,
 		&:active ~ label
 		// &:not(:placeholder-shown) ~ label
 			display: none
+		&::placeholder
+			color: rgba(0,0,0,.16)
 	.input-error
 		display: none
 		position: absolute

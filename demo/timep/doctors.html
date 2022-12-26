@@ -33,10 +33,22 @@
 
 	<header class="header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 		<div class="uk-container">
+
 			<div class="header-top">
-				<div class="header-search none">
-					<input type="text">
+
+				<!-- <div class="header-search" hidden> -->
+				<div class="nav-overlay header-search" hidden>
+
+					<div class="uk-navbar-item uk-width-expand">
+							<form class="uk-search uk-search-navbar uk-width-1-1">
+									<input class="uk-search-input" type="search" placeholder="Пошук..." aria-label="Search" autofocus>
+							</form>
+					</div>
+
+					<a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+
 				</div>
+				<!-- </div> -->
 				<div class="header-top_logo">
 					<a href="#">
 						<img src="./img/logo.svg" alt="logo">
@@ -68,23 +80,31 @@
 						</div>
 					</div>
 					<div class="top_info-nav">
+
 						<div class="nav-search">
-							<a href="#"><img src="./img/icon/search.svg" alt="search" id="nav-search"></a>
+							<a href="#"><img src="./img/icon/search.svg" alt="search" id="nav-search" uk-toggle="target: .nav-overlay; animation: uk-animation-fade"></a>
 						</div>
+						<!-- <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a> -->
 						<div class="nav-lang">
-							<ul>
+							<div class="uk-inline">
+								<div>
+									UA <img src="./img/icon/arrowdown.svg" alt="icon">
+								</div>
+								<div uk-dropdown="mode: click">RU</div>
+							</div>
+							<!-- <ul>
 								<li>UA <img src="./img/icon/arrowdown.svg" alt="icon"></li>
-							</ul>
+							</ul> -->
 						</div>
 						<div class="mob-menu"><a href="#mmenu" class="mmenu" uk-toggle><span></span><span></span><span></span></a></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="header-menu">
+		<div class="header-menu" >
 			<div class="uk-container">
 
-				<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
+				<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: hover">
 					<div class="uk-navbar-left">
 
 						<div class="info-call">
@@ -95,40 +115,72 @@
 							<span>(дзвінки безкоштовні)</span>
 						</div>
 
-							<ul class="uk-navbar-nav">
-									<!-- <li class="uk-active"><a href="#">Active</a></li>
-									<li>
-											<a href="#">Parent</a>
-											<div class="uk-navbar-dropdown">
-													<ul class="uk-nav uk-navbar-dropdown-nav">
-															<li class="uk-active"><a href="#">Active</a></li>
-															<li><a href="#">Item</a></li>
-															<li><a href="#">Item</a></li>
-													</ul>
-											</div>
-									</li> -->
-									<li><a href="#">Про клініку</a></li>
-									<li><a href="#">Консультація <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg>
-											</a>
-											<div class="uk-navbar-dropdown">
+						<ul class="uk-navbar-nav">
+								<!-- <li class="uk-active"><a href="#">Active</a></li>
+								<li>
+										<a href="#">Parent</a>
+										<div class="uk-navbar-dropdown">
 												<ul class="uk-nav uk-navbar-dropdown-nav">
-														<li class="uk-active"><a href="#">ортопеда-травматолога</a></li>
-														<li><a href="#">вертебролога</a></li>
-														<li><a href="#">невропатолога</a></li>
+														<li class="uk-active"><a href="#">Active</a></li>
+														<li><a href="#">Item</a></li>
+														<li><a href="#">Item</a></li>
 												</ul>
-											</div>
-									</li>
-									<li><a href="#">Що ми лікуємо <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
-									<li><a href="#">Методи лікування <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
-									<li><a href="#">Реабілітація <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
-									<li><a href="#">Ціни </a></li>
-									<li><a href="#">Лікарі <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a></li>
-									<li><a href="#">Контакти</a></li>
-							</ul>
+										</div>
+								</li> -->
+								<li><a href="#">Про клініку</a></li>
+								<li><a href="#">Консультація <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg>
+										</a>
+										<div class="uk-navbar-dropdown">
+											<ul class="uk-nav uk-navbar-dropdown-nav">
+													<li class="uk-active"><a href="#">ортопеда-травматолога</a></li>
+													<li><a href="#">вертебролога</a></li>
+													<li><a href="#">невропатолога</a></li>
+											</ul>
+										</div>
+								</li>
+								<li><a href="#">Що ми лікуємо <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a>
+									<div class="uk-navbar-dropdown">
+										<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li class="uk-active"><a href="#">ортопеда-травматолога</a></li>
+												<li><a href="#">вертебролога</a></li>
+												<li><a href="#">невропатолога</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">Методи лікування <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a>
+									<div class="uk-navbar-dropdown">
+										<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li class="uk-active"><a href="#">ортопеда-травматолога</a></li>
+												<li><a href="#">вертебролога</a></li>
+												<li><a href="#">невропатолога</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">Реабілітація <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a>
+									<div class="uk-navbar-dropdown">
+										<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li class="uk-active"><a href="#">ортопеда-травматолога</a></li>
+												<li><a href="#">вертебролога</a></li>
+												<li><a href="#">невропатолога</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">Ціни </a></li>
+								<li><a href="#">Лікарі <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0L4.5 5L9 0H0Z" fill="#37373A"/></svg></a>
+									<div class="uk-navbar-dropdown">
+										<ul class="uk-nav uk-navbar-dropdown-nav">
+												<li class="uk-active"><a href="#">ортопеда-травматолога</a></li>
+												<li><a href="#">вертебролога</a></li>
+												<li><a href="#">невропатолога</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="#">Контакти</a></li>
+						</ul>
 
 					</div>
 					<div class="uk-navbar-right">
-						<a href="#" class="btn-primary">
+						<a href="#modal-form" class="btn-primary" uk-toggle>
 							Замовити зворотній дзвінок
 						</a>
 					</div>
@@ -158,84 +210,346 @@
 					<div class="center">
 						<div class="section-title">Наші Лікарі</div>
 					</div>
-					<div class="doctor-grid">
-						<div class="item">
+					<div class="doctor-grid swiper-doctor">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-							<div class="item-title">Самохін
-								Анатолій Вікторович</div>
-								<div class="item-subtitle">Ортопед-травматолог</div>
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
+									Анатолій Вікторович</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="item">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-								<div class="item-title">Самохін
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
 									Анатолій Вікторович</div>
-									<div class="item-subtitle">Ортопед-травматолог</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
 								</div>
+							</div>
 						</div>
-						<div class="item">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-								<div class="item-title">Самохін
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
 									Анатолій Вікторович</div>
-									<div class="item-subtitle">Ортопед-травматолог</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
 								</div>
+							</div>
 						</div>
-						<div class="item">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-								<div class="item-title">Самохін
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
 									Анатолій Вікторович</div>
-									<div class="item-subtitle">Ортопед-травматолог</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
 								</div>
+							</div>
 						</div>
-						<div class="item">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-								<div class="item-title">Самохін
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
 									Анатолій Вікторович</div>
-									<div class="item-subtitle">Ортопед-травматолог</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
 								</div>
+							</div>
 						</div>
+
 					</div>
 				</div>
 				<div>
 					<div class="center">
 						<div class="section-title">Наші реабілітологи</div>
 					</div>
-					<div class="doctor-grid">
-						<div class="item">
+					<div class="doctor-grid swiper-doctor">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-							<div class="item-title">Самохін
-								Анатолій Вікторович</div>
-								<div class="item-subtitle">Ортопед-травматолог</div>
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
+									Анатолій Вікторович</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="item">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-								<div class="item-title">Самохін
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
 									Анатолій Вікторович</div>
-									<div class="item-subtitle">Ортопед-травматолог</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
 								</div>
+							</div>
 						</div>
-						<div class="item">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-								<div class="item-title">Самохін
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
 									Анатолій Вікторович</div>
-									<div class="item-subtitle">Ортопед-травматолог</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
 								</div>
+							</div>
 						</div>
-						<div class="item">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-								<div class="item-title">Самохін
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
 									Анатолій Вікторович</div>
-									<div class="item-subtitle">Ортопед-травматолог</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
 								</div>
+							</div>
 						</div>
-						<div class="item">
+
+						<div class="item block">
 							<div class="item-bg" style="background-image: url('./img/doctor/muhomorov.jpg');">
-								<div class="item-title">Самохін
+
+							</div>
+							<!-- <div class="details-in">
+								<div class="title">Megan FOX</div>
+								<div class="noh-title">массажист</div>
+							</div> -->
+							<div></div>
+							<div class="details">
+								<div class="title">Самохін <br>
 									Анатолій Вікторович</div>
-									<div class="item-subtitle">Ортопед-травматолог</div>
+								<div class="noh-title">массажист доктор медичних наук, професор і блабла бла ваіваів іаіва віаіва</div>
+								<div class="hid">
+									<!-- <div class="h-title">Лікар ортопед</div> -->
+									<ul>
+										<li>Спеціальність: <span>Ортопед-травматолог</span></li>
+										<li>Направлення: <span>Ортопедія-травмотологія</span></li>
+										<li>Стаж: <span>40 років</span></li>
+									</ul>
+									<div class="item-link">
+										<a href="#" class="btn-arrowtop">Докладніше</a>
+									</div>
+									<div class="action">
+										<div class="action-price revers">
+											<span class="price">800 грн</span>
+											<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+										</div>
+									</div>
 								</div>
+							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -261,14 +575,14 @@
 					<ul class="footer-links">
 						<li>
 							<a href="#">
-								Уколи гіалуронової кислоти у суглоб
+								Уколи гіалуронової<br> кислоти у суглоб
 							</a>
 						</li>
 						<li><a href="#">
-							Плазмоліфтинг суглобів (PPP-терапія суглобів)
+							Плазмоліфтинг суглобів<br> (PPP-терапія суглобів)
 						</a></li>
 						<li><a href="#">
-							Плазмотерапія (PRP-терапія суглобів)
+							Плазмотерапія<br> (PRP-терапія суглобів)
 						</a></li>
 						<li><a href="#">
 							Пролотерапія
@@ -311,7 +625,7 @@
 								<a href="#">0 800 339 729</a>
 							</li>
 						</ul>
-						<a href="#" class="btn-primary">Замовити зворотній дзвінок</a>
+						<a href="#modal-form" class="btn-primary" uk-toggle>Замовити зворотній дзвінок</a>
 					</div>
 				<!-- </div> -->
 				<!-- <div> -->
@@ -337,35 +651,191 @@
 	</footer>
 
 
-		<div id="mmenu" uk-offcanvas="overlay: true;">
-			<div class="uk-offcanvas-bar">
-
-					<button class="uk-offcanvas-close" type="button" uk-close></button>
-
-					<h3>Title</h3>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
+	<div id="mmenu" uk-offcanvas="flip: true; overlay: true;">
+		<div class="uk-offcanvas-bar">
+			<div class="menu_back">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M19 10H1M1 10L10 19M1 10L10 1" stroke="#37373A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
 			</div>
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+
+			<div class="wrapper-mmenu" id="mmenu-menu">
+				<div class="list-menu">
+
+					<div class="menu-item">
+						<a href="#" class="item-title">Про клініку</a>
+					</div>
+
+					<div class="menu-item">
+						<a href="#" class="item-title parent">Консультація</a>
+						<div class="item-content">
+							<div class="sublist-menu">
+								<div class="menu-item">
+									<div class="item-title">раз</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="menu-item">
+						<a href="#" class="item-title parent">Що ми лікуємо</a>
+						<div class="item-content">
+							<div class="sublist-menu">
+								<div class="menu-item">
+									<div class="item-title">раз</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item">
+						<a href="#" class="item-title parent">Методи лікування</a>
+						<div class="item-content">
+							<div class="sublist-menu">
+								<div class="menu-item">
+									<div class="item-title">раз</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item">
+						<a href="#" class="item-title parent">реабілітація</a>
+						<div class="item-content">
+							<div class="sublist-menu">
+								<div class="menu-item">
+									<div class="item-title">раз</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="menu-item">
+						<a href="#" class="item-title">Ціни</a>
+					</div>
+
+					<div class="menu-item">
+						<a href="#" class="item-title parent">лікарі</a>
+						<div class="item-content">
+							<div class="sublist-menu">
+								<div class="menu-item">
+									<div class="item-title">раз</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+								<div class="menu-item">
+									<div class="item-title">Два</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="menu-item">
+						<a href="#" class="item-title">Контакти</a>
+					</div>
+
+				</div>
+
+
+				<div class="foot">
+					<hr>
+					test
+				</div>
+			</div>
+
 		</div>
+	</div>
+
+	<div id="modal-form" class="uk-flex-top" uk-modal>
+		<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+
+				<div class="grid-modal">
+					<div class="modal-bg" style="background-image: url('./img/modal.jpg');"></div>
+					<div class="modal-form">
+
+						<form action="" class="fform">
+							<legend class="form-title">
+								Записатися на прийом
+							</legend>
+							<div class="uk-position-relative">
+								<input id="fname" class="input" type="text" placeholder="">
+								<label for="fname">Ім'я</label>
+							</div>
+							<div class="uk-position-relative">
+								<input id="fphone" class="input phone error1" type="text" placeholder="+38(000) 000-00-00" required>
+								<label for="fphone"><span>*</span>Номер телефону</label>
+								<div class="input-error">Вкажіть коректний номер телефону</div>
+							</div>
+							<div class="uk-position-relative">
+								<textarea id="fmsg" class="input" rows="5" placeholder=""></textarea>
+								<label for="fmsg">Коментар</label>
+							</div>
+							<a href="#" class="btn-primary">Надіслати</a>
+						</form>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
 
 
 	<script src="./libs/jquery/dist/jquery.min.js"></script>
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
-	<script>
 
-		$( "input,textarea" ).focusin(function() {
-			console.log($(this).next("label").hide())
-			// $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 1000 );
-		});
-		$( "input,textarea" ).blur(function() {
-			if ($(this).val() === '') {
-				console.log($(this).next("label").show())
-			}
-			// $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 1000 );
-		});
-
-	</script>
 	<script src="./js/scripts.min.js?1"></script>
 
 </body>
