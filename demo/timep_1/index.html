@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
 <head>
 
@@ -31,7 +31,7 @@
 
 <body class="">
 
-	<header class="header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+	<header class="header" data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 		<div class="uk-container">
 
 			<div class="header-top">
@@ -45,7 +45,7 @@
 							</form>
 					</div>
 
-					<a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+					<a id="close-search" class="uk-navbar-toggle" data-uk-close data-uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
 
 				</div>
 				<!-- </div> -->
@@ -82,7 +82,7 @@
 					<div class="top_info-nav">
 
 						<div class="nav-search">
-							<a href="#"><img src="./img/icon/search.svg" alt="search" id="nav-search" uk-toggle="target: .nav-overlay; animation: uk-animation-fade"></a>
+							<a href="#"><img src="./img/icon/search.svg" alt="search" data-uk-toggle="target: .nav-overlay; animation: uk-animation-fade"></a>
 						</div>
 						<!-- <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a> -->
 						<div class="nav-lang">
@@ -90,13 +90,13 @@
 								<div>
 									UA <img src="./img/icon/arrowdown.svg" alt="icon">
 								</div>
-								<div uk-dropdown="mode: click">RU</div>
+								<div data-uk-dropdown="mode: click" id="open-drop">RU</div>
 							</div>
 							<!-- <ul>
 								<li>UA <img src="./img/icon/arrowdown.svg" alt="icon"></li>
 							</ul> -->
 						</div>
-						<div class="mob-menu"><a href="#mmenu" class="mmenu" uk-toggle><span></span><span></span><span></span></a></div>
+						<div class="mob-menu"><a href="#mmenu" id="open-mmenu" class="mmenu" data-uk-toggle><span></span><span></span><span></span></a></div>
 					</div>
 				</div>
 			</div>
@@ -104,7 +104,7 @@
 		<div class="header-menu" >
 			<div class="uk-container">
 
-				<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: hover">
+				<nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar="mode: hover">
 					<div class="uk-navbar-left">
 
 						<div class="info-call">
@@ -180,7 +180,7 @@
 
 					</div>
 					<div class="uk-navbar-right">
-						<a href="#modal-form" class="btn-primary" uk-toggle>
+						<a href="#modal-form" class="btn-primary" data-uk-toggle>
 							Замовити зворотній дзвінок
 						</a>
 					</div>
@@ -326,35 +326,35 @@
 					<div class="swiper-wrapper">
 
 						<a href="#" class="swiper-slide item">
-							<img src="./img/icon/implant.svg" class="item_icon">
+							<img src="./img/icon/implant.svg" class="item_icon" alt="icon">
 							<div class="item_title">Ортопедія-травмотологія</div>
 						</a>
 						<a href="#" class="swiper-slide item">
-							<img src="./img/icon/service_vertebr.svg" class="item_icon">
+							<img src="./img/icon/service_vertebr.svg" class="item_icon" alt="icon">
 							<div class="item_title">Вертебрологія</div>
 						</a>
 						<a href="#" class="swiper-slide item">
-							<img src="./img/icon/service_reab.svg" class="item_icon">
+							<img src="./img/icon/service_reab.svg" class="item_icon" alt="icon">
 							<div class="item_title">Реабілітація</div>
 						</a>
 						<a href="#" class="swiper-slide item">
-							<img src="./img/icon/service_nevrol.svg" class="item_icon">
+							<img src="./img/icon/service_nevrol.svg" class="item_icon" alt="icon">
 							<div class="item_title">Неврологія</div>
 						</a>
 						<a href="#" class="swiper-slide item">
-							<img src="./img/icon/service_psyho.svg" class="item_icon">
+							<img src="./img/icon/service_psyho.svg" class="item_icon" alt="icon">
 							<div class="item_title">Психологія</div>
 						</a>
 						<a href="#" class="swiper-slide item">
-							<img src="./img/icon/service_psyhi.svg" class="item_icon">
+							<img src="./img/icon/service_psyhi.svg" class="item_icon" alt="icon">
 							<div class="item_title">Психіатрія</div>
 						</a>
 						<a href="#" class="swiper-slide item">
-							<img src="./img/icon/service_endo.svg" class="item_icon">
+							<img src="./img/icon/service_endo.svg" class="item_icon" alt="icon">
 							<div class="item_title">Ендокринологія</div>
 						</a>
 						<a href="#" class="swiper-slide item">
-							<img src="./img/icon/service_revma.svg" class="item_icon">
+							<img src="./img/icon/service_revma.svg" class="item_icon" alt="icon">
 							<div class="item_title">Ревматологія</div>
 						</a>
 
@@ -405,7 +405,7 @@
 										<div class="action">
 											<div class="action-price revers">
 												<span class="price">800 грн</span>
-												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<a href="#modal-form" class="btn-primary" data-uk-toggle>Записатися на прийом</a>
 											</div>
 										</div>
 									</div>
@@ -441,7 +441,7 @@
 										<div class="action">
 											<div class="action-price revers">
 												<span class="price">800 грн</span>
-												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<a href="#modal-form" class="btn-primary" data-uk-toggle>Записатися на прийом</a>
 											</div>
 										</div>
 									</div>
@@ -477,7 +477,7 @@
 										<div class="action">
 											<div class="action-price revers">
 												<span class="price">800 грн</span>
-												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<a href="#modal-form" class="btn-primary" data-uk-toggle>Записатися на прийом</a>
 											</div>
 										</div>
 									</div>
@@ -513,7 +513,7 @@
 										<div class="action">
 											<div class="action-price revers">
 												<span class="price">800 грн</span>
-												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<a href="#modal-form" class="btn-primary" data-uk-toggle>Записатися на прийом</a>
 											</div>
 										</div>
 									</div>
@@ -549,7 +549,7 @@
 										<div class="action">
 											<div class="action-price revers">
 												<span class="price">800 грн</span>
-												<a href="#modal-form" class="btn-primary" uk-toggle>Записатися на прийом</a>
+												<a href="#modal-form" class="btn-primary" data-uk-toggle>Записатися на прийом</a>
 											</div>
 										</div>
 									</div>
@@ -579,21 +579,23 @@
 					</div>
 					<div class="form-right">
 
-							<form action="" class="fform">
-								<legend class="form-title">
-									Записатися на прийом
-								</legend>
+							<form action="/" class="fform">
+
+									<div class="form-title">
+										Записатися на прийом
+									</div>
+
 								<div class="uk-position-relative">
-									<input id="fname" class="input" type="text" placeholder="">
+									<input name="fname" class="input" type="text" placeholder="">
 									<label for="fname">Ім'я</label>
 								</div>
 								<div class="uk-position-relative">
-									<input id="fphone" class="input phone error1" type="text" placeholder="+38(000) 000-00-00" required>
+									<input name="fphone" class="input phone error1" type="text" placeholder="+38(000) 000-00-00" required>
 									<label for="fphone"><span>*</span>Номер телефону</label>
 									<div class="input-error">Вкажіть коректний номер телефону</div>
 								</div>
 								<div class="uk-position-relative">
-									<textarea id="fmsg" class="input" rows="5" placeholder=""></textarea>
+									<textarea name="fmsg" class="input" rows="5" placeholder=""></textarea>
 									<label for="fmsg">Коментар</label>
 								</div>
 								<a href="#" class="btn-primary">Надіслати</a>
@@ -612,7 +614,7 @@
 						Про клініку
 					</h4>
 				</div>
-				<div class="uk-grid uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match mgrid aboutclinic-grid " uk-grid>
+				<div class="uk-grid uk-grid-collapse uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match mgrid aboutclinic-grid " data-uk-grid>
 					<div>
 						<div class="aboutclinic-about">
 							<div class="about-subtitle">
@@ -729,7 +731,7 @@
 		<!--  -->
 		<section class="section section_seo">
 			<div class="uk-container">
-				<div class="uk-grid uk-grid-collapse mgrid uk-child-width-1-2@s uk-child-width-1-1 uk-grid-match" uk-grid>
+				<div class="uk-grid uk-grid-collapse mgrid uk-child-width-1-2@s uk-child-width-1-1 uk-grid-match" data-uk-grid>
 					<div>
 						<div class="img" style="background-image: url('./img/seo.jpg');"></div>
 					</div>
@@ -828,7 +830,7 @@
 								<a href="#">0 800 339 729</a>
 							</li>
 						</ul>
-						<a href="#modal-form" class="btn-primary" uk-toggle>Замовити зворотній дзвінок</a>
+						<a href="#modal-form" class="btn-primary" data-uk-toggle>Замовити зворотній дзвінок</a>
 					</div>
 				<!-- </div> -->
 				<!-- <div> -->
@@ -854,14 +856,14 @@
 	</footer>
 
 
-	<div id="mmenu" uk-offcanvas="flip: true; overlay: true;">
+	<div id="mmenu" data-uk-offcanvas="flip: true; overlay: true;">
 		<div class="uk-offcanvas-bar">
 			<div class="menu_back">
 				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M19 10H1M1 10L10 19M1 10L10 1" stroke="#37373A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 			</div>
-			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<button class="uk-offcanvas-close" type="button" data-uk-close></button>
 
 			<div class="wrapper-mmenu" id="mmenu-menu">
 				<div class="list-menu">
@@ -1000,19 +1002,21 @@
 		</div>
 	</div>
 
-	<div id="modal-form" class="uk-flex-top" uk-modal>
+	<div id="modal-form" class="uk-flex-top" data-uk-modal>
 		<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 
-				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<button class="uk-modal-close-default" type="button" data-uk-close></button>
 
 				<div class="grid-modal">
 					<div class="modal-bg" style="background-image: url('./img/modal.jpg');"></div>
 					<div class="modal-form">
 
-						<form action="" class="fform">
-							<legend class="form-title">
-								Записатися на прийом
-							</legend>
+						<form action="/" class="fform">
+
+								<div class="form-title">
+									Записатися на прийом
+								</div>
+
 							<div class="uk-position-relative">
 								<input id="fname" class="input" type="text" placeholder="">
 								<label for="fname">Ім'я</label>
