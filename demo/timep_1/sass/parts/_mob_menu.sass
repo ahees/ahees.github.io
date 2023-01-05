@@ -16,6 +16,25 @@
 		top: 10px
 		opacity: 0
 		cursor: pointer
+.foot
+	hr
+		z-index: 1
+		border-top-color: #999999
+		margin-bottom: 40px
+	.foot_info-items
+		flex-direction: column
+		display: flex
+		gap: 20px
+	.info-item
+		font-size: 14px
+		font-family: $title-font-m
+		font-weight: normal
+		position: relative
+		padding-left: 20px
+		line-height: 14px
+		.icon
+			position: absolute
+			left: 0
 .wrapper-mmenu
 	position: relative
 	// width: 320px
@@ -34,11 +53,17 @@
 		// min-height: 80%
 		& > .menu-item
 			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 40px
 			.item-title
+				position: relative
 				font-family: $title-font-sb
 				font-size: 16px
 				text-transform: uppercase
 				color: #37373a
+				svg
+					position: absolute
+					top: 4px
 
 		.item-content
 			display: none
@@ -55,5 +80,7 @@
 			display: block
 			.item-title.parent
 				color: #BD4735
+				svg
+					display: none
 		.menu-item.disable
 			display: none
