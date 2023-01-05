@@ -4,7 +4,7 @@
 	position: relative
 	border-top: 0.4px solid rgba(0,0,0 , .1)
 	border-bottom: 0.4px solid rgba(0,0,0 , .1)
-	padding: 38px 0
+	padding: 28px 0
 	background-color: #fff
 	.info-call
 		display: none
@@ -36,9 +36,12 @@
 			font-family: $title-font-sb
 			font-weight: normal
 			& > li
+				&.uk-active
+					color: $accentcolor
 				& > a
 					padding: 0
 					padding-bottom: 20px
+					color: #37373a
 					&:hover
 						color: $accentcolor
 				&:last-child
@@ -47,9 +50,11 @@
 .header
 	.header-top
 		position: relative
-		padding: 34px 0
+		padding: 24px 0
 		display: flex
 		justify-content: space-between
+		align-items: center
+		// background-color: tomato
 		.header-search
 			position: absolute
 			z-index: 2
@@ -66,15 +71,19 @@
 		font-weight: normal
 		position: relative
 		padding-left: 20px
+		line-height: 14px
 		.icon
 			position: absolute
 			left: 0
 		&:last-child
+			a
+				color: #BD4635
 			span
 				display: block
 				font-family: $title-font-b
 				font-weight: normal
 				color: $accentcolor
+				font-size: 14px
 				&:last-child
 					font-size: 8px
 					font-family: $title-font-sb
