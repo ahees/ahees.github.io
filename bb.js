@@ -22,7 +22,7 @@
   if (window.lampa_backup_plugin) return;
   window.lampa_backup_plugin = true;
 
-  var VERSION = '1.0.0';
+  var VERSION = '1.3.0';
   var FORMAT = 'lampa-backup';
   var SERVER_PATH = 'lampabackup';       // сервер пропускає лише [a-z0-9-]
   var SERVER_UNDO = 'lampabackup-undo';
@@ -164,6 +164,8 @@
     lbk_done:             { uk: 'Імпортовано. Перезавантаження…', ru: 'Импортировано. Перезагрузка…', en: 'Imported. Reloading…' },
     lbk_last:             { uk: 'Останній', ru: 'Последний', en: 'Last' },
     lbk_none:             { uk: 'немає', ru: 'нет', en: 'none' },
+    lbk_tc_fetch:         { uk: 'Таймкоди з сервера…', ru: 'Таймкоды с сервера…', en: 'Server timecodes…' },
+    lbk_tc_server:        { uk: 'таймкодів із сервера', ru: 'таймкодов с сервера', en: 'server timecodes' },
     lbk_created:          { uk: 'Створено', ru: 'Создан', en: 'Created' }
   });
 
@@ -260,7 +262,13 @@
       req = new XMLHttpRequest();
       req.open(method, url, true);
       req.timeout = timeout || 60000;
-      if (body !== null && typeof body !== 'undefined') req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+      var form = body && typeof body === 'object' && body.__form;
+      if (form) {
+        var parts = [];
+        keys(body).forEach(function (k) { if (k !== '__form') parts.push(encodeURIComponent(k) + '=' + encodeURIComponent(body[k])); });
+        body = parts.join('&');
+        req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+      } else if (body !== null && typeof body !== 'undefined') req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
       req.onreadystatechange = function () {
         if (req.readyState !== 4) return;
         var json = null;
@@ -366,14 +374,58 @@
   // Серверні таймкоди Lampac зберігають ідентичність серії (tv-ID-sXeY), якої немає в локальних хешах.
   function attachServerTimecodes(backup, done) {
     if (!backup.categories || backup.categories.indexOf('timeline') < 0 || !window.lampac_timecode_plugin || !host()) return done(backup);
-    var url = api('/timecode/dump');
     var pid = timecodeProfile();
-    if (pid) url = Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid));
-    xhr('GET', url, null, function (j) {
-      if (j && isArr(j.rows) && j.rows.length) backup.server.timecode = { rows: j.rows };
-      done(backup);
-    }, function () { done(backup); }, 30000);
+    var withProfile = function (url) { return pid ? Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid)) : url; };
+
+    // Новий Lampac віддає все одним запитом.
+    xhr('GET', withProfile(api('/timecode/dump')), null, function (j) {
+      if (j && isArr(j.rows) && j.rows.length) {
+        backup.server.timecode = { rows: j.rows, source: 'dump' };
+        return done(backup);
+      }
+      perCard();
+    }, perCard, 30000);
+
+    // Старий Lampac (або порожній dump): питаємо /timecode/all по кожній картці із закладок.
+    // Саме звідти Лампа малює таймлайни серій, коли відкриваєш картку.
+    function perCard() {
+      var fav = normFav(parseRaw(backup.data.favorite || readRaw('favorite') || '') || {});
+      var list = [], seen = {};
+      fav.card.forEach(function (c) {
+        if (!c || !c.id) return;
+        var type = (c.name || c.original_name || c.first_air_date || c.number_of_seasons) ? 'tv' : 'movie';
+        var key = c.id + '_' + type;
+        if (!seen[key]) { seen[key] = 1; list.push(key); }
+      });
+      if (!list.length) return done(backup);
+      var rows = [], i = 0;
+      (function step() {
+        if (i >= list.length) {
+          if (rows.length) backup.server.timecode = { rows: rows, source: 'all' };
+          return done(backup);
+        }
+        var card = list[i++];
+        if (Lampa.Loading.setText) Lampa.Loading.setText(t('lbk_tc_fetch') + ' ' + i + '/' + list.length);
+        var url = withProfile(Lampa.Utils.addUrlComponent(api('/timecode/all'), 'card_id=' + encodeURIComponent(card)));
+        xhr('GET', url, null, function (res) {
+          if (isObj(res) && !res.accsdb) {
+            keys(res).forEach(function (h) {
+              var road = parseRaw(res[h]);
+              if (!isObj(road)) return;
+              rows.push({
+                hash: h, card: card,
+                position: +road.time || 0, duration: +road.duration || 0, percent: +road.percent || 0,
+                profile: road.profile || 0, watched_at: +road.updated || 0,
+                id: typeof road.id === 'string' ? road.id : undefined
+              });
+            });
+          }
+          setTimeout(step, 110);           // WAF Lampac ~10 запитів/с
+        }, function () { setTimeout(step, 110); }, 15000);
+      })();
+    }
   }
+
 
   // Нормалізувати будь-який вхід (наш формат або «сирий» дамп localStorage) до нашого формату.
   function normalizeBackup(json) {
@@ -557,6 +609,8 @@
       });
     }
 
+    if (selected.timeline) mergeServerRowsLocal(backup, curTL, mode);
+
     try { if (Lampa.Favorite.read) Lampa.Favorite.read(true); else Lampa.Favorite.init(); } catch (e) {}
 
     var after = { favorite: parseRaw(readRaw('favorite') || '') };
@@ -574,13 +628,34 @@
     runSeq(steps, function () { done(written); });
   }
 
+
+  // Серверні рядки таймкодів → локальний file_view (той, з якого Лампа малює смужки прогресу).
+  function rowToRoad(r) {
+    var road = { time: +r.position || 0, duration: +r.duration || 0, percent: +r.percent || 0, profile: r.profile || 0, updated: +r.watched_at || 0 };
+    if (r.id) road.id = r.id;
+    return road;
+  }
+
+  function mergeServerRowsLocal(backup, file, mode) {
+    var rows = backup.server && backup.server.timecode && backup.server.timecode.rows;
+    if (!isArr(rows) || !rows.length) return;
+    var viewed = parseRaw(readRaw(file) || '');
+    if (!isObj(viewed)) viewed = {};
+    var add = {};
+    rows.forEach(function (r) {
+      if (!r || !r.hash || r.deleted) return;
+      add[r.hash] = rowToRoad(r);
+    });
+    writeKey(file, mergeTimeline(viewed, add));
+  }
+
   function runSeq(steps, done) {
     var i = 0;
     (function next() {
       if (i >= steps.length) return done();
       var fn = steps[i++];
       var called = false;
-      var guard = setTimeout(function () { if (!called) { called = true; next(); } }, 120000);
+      var guard = setTimeout(function () { if (!called) { called = true; next(); } }, 900000);
       try {
         fn(function () { if (called) return; called = true; clearTimeout(guard); next(); });
       } catch (e) {
@@ -625,10 +700,103 @@
     var pid = bookmarkProfile();
     if (pid) url = Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid));
 
-    sendBatches(url, rows, 300, function () {
-      try { Lampa.Listener.send('lampac', { name: 'bookmark_pullFromServer' }); } catch (e) {}
-      next();
-    });
+    // Нове API (/bookmark/sync). Старі збірки Lampac його не мають (404) —
+    // тоді йдемо по-старому: /bookmark/add і /bookmark/remove по одній картці.
+    xhr('POST', url, JSON.stringify(rows.slice(0, 1)), function (j) {
+      if (!j || j.accsdb || typeof j.version === 'undefined') return legacyBookmarks(fav, mode, next);
+      sendBatches(url, rows, 300, function () {
+        try { Lampa.Listener.send('lampac', { name: 'bookmark_pullFromServer' }); } catch (e) {}
+        next();
+      });
+    }, function () { legacyBookmarks(fav, mode, next); });
+  }
+
+  function bookmarkUrl(path) {
+    var url = api('/bookmark' + path);
+    var pid = bookmarkProfile();
+    if (pid) url = Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid));
+    return url;
+  }
+
+  // Старий протокол: сервер тримає весь об'єкт favorite, а bookmark.js при старті
+  // ПЕРЕЗАПИСУЄ локальні закладки серверними. Тож доносимо різницю на сервер явно.
+  function legacyBookmarks(fav, mode, next) {
+    xhr('GET', bookmarkUrl('/list'), null, function (server) {
+      if (!isObj(server) || server.accsdb) return next();
+      server = normFav(server);
+      var cards = {};
+      fav.card.forEach(function (c) { if (c && c.id != null) cards[String(c.id)] = c; });
+      var serverCards = {};
+      server.card.forEach(function (c) { if (c && c.id != null) serverCards[String(c.id)] = c; });
+
+      var has = function (list, id) {
+        for (var i = 0; i < list.length; i++) if (String(list[i]) === String(id)) return true;
+        return false;
+      };
+
+      var ops = [];
+      keys(fav).forEach(function (cat) {
+        if (cat === 'card' || !isArr(fav[cat])) return;
+        var srv = isArr(server[cat]) ? server[cat] : [];
+        // Сервер вставляє на початок — тому йдемо з кінця, щоб зберегти порядок.
+        for (var i = fav[cat].length - 1; i >= 0; i--) {
+          var id = fav[cat][i];
+          var card = cards[String(id)];
+          if (!card || has(srv, id)) continue;
+          ops.push({ path: '/add', body: { where: cat, card: card, card_id: card.id, id: card.id } });
+        }
+      });
+
+      if (mode === 'replace') {
+        keys(server).forEach(function (cat) {
+          if (cat === 'card' || !isArr(server[cat])) return;
+          var mine = isArr(fav[cat]) ? fav[cat] : [];
+          server[cat].forEach(function (id) {
+            if (has(mine, id)) return;
+            var body = { where: cat, method: 'id', card_id: id, id: id };
+            if (serverCards[String(id)]) body.card = serverCards[String(id)];
+            ops.push({ path: '/remove', body: body });
+          });
+        });
+      }
+
+      // /add приймає масив — шлемо пачками по 50, щоб 500+ карток не йшли хвилинами.
+      // Якщо пачку не прийняли — та сама пачка по одній.
+      var groups = [], cur = null;
+      ops.forEach(function (op) {
+        if (op.path === '/add') {
+          if (!cur || cur.length >= 50) { cur = []; groups.push({ path: '/add', items: cur }); }
+          cur.push(op.body);
+        } else { cur = null; groups.push({ path: op.path, items: [op.body] }); }
+      });
+
+      var done = 0, g = 0;
+      var progress = function () {
+        if (Lampa.Loading.setText) Lampa.Loading.setText(t('lbk_pushing') + ' ' + done + '/' + ops.length);
+      };
+      var single = function (items, cb) {
+        var k = 0;
+        (function one() {
+          if (k >= items.length) return cb();
+          var body = items[k++];
+          xhr('POST', bookmarkUrl('/add'), JSON.stringify(body), function () { done++; progress(); setTimeout(one, 150); },
+            function () { done++; progress(); setTimeout(one, 150); });
+        })();
+      };
+      (function step() {
+        if (g >= groups.length) return next();
+        var grp = groups[g++];
+        var body = grp.items.length === 1 ? grp.items[0] : grp.items;
+        xhr('POST', bookmarkUrl(grp.path), JSON.stringify(body), function (j) {
+          if (j && j.success === false && grp.items.length > 1) return single(grp.items, function () { setTimeout(step, 150); });
+          done += grp.items.length; progress();
+          setTimeout(step, 150);           // WAF Lampac: ~10 запитів/с на /bookmark
+        }, function () {
+          if (grp.items.length > 1) return single(grp.items, function () { setTimeout(step, 150); });
+          done++; progress(); setTimeout(step, 150);
+        });
+      })();
+    }, function () { next(); });
   }
 
   // --- закладки → CUB (коли увімкнена синхронізація акаунта) ---------------------------------
@@ -678,22 +846,114 @@
   // --- таймкоди → модуль TimeCode Lampac (/timecode/set) --------------------------------------
   function pushTimecodes(backup, next) {
     var rows = backup.server && backup.server.timecode && backup.server.timecode.rows;
-    if (!window.lampac_timecode_plugin || !host() || !isArr(rows) || !rows.length) {
-      // Локальні хеші timecode.js сам дошле при наступному старті (migrate), скидаємо прапорець.
-      window.lampac_timecode_migrated = false;
-      return next();
-    }
-    var url = api('/timecode/set');
+    if (!window.lampac_timecode_plugin || !host()) return next();
+    var sent = {};
+    var finish = function () { legacyTimecodes(backup, next, sent); };
+    if (!isArr(rows) || !rows.length) return finish();
+
     var pid = timecodeProfile();
+    var url = api('/timecode/set');
     if (pid) url = Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid));
     var clean = rows.map(function (r) {
       var o = {};
       ['id', 'hash', 'card', 'position', 'duration', 'percent', 'watched_at', 'deleted', 'profile', 'extra'].forEach(function (f) {
         if (typeof r[f] !== 'undefined' && r[f] !== null) o[f] = r[f];
       });
+      if (r.hash) sent[r.hash] = 1;
       return o;
     });
-    sendBatches(url, clean, 200, next, true);
+
+    // Пробуємо нове API першою пачкою; старий сервер відповість 404 — тоді по одному через /timecode/add.
+    xhr('POST', url, JSON.stringify({ rows: clean.slice(0, 200) }), function (j) {
+      if (j && typeof j.version !== 'undefined') return sendBatches(url, clean.slice(200), 200, finish, true);
+      legacyRows();
+    }, legacyRows);
+
+    function legacyRows() {
+      var list = rows.filter(function (r) { return r && r.hash && r.card && !r.deleted; });
+      var i = 0;
+      (function step() {
+        if (i >= list.length) return finish();
+        var r = list[i++];
+        var u = Lampa.Utils.addUrlComponent(api('/timecode/add'), 'card_id=' + encodeURIComponent(r.card));
+        if (pid) u = Lampa.Utils.addUrlComponent(u, 'profile_id=' + encodeURIComponent(pid));
+        if (Lampa.Loading.setText) Lampa.Loading.setText(t('lbk_pushing') + ' ' + i + '/' + list.length);
+        xhr('POST', u, { __form: 1, id: r.hash, data: JSON.stringify(rowToRoad(r)) },
+          function () { setTimeout(step, 110); }, function () { setTimeout(step, 110); });
+      })();
+    }
+  }
+
+
+  // Старий (і новий теж) /timecode/add: form id=<хеш>, data=<road>, card_id=<id>_<tv|movie>.
+  // Хеш не знає, чия це серія, тому підбираємо його по оригінальних назвах карток із закладок —
+  // так само рахує сама Лампа.
+  function legacyTimecodes(backup, next, skip) {
+    var needed = {};
+    skip = skip || {};
+    keys(backup.data).forEach(function (k) {
+      if (!/^file_view/.test(k)) return;
+      var v = parseRaw(backup.data[k]);
+      if (isObj(v)) keys(v).forEach(function (h) { if (!skip[h]) needed[h] = 1; });
+    });
+    var left = keys(needed).length;
+    if (!left) return next();
+
+    var viewed = parseRaw(readRaw(timelineFile()) || '') || {};
+    var fav = normFav(parseRaw(readRaw('favorite') || '') || {});
+    var hash = function (str) { try { return String(Lampa.Utils.hash(str)); } catch (e) { return ''; } };
+    var found = [];
+
+    // 1) Новий timecode.js Lampac пише в road ідентичність: "tv-96402-s1e1" / "movie-603".
+    keys(needed).forEach(function (h) {
+      var road = viewed[h];
+      var m = isObj(road) && typeof road.id === 'string' ? road.id.match(/^(tv|movie)-(\d+)/) : null;
+      if (m) { needed[h] = 2; left--; found.push({ hash: h, card_id: m[2] + '_' + m[1] }); }
+    });
+
+    // 2) Решту — підбором хешу за оригінальними назвами (картки закладок + індекс timecode.js).
+    var pool = fav.card.slice();
+    var idx = parseRaw(readRaw('lampac_timecode_cards') || '') || [];
+    if (isArr(idx)) idx.forEach(function (x) {
+      if (x && x.i && x.o) pool.push(x.t === 'tv' ? { id: x.i, original_name: x.o, number_of_seasons: x.s || 0 } : { id: x.i, original_title: x.o });
+    });
+
+    for (var c = 0; c < pool.length && left > 0; c++) {
+      var card = pool[c];
+      if (!card || !card.id) continue;
+      var isTv = !!(card.name || card.original_name || card.first_air_date || card.number_of_seasons);
+      if (isTv) {
+        var original = card.original_name || card.original_title;
+        if (!original) continue;
+        var seasons = card.number_of_seasons > 0 ? Math.min(card.number_of_seasons + 1, 60) : 30;
+        for (var s = 0; s <= seasons && left > 0; s++) {
+          for (var e = 1; e <= 200 && left > 0; e++) {
+            var h = hash([s, s > 10 ? ':' : '', e, original].join(''));
+            if (needed[h] === 1) { needed[h] = 2; left--; found.push({ hash: h, card_id: card.id + '_tv' }); }
+          }
+        }
+      } else if (card.original_title) {
+        var hm = hash(card.original_title);
+        if (needed[hm] === 1) { needed[hm] = 2; left--; found.push({ hash: hm, card_id: card.id + '_movie' }); }
+      }
+    }
+    if (!found.length) return next();
+
+    var i = 0;
+    (function step() {
+      if (i >= found.length) return next();
+      var f = found[i++];
+      var road = viewed[f.hash];
+      if (!isObj(road)) return step();
+      var url = api('/timecode/add');
+      url = Lampa.Utils.addUrlComponent(url, 'card_id=' + encodeURIComponent(f.card_id));
+      var pid = timecodeProfile();
+      if (pid) url = Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid));
+      if (Lampa.Loading.setText) Lampa.Loading.setText(t('lbk_pushing') + ' ' + i + '/' + found.length);
+      xhr('POST', url, { __form: 1, id: f.hash, data: JSON.stringify(road) }, function () {
+        setTimeout(step, 150);
+      }, function () { setTimeout(step, 150); });
+    })();
   }
 
   function sendBatches(url, rows, size, done, wrap) {
@@ -804,6 +1064,11 @@
     });
   }
 
+  function tcInfo(backup) {
+    var n = backup.server && backup.server.timecode && backup.server.timecode.rows ? backup.server.timecode.rows.length : 0;
+    return backup.categories && backup.categories.indexOf('timeline') >= 0 ? ' (' + t('lbk_tc_server') + ': ' + n + ')' : '';
+  }
+
   function buildBackup(selected, done) {
     attachServerTimecodes(collect(selected), done);
   }
@@ -816,7 +1081,7 @@
       buildBackup(sel, function (backup) {
         Lampa.Loading.stop();
         var ok = downloadText('lampa-backup-' + stamp() + '.json', JSON.stringify(backup));
-        Lampa.Noty.show(ok ? t('lbk_exported') : t('lbk_export_fail'));
+        Lampa.Noty.show(ok ? t('lbk_exported') + tcInfo(backup) : t('lbk_export_fail'));
         back(ctrl);
       });
     });
@@ -829,7 +1094,7 @@
       buildBackup(sel, function (backup) {
         storageSet(SERVER_PATH, backup, function () {
           Lampa.Loading.stop();
-          Lampa.Noty.show(t('lbk_saved_server'));
+          Lampa.Noty.show(t('lbk_saved_server') + tcInfo(backup));
           back(ctrl);
           refreshInfo();
         }, function () {
@@ -1067,6 +1332,8 @@
       exportServer: exportServer,
       importServer: importServer,
       undo: undoImport,
+      // importJson(obj) — показати діалог імпорту для готового об'єкта; opts = {selected, mode, noUndo} — без діалогу.
+      importJson: function (json, opts) { startImport(json, controllerName(), opts); },
       collect: function (cats) {
         var sel = {};
         (cats || CATS.map(function (c) { return c.id; })).forEach(function (c) { sel[c] = true; });
