@@ -22,7 +22,7 @@
   if (window.lampa_backup_plugin) return;
   window.lampa_backup_plugin = true;
 
-  var VERSION = '1.3.0';
+  var VERSION = '1.5.0';
   var FORMAT = 'lampa-backup';
   var SERVER_PATH = 'lampabackup';       // сервер пропускає лише [a-z0-9-]
   var SERVER_UNDO = 'lampabackup-undo';
@@ -256,7 +256,83 @@
 
   function api(path) { return withAccount(host() + path); }
 
-  function xhr(method, url, body, ok, fail, timeout) {
+  // ---------------------------------------------------------------------------
+  // Ідентичність для таймкодів — РІВНО як у timecode.js цього сервера.
+  // timecode.js не шле account_email Lampac: він бере email акаунта CUB (Storage 'account')
+  // і uid, який сервер роздає сам (server_uid). Інша комбінація = інша (порожня) область даних.
+  // ---------------------------------------------------------------------------
+  var tcIdentity = null;
+
+  function loadTcIdentity(cb) {
+    if (tcIdentity) return cb();
+    var done = function (text) {
+      text = text || '';
+      var su = text.match(/var\s+server_uid\s*=\s*'([^']*)'/);
+      var tk = text.match(/var\s+token\s*=\s*'([^']*)'/);
+      tcIdentity = {
+        server_uid: su ? su[1] : '',
+        token: tk && tk[1] !== '{token}' ? tk[1] : ''
+      };
+      cb();
+    };
+    try {
+      var req = new XMLHttpRequest();
+      req.open('GET', host() + '/timecode.js', true);
+      req.timeout = 15000;
+      req.onreadystatechange = function () { if (req.readyState === 4) done(req.status === 200 ? req.responseText : ''); };
+      req.ontimeout = function () { done(''); };
+      req.send(null);
+    } catch (e) { done(''); }
+  }
+
+  function tcApi(path) {
+    var url = host() + path;
+    var id = tcIdentity || { server_uid: '', token: '' };
+    var acc = Lampa.Storage.get('account', '{}');
+    if (id.token) url = Lampa.Utils.addUrlComponent(url, 'token=' + encodeURIComponent(id.token));
+    if (acc && acc.email && !id.server_uid) url = Lampa.Utils.addUrlComponent(url, 'account_email=' + encodeURIComponent(acc.email));
+    var uid = id.server_uid || Lampa.Storage.get('lampac_unic_id', '');
+    if (uid) url = Lampa.Utils.addUrlComponent(url, 'uid=' + encodeURIComponent(uid));
+    if (window.lwsEvent && window.lwsEvent.connectionId) url = Lampa.Utils.addUrlComponent(url, 'connectionId=' + encodeURIComponent(window.lwsEvent.connectionId));
+    return url;
+  }
+
+
+  // Lampac WAF: ^/timecode/ і ^/bookmark — 10 запитів/с з одного IP, понад — 429.
+  // Сама Лампа (timecode.js, bookmark.js) ходить туди ж, тому тримаємо запас:
+  // запити групи йдуть з паузою, а на 429 — чекаємо і повторюємо.
+  var paceLast = {};
+  var PACE = { tc: 260, bm: 220 };
+
+  function paceGroup(url) {
+    if (/\/timecode\//.test(url)) return 'tc';
+    if (/\/bookmark/.test(url)) return 'bm';
+    return null;
+  }
+
+  function xhr(method, url, body, ok, fail, timeout, attempt) {
+    attempt = attempt || 0;
+    var group = paceGroup(url);
+    if (group) {
+      var now = Date.now();
+      var at = Math.max(now, (paceLast[group] || 0) + PACE[group]);
+      paceLast[group] = at;
+      if (at > now) return setTimeout(function () { rawXhr(); }, at - now);
+    }
+    rawXhr();
+
+    function rawXhr() {
+      xhrOnce(method, url, body, ok, function (status, json) {
+        if (status === 429 && attempt < 8) {
+          if (group) paceLast[group] = Date.now() + 1500;
+          return setTimeout(function () { xhr(method, url, body, ok, fail, timeout, attempt + 1); }, 1500);
+        }
+        if (fail) fail(status, json);
+      }, timeout);
+    }
+  }
+
+  function xhrOnce(method, url, body, ok, fail, timeout) {
     var req;
     try {
       req = new XMLHttpRequest();
@@ -374,17 +450,50 @@
   // Серверні таймкоди Lampac зберігають ідентичність серії (tv-ID-sXeY), якої немає в локальних хешах.
   function attachServerTimecodes(backup, done) {
     if (!backup.categories || backup.categories.indexOf('timeline') < 0 || !window.lampac_timecode_plugin || !host()) return done(backup);
+    if (!tcIdentity) return loadTcIdentity(function () { attachServerTimecodes(backup, done); });
     var pid = timecodeProfile();
     var withProfile = function (url) { return pid ? Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid)) : url; };
 
-    // Новий Lampac віддає все одним запитом.
-    xhr('GET', withProfile(api('/timecode/dump')), null, function (j) {
-      if (j && isArr(j.rows) && j.rows.length) {
-        backup.server.timecode = { rows: j.rows, source: 'dump' };
-        return done(backup);
-      }
-      perCard();
-    }, perCard, 30000);
+    // Новий Lampac: /timecode/areas каже, в яких областях (profile_id) лежать таймкоди,
+    // і кожну область забираємо одним /timecode/dump.
+    xhr('GET', tcApi('/timecode/areas'), null, function (j) {
+      var areas = j && isArr(j.areas) ? j.areas.filter(function (a) { return a && a.rows > 0; }) : [];
+      if (!areas.length) return currentDump();
+      var rows = [], k = 0, seen = {};
+      (function nextArea() {
+        if (k >= areas.length) {
+          if (rows.length) {
+            backup.server.timecode = { rows: rows, source: 'areas', areas: areas.map(function (a) { return { profile_id: a.profile_id, rows: a.rows }; }) };
+            return done(backup);
+          }
+          return currentDump();
+        }
+        var a = areas[k++];
+        var url = tcApi('/timecode/dump');
+        if (a.profile_id) url = Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(a.profile_id));
+        if (Lampa.Loading.setText) Lampa.Loading.setText(t('lbk_tc_fetch') + ' ' + k + '/' + areas.length);
+        xhr('GET', url, null, function (d) {
+          ((d && d.rows) || []).forEach(function (r) {
+            var key = (r.id || '') + '|' + (r.card || '') + '|' + (r.hash || '');
+            if (seen[key]) return;
+            seen[key] = 1;
+            if (a.profile_id) r.area = a.profile_id;
+            rows.push(r);
+          });
+          nextArea();
+        }, nextArea, 60000);
+      })();
+    }, currentDump, 30000);
+
+    function currentDump() {
+      xhr('GET', withProfile(tcApi('/timecode/dump')), null, function (j) {
+        if (j && isArr(j.rows) && j.rows.length) {
+          backup.server.timecode = { rows: j.rows, source: 'dump' };
+          return done(backup);
+        }
+        perCard();
+      }, perCard, 60000);
+    }
 
     // Старий Lampac (або порожній dump): питаємо /timecode/all по кожній картці із закладок.
     // Саме звідти Лампа малює таймлайни серій, коли відкриваєш картку.
@@ -406,7 +515,7 @@
         }
         var card = list[i++];
         if (Lampa.Loading.setText) Lampa.Loading.setText(t('lbk_tc_fetch') + ' ' + i + '/' + list.length);
-        var url = withProfile(Lampa.Utils.addUrlComponent(api('/timecode/all'), 'card_id=' + encodeURIComponent(card)));
+        var url = withProfile(Lampa.Utils.addUrlComponent(tcApi('/timecode/all'), 'card_id=' + encodeURIComponent(card)));
         xhr('GET', url, null, function (res) {
           if (isObj(res) && !res.accsdb) {
             keys(res).forEach(function (h) {
@@ -420,8 +529,8 @@
               });
             });
           }
-          setTimeout(step, 110);           // WAF Lampac ~10 запитів/с
-        }, function () { setTimeout(step, 110); }, 15000);
+          setTimeout(step, 0);           // WAF Lampac ~10 запитів/с
+        }, function () { setTimeout(step, 0); }, 15000);
       })();
     }
   }
@@ -847,12 +956,13 @@
   function pushTimecodes(backup, next) {
     var rows = backup.server && backup.server.timecode && backup.server.timecode.rows;
     if (!window.lampac_timecode_plugin || !host()) return next();
+    if (!tcIdentity) return loadTcIdentity(function () { pushTimecodes(backup, next); });
     var sent = {};
     var finish = function () { legacyTimecodes(backup, next, sent); };
     if (!isArr(rows) || !rows.length) return finish();
 
     var pid = timecodeProfile();
-    var url = api('/timecode/set');
+    var url = tcApi('/timecode/set');
     if (pid) url = Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid));
     var clean = rows.map(function (r) {
       var o = {};
@@ -875,11 +985,11 @@
       (function step() {
         if (i >= list.length) return finish();
         var r = list[i++];
-        var u = Lampa.Utils.addUrlComponent(api('/timecode/add'), 'card_id=' + encodeURIComponent(r.card));
+        var u = Lampa.Utils.addUrlComponent(tcApi('/timecode/add'), 'card_id=' + encodeURIComponent(r.card));
         if (pid) u = Lampa.Utils.addUrlComponent(u, 'profile_id=' + encodeURIComponent(pid));
         if (Lampa.Loading.setText) Lampa.Loading.setText(t('lbk_pushing') + ' ' + i + '/' + list.length);
         xhr('POST', u, { __form: 1, id: r.hash, data: JSON.stringify(rowToRoad(r)) },
-          function () { setTimeout(step, 110); }, function () { setTimeout(step, 110); });
+          function () { setTimeout(step, 0); }, function () { setTimeout(step, 0); });
       })();
     }
   }
@@ -945,14 +1055,14 @@
       var f = found[i++];
       var road = viewed[f.hash];
       if (!isObj(road)) return step();
-      var url = api('/timecode/add');
+      var url = tcApi('/timecode/add');
       url = Lampa.Utils.addUrlComponent(url, 'card_id=' + encodeURIComponent(f.card_id));
       var pid = timecodeProfile();
       if (pid) url = Lampa.Utils.addUrlComponent(url, 'profile_id=' + encodeURIComponent(pid));
       if (Lampa.Loading.setText) Lampa.Loading.setText(t('lbk_pushing') + ' ' + i + '/' + found.length);
       xhr('POST', url, { __form: 1, id: f.hash, data: JSON.stringify(road) }, function () {
-        setTimeout(step, 150);
-      }, function () { setTimeout(step, 150); });
+        setTimeout(step, 0);
+      }, function () { setTimeout(step, 0); });
     })();
   }
 
